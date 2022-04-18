@@ -5,180 +5,180 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Polygon?>
 
-<AnchorPane centerShape="false" prefHeight="977.0" prefWidth="1394.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.catanfx.Controllers.GameBoardController">
-    <Polygon id="tile1" fx:id="tile1" fill="DODGERBLUE" layoutX="601.0" layoutY="349.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="tile2" fill="DODGERBLUE" layoutX="731.0" layoutY="349.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="tile5" fill="DODGERBLUE" layoutX="667.0" layoutY="452.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="tile3" fill="DODGERBLUE" layoutX="861.0" layoutY="349.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="tile4" fill="DODGERBLUE" layoutX="535.0" layoutY="452.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="tile6" fill="DODGERBLUE" layoutX="796.0" layoutY="452.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="tile7" fill="DODGERBLUE" layoutX="928.0" layoutY="452.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="tile8" fill="DODGERBLUE" layoutX="471.0" layoutY="555.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="tile12" fill="DODGERBLUE" layoutX="992.0" layoutY="555.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="tile9" fill="DODGERBLUE" layoutX="601.0" layoutY="555.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="tile10" fill="DODGERBLUE" layoutX="731.0" layoutY="555.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="tile11" fill="DODGERBLUE" layoutX="861.0" layoutY="555.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="tile14" fill="DODGERBLUE" layoutX="667.0" layoutY="660.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="tile13" fill="DODGERBLUE" layoutX="535.0" layoutY="660.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="tile15" fill="DODGERBLUE" layoutX="796.0" layoutY="660.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="tile16" fill="DODGERBLUE" layoutX="928.0" layoutY="660.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="tile17" fill="DODGERBLUE" layoutX="601.0" layoutY="764.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="tile18" fill="DODGERBLUE" layoutX="731.0" layoutY="764.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="tile19" fill="DODGERBLUE" layoutX="861.0" layoutY="764.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="hexSea13" fill="DODGERBLUE" layoutX="471.0" layoutY="349.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="hexSea12" fill="DODGERBLUE" layoutX="407.0" layoutY="451.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="hexSea11" fill="DODGERBLUE" layoutX="343.0" layoutY="552.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="hexSea10" fill="DODGERBLUE" layoutX="407.0" layoutY="657.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="hexSea9" fill="DODGERBLUE" layoutX="471.0" layoutY="765.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="harbour5" fill="DODGERBLUE" layoutX="538.0" layoutY="866.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="harbour1" fill="DODGERBLUE" layoutX="536.0" layoutY="248.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="hexSea1" fill="DODGERBLUE" layoutX="666.0" layoutY="248.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="hexSea2" fill="DODGERBLUE" layoutX="796.0" layoutY="248.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="hexSea8" fill="DODGERBLUE" layoutX="666.0" layoutY="866.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="hexSea7" fill="DODGERBLUE" layoutX="797.0" layoutY="866.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="harbour4" fill="DODGERBLUE" layoutX="928.0" layoutY="866.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="hexSea6" fill="DODGERBLUE" layoutX="992.0" layoutY="765.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="hexSea5" fill="DODGERBLUE" layoutX="1056.0" layoutY="659.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="harbour3" fill="DODGERBLUE" layoutX="1121.0" layoutY="554.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="hexSea4" fill="DODGERBLUE" layoutX="1057.0" layoutY="451.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="hexSea3" fill="DODGERBLUE" layoutX="992.0" layoutY="349.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="harbour2" fill="DODGERBLUE" layoutX="928.0" layoutY="249.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-   <ImageView fx:id="road1" fitHeight="54.0" fitWidth="54.0" layoutX="566.0" layoutY="154.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+<AnchorPane prefHeight="755.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.catanfx.Controllers.GameBoardController">
+    <Polygon id="tile1" fx:id="tile1" fill="DODGERBLUE" layoutX="358.0" layoutY="253.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="tile2" fill="DODGERBLUE" layoutX="488.0" layoutY="253.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="tile5" fill="DODGERBLUE" layoutX="424.0" layoutY="356.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="tile3" fill="DODGERBLUE" layoutX="618.0" layoutY="253.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="tile4" fill="DODGERBLUE" layoutX="292.0" layoutY="356.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="tile6" fill="DODGERBLUE" layoutX="553.0" layoutY="356.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="tile7" fill="DODGERBLUE" layoutX="685.0" layoutY="356.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="tile8" fill="DODGERBLUE" layoutX="228.0" layoutY="459.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="tile12" fill="DODGERBLUE" layoutX="749.0" layoutY="459.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="tile9" fill="DODGERBLUE" layoutX="358.0" layoutY="459.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="tile10" fill="DODGERBLUE" layoutX="488.0" layoutY="459.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="tile11" fill="DODGERBLUE" layoutX="618.0" layoutY="459.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="tile14" fill="DODGERBLUE" layoutX="424.0" layoutY="564.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="tile13" fill="DODGERBLUE" layoutX="292.0" layoutY="564.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="tile15" fill="DODGERBLUE" layoutX="553.0" layoutY="564.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="tile16" fill="DODGERBLUE" layoutX="685.0" layoutY="564.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="tile17" fill="DODGERBLUE" layoutX="358.0" layoutY="668.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="tile18" fill="DODGERBLUE" layoutX="488.0" layoutY="668.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="tile19" fill="DODGERBLUE" layoutX="618.0" layoutY="668.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="hexSea13" fill="DODGERBLUE" layoutX="228.0" layoutY="253.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="hexSea12" fill="DODGERBLUE" layoutX="164.0" layoutY="355.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="hexSea11" fill="DODGERBLUE" layoutX="100.0" layoutY="456.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="hexSea10" fill="DODGERBLUE" layoutX="164.0" layoutY="561.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="hexSea9" fill="DODGERBLUE" layoutX="228.0" layoutY="669.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="harbour5" fill="DODGERBLUE" layoutX="295.0" layoutY="770.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="harbour1" fill="DODGERBLUE" layoutX="293.0" layoutY="152.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="hexSea1" fill="DODGERBLUE" layoutX="423.0" layoutY="152.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="hexSea2" fill="DODGERBLUE" layoutX="553.0" layoutY="152.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="hexSea8" fill="DODGERBLUE" layoutX="423.0" layoutY="770.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="hexSea7" fill="DODGERBLUE" layoutX="554.0" layoutY="770.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="harbour4" fill="DODGERBLUE" layoutX="685.0" layoutY="770.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="hexSea6" fill="DODGERBLUE" layoutX="749.0" layoutY="669.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="hexSea5" fill="DODGERBLUE" layoutX="813.0" layoutY="563.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="harbour3" fill="DODGERBLUE" layoutX="878.0" layoutY="458.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="hexSea4" fill="DODGERBLUE" layoutX="814.0" layoutY="355.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="hexSea3" fill="DODGERBLUE" layoutX="749.0" layoutY="253.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="harbour2" fill="DODGERBLUE" layoutX="685.0" layoutY="153.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+   <ImageView fx:id="road1" fitHeight="54.0" fitWidth="54.0" layoutX="323.0" layoutY="58.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Road/white.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road2" fitHeight="54.0" fitWidth="54.0" layoutX="696.0" layoutY="153.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="road2" fitHeight="54.0" fitWidth="54.0" layoutX="453.0" layoutY="57.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Road/white.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road3" fitHeight="54.0" fitWidth="54.0" layoutX="826.0" layoutY="153.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="road3" fitHeight="54.0" fitWidth="54.0" layoutX="583.0" layoutY="57.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Road/white.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road4" fitHeight="54.0" fitWidth="54.0" layoutX="501.0" layoutY="254.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="road4" fitHeight="54.0" fitWidth="54.0" layoutX="258.0" layoutY="158.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Road/white.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road5" fitHeight="54.0" fitWidth="54.0" layoutX="631.0" layoutY="254.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="road5" fitHeight="54.0" fitWidth="54.0" layoutX="388.0" layoutY="158.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Road/white.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road6" fitHeight="54.0" fitWidth="54.0" layoutX="762.0" layoutY="254.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="road6" fitHeight="54.0" fitWidth="54.0" layoutX="519.0" layoutY="158.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Road/white.png" />
       </image>
    </ImageView>
-   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="893.0" layoutY="254.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="650.0" layoutY="158.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Road/white.png" />
       </image>
    </ImageView>
-   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="436.0" layoutY="356.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="193.0" layoutY="260.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Road/white.png" />
       </image>
    </ImageView>
-   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="566.0" layoutY="356.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="323.0" layoutY="260.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Road/white.png" />
       </image>
    </ImageView>
-   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="696.0" layoutY="357.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="453.0" layoutY="261.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Road/white.png" />
       </image>
    </ImageView>
-   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="826.0" layoutY="356.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="583.0" layoutY="260.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Road/white.png" />
       </image>
    </ImageView>
-   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="957.0" layoutY="356.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="714.0" layoutY="260.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Road/white.png" />
       </image>
    </ImageView>
-   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="372.0" layoutY="457.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="129.0" layoutY="361.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Road/white.png" />
       </image>
    </ImageView>
-   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="503.0" layoutY="460.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="260.0" layoutY="364.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Road/white.png" />
       </image>
    </ImageView>
-   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="631.0" layoutY="457.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="388.0" layoutY="361.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Road/white.png" />
       </image>
    </ImageView>
-   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="761.0" layoutY="462.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="518.0" layoutY="366.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Road/white.png" />
       </image>
    </ImageView>
-   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="893.0" layoutY="462.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="650.0" layoutY="366.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Road/white.png" />
       </image>
    </ImageView>
-   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="1022.0" layoutY="459.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="779.0" layoutY="363.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Road/white.png" />
       </image>
    </ImageView>
-   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="436.0" layoutY="562.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="193.0" layoutY="466.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Road/white.png" />
       </image>
    </ImageView>
-   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="566.0" layoutY="562.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="323.0" layoutY="466.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Road/white.png" />
       </image>
    </ImageView>
-   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="696.0" layoutY="562.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="453.0" layoutY="466.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Road/white.png" />
       </image>
    </ImageView>
-   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="826.0" layoutY="562.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="583.0" layoutY="466.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Road/white.png" />
       </image>
    </ImageView>
-   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="957.0" layoutY="562.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="714.0" layoutY="466.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Road/white.png" />
       </image>
    </ImageView>
-   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="501.0" layoutY="669.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="258.0" layoutY="573.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Road/white.png" />
       </image>
    </ImageView>
-   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="631.0" layoutY="669.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="388.0" layoutY="573.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Road/white.png" />
       </image>
    </ImageView>
-   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="762.0" layoutY="669.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="519.0" layoutY="573.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Road/white.png" />
       </image>
    </ImageView>
-   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="893.0" layoutY="669.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="650.0" layoutY="573.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Road/white.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road11" fitHeight="54.0" fitWidth="54.0" layoutX="474.0" layoutY="204.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
+   <ImageView fx:id="road11" fitHeight="54.0" fitWidth="54.0" layoutX="231.0" layoutY="108.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
       <image>
          <Image url="@../../../Assets/Road/white.png" />
       </image>
