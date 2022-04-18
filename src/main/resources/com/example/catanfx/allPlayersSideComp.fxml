@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="1021.0" prefWidth="431.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.catanfx.Controllers.allPlayersSideComp">
+   <children>
+      <GridPane prefHeight="1019.0" prefWidth="423.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="423.0" minWidth="10.0" prefWidth="423.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="203.0" minWidth="0.0" prefWidth="0.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Pane fx:id="pane0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Rectangle fx:id="rect0" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="218.0" layoutX="29.0" layoutY="15.0" stroke="BLACK" strokeType="INSIDE" width="372.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="74.0" layoutX="104.0" layoutY="26.0" stroke="BLACK" strokeType="INSIDE" width="208.0" />
+                  <Text fx:id="text0" layoutX="73.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player: 1" textAlignment="CENTER" wrappingWidth="259.9518127441406">
+                     <font>
+                        <Font size="49.0" />
+                     </font>
+                  </Text>
+                  <TextArea fx:id="textArea0" editable="false" layoutX="28.0" layoutY="108.0" prefHeight="128.0" prefWidth="373.0" text="Resource Cards: 1&#10;Development Cards: 1 &#10;Victory Points: 1">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </TextArea>
+               </children>
+            </Pane>
+            <Pane fx:id="pane1" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <children>
+                  <Rectangle fx:id="rect1" arcHeight="5.0" arcWidth="5.0" fill="#0bf224" height="218.0" layoutX="29.0" layoutY="15.0" stroke="BLACK" strokeType="INSIDE" width="372.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="74.0" layoutX="104.0" layoutY="26.0" stroke="BLACK" strokeType="INSIDE" width="208.0" />
+                  <Text fx:id="text1" layoutX="73.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player: 1" textAlignment="CENTER" wrappingWidth="259.9518127441406">
+                     <font>
+                        <Font size="49.0" />
+                     </font>
+                  </Text>
+                  <TextArea fx:id="textArea1" editable="false" layoutX="28.0" layoutY="108.0" prefHeight="128.0" prefWidth="373.0" text="Resource Cards: 1&#10;Development Cards: 1 &#10;Victory Points: 1">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </TextArea>
+               </children>
+            </Pane>
+            <Pane fx:id="pane2" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+               <children>
+                  <Rectangle fx:id="rect2" arcHeight="5.0" arcWidth="5.0" fill="#f67e15" height="218.0" layoutX="29.0" layoutY="15.0" stroke="BLACK" strokeType="INSIDE" width="372.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="74.0" layoutX="104.0" layoutY="26.0" stroke="BLACK" strokeType="INSIDE" width="208.0" />
+                  <Text fx:id="text2" layoutX="73.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player: 1" textAlignment="CENTER" wrappingWidth="259.9518127441406">
+                     <font>
+                        <Font size="49.0" />
+                     </font>
+                  </Text>
+                  <TextArea fx:id="textArea2" editable="false" layoutX="28.0" layoutY="108.0" prefHeight="128.0" prefWidth="373.0" text="Resource Cards: 1&#10;Development Cards: 1 &#10;Victory Points: 1">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </TextArea>
+               </children>
+            </Pane>
+            <Pane fx:id="pane3" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+               <children>
+                  <Rectangle fx:id="rect3" arcHeight="5.0" arcWidth="5.0" fill="#e10000" height="218.0" layoutX="29.0" layoutY="15.0" stroke="BLACK" strokeType="INSIDE" width="372.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="74.0" layoutX="104.0" layoutY="26.0" stroke="BLACK" strokeType="INSIDE" width="208.0" />
+                  <Text fx:id="text3" layoutX="73.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player: 1" textAlignment="CENTER" wrappingWidth="259.9518127441406">
+                     <font>
+                        <Font size="49.0" />
+                     </font>
+                  </Text>
+                  <TextArea fx:id="textArea3" editable="false" layoutX="28.0" layoutY="108.0" prefHeight="128.0" prefWidth="373.0" text="Resource Cards: 1&#10;Development Cards: 1 &#10;Victory Points: 1">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </TextArea>
+               </children>
+            </Pane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
