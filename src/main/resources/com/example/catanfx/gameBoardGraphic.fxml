@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane dividerPositions="0.23878923766816143, 0.7337443946188341" focusTraversable="true" prefHeight="1023.0" prefWidth="1786.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.catanfx.Controllers.GameBoardGraphicController">
+   <items>
+      <AnchorPane prefHeight="1021.0" prefWidth="431.0">
+         <children>
+            <fx:include fx:id="allPlayersSideComp" source="allPlayersSideComp.fxml" />
+         </children>
+      </AnchorPane>
+      <AnchorPane centerShape="false" prefHeight="1001.0" prefWidth="1284.0">
+         <fx:include fx:id="gameBoard" source="gameBoard.fxml" />
+      </AnchorPane>
+      <AnchorPane prefHeight="1021.0" prefWidth="462.0" />
+   </items>
+</SplitPane>
