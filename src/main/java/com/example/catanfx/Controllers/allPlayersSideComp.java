@@ -1,8 +1,10 @@
 package com.example.catanfx.Controllers;
 import com.example.catanfx.GamePieces.GameState;
 import com.example.catanfx.GamePieces.Player;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
@@ -31,10 +33,18 @@ public class allPlayersSideComp implements Initializable {
     private TextArea textArea2;
     @FXML
     private TextArea textArea3;
+    @FXML
+    private Button inventory0;
+    @FXML
+    private Button inventory1;
+    @FXML
+    private Button inventory2;
+    @FXML
+    private Button inventory3;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-       if(GameState.getAllPlayers().size()==3){pane3.setVisible(false);}
+       if(GameState.getAllPlayers().size()==3){pane3.setDisable(true);pane3.setVisible(false);}
        updatePane0();
        updatePane1();
        updatePane2();
@@ -119,6 +129,23 @@ public class allPlayersSideComp implements Initializable {
         }
         String text = "Resource Cards: " + p.getRC().size() + "\n" + "Development Cards: " + p.getDC().size() + "\n" + "Points: " + p.getPoints();
         textArea3.setText(text);
+    }
+
+    @FXML
+    void openInventory(ActionEvent event) {
+        Button b = (Button)event.getSource();
+        if(b.equals(inventory0)){
+            System.out.println("Inventory 0");
+        }
+        else if(b.equals(inventory1)){
+            System.out.println("Inventory 1");
+        }
+        else if(b.equals(inventory2)){
+            System.out.println("Inventory 2");
+        }
+        else if(b.equals(inventory3)){
+            System.out.println("Inventory 3");
+        }
     }
 
 }
