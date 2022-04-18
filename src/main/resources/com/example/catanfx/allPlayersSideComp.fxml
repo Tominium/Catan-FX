@@ -44,7 +44,7 @@
                <children>
                   <Rectangle fx:id="rect1" arcHeight="5.0" arcWidth="5.0" fill="#0bf224" height="218.0" layoutX="29.0" layoutY="15.0" stroke="BLACK" strokeType="INSIDE" width="372.0" />
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="74.0" layoutX="104.0" layoutY="26.0" stroke="BLACK" strokeType="INSIDE" width="208.0" />
-                  <Text fx:id="text1" layoutX="73.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player: 1" textAlignment="CENTER" wrappingWidth="259.9518127441406">
+                  <Text fx:id="text1" layoutX="73.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player: 2" textAlignment="CENTER" wrappingWidth="259.9518127441406">
                      <font>
                         <Font size="49.0" />
                      </font>
@@ -60,7 +60,7 @@
                <children>
                   <Rectangle fx:id="rect2" arcHeight="5.0" arcWidth="5.0" fill="#f67e15" height="218.0" layoutX="29.0" layoutY="15.0" stroke="BLACK" strokeType="INSIDE" width="372.0" />
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="74.0" layoutX="104.0" layoutY="26.0" stroke="BLACK" strokeType="INSIDE" width="208.0" />
-                  <Text fx:id="text2" layoutX="73.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player: 1" textAlignment="CENTER" wrappingWidth="259.9518127441406">
+                  <Text fx:id="text2" layoutX="73.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player: 3" textAlignment="CENTER" wrappingWidth="259.9518127441406">
                      <font>
                         <Font size="49.0" />
                      </font>
@@ -76,7 +76,7 @@
                <children>
                   <Rectangle fx:id="rect3" arcHeight="5.0" arcWidth="5.0" fill="#e10000" height="218.0" layoutX="29.0" layoutY="15.0" stroke="BLACK" strokeType="INSIDE" width="372.0" />
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="74.0" layoutX="104.0" layoutY="26.0" stroke="BLACK" strokeType="INSIDE" width="208.0" />
-                  <Text fx:id="text3" layoutX="73.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player: 1" textAlignment="CENTER" wrappingWidth="259.9518127441406">
+                  <Text fx:id="text3" layoutX="73.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player: 4" textAlignment="CENTER" wrappingWidth="259.9518127441406">
                      <font>
                         <Font size="49.0" />
                      </font>
