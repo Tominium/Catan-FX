@@ -1,5 +1,6 @@
 package com.example.catanfx.Controllers;
 
+import com.example.catanfx.GamePieces.GameState;
 import com.example.catanfx.GamePieces.HelpMenu;
 import com.example.catanfx.HelloApplication;
 import javafx.event.ActionEvent;
@@ -46,6 +47,7 @@ public class MainMenuController implements Initializable {
             alert.showAndWait();
         }
         else{
+            new GameState(choice.getValue());
             HelloApplication.changeScene("gameBoardGraphic.fxml");
         }
     }

@@ -47,7 +47,7 @@ public class allPlayersSideComp implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-       // if(GameState.getAllPlayers().size()==3){pane3.setVisible(false);}
+       if(GameState.getAllPlayers().size()==3){pane3.setVisible(false);}
 
     }
 
