@@ -11,7 +11,7 @@
     <children>
         <ImageView fitHeight="463.0" fitWidth="837.0" pickOnBounds="true">
             <image>
-                <Image url="@../../../Assets/Images/ezgif.com-gif-maker.gif" />
+                <Image url="@../../../Assets/Images/CoolPic.jpg" />
             </image>
         </ImageView>
         <Button id="startButton" fx:id="startButton" layoutX="368.0" layoutY="247.0" mnemonicParsing="false" onAction="#startGame" text="Start Game">

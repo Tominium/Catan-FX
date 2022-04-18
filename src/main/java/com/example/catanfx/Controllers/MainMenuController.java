@@ -1,7 +1,7 @@
 package com.example.catanfx.Controllers;
 
+import com.example.catanfx.GamePieces.HelpMenu;
 import com.example.catanfx.HelloApplication;
-import com.example.catanfx.HelpMenu;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -46,7 +46,7 @@ public class MainMenuController implements Initializable {
             alert.showAndWait();
         }
         else{
-            HelloApplication.changeScene("gameBoard.fxml");
+            HelloApplication.changeScene("gameBoardGraphic.fxml");
         }
     }
 
