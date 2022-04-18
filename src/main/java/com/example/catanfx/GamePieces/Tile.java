@@ -1,4 +1,6 @@
-package com.example.catanfx;
+package com.example.catanfx.GamePieces;
+
+import com.example.catanfx.GamePieces.Misc.Token;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Polygon;
 import javafx.scene.image.Image;

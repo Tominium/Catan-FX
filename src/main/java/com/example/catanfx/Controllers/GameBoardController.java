@@ -1,6 +1,6 @@
 package com.example.catanfx.Controllers;
 
-import com.example.catanfx.Tile;
+import com.example.catanfx.GamePieces.Tile;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.image.Image;

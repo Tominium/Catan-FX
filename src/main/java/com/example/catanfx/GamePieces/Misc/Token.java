@@ -1,9 +1,5 @@
-package com.example.catanfx;
-
-import javax.imageio.ImageIO;
-import java.awt.*;
+package com.example.catanfx.GamePieces.Misc;
 import javafx.scene.image.Image;
-import java.io.IOException;
 
 public class Token {
 

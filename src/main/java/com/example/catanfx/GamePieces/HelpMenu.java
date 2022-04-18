@@ -1,4 +1,5 @@
-package com.example.catanfx;
+package com.example.catanfx.GamePieces;
+
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.awt.*;
