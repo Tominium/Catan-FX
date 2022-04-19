@@ -1,7 +1,6 @@
 package com.example.catanfx.Controllers;
 
 import com.example.catanfx.GamePieces.GameState;
-import com.example.catanfx.GamePieces.HelpMenu;
 import com.example.catanfx.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -54,6 +53,5 @@ public class MainMenuController implements Initializable {
 
     @FXML
     public void helpMenu(ActionEvent actionEvent) {
-        new HelpMenu();
     }
 }
