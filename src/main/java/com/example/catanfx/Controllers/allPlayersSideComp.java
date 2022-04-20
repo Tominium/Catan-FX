@@ -1,6 +1,7 @@
 package com.example.catanfx.Controllers;
 import com.example.catanfx.GamePieces.GameState;
 import com.example.catanfx.GamePieces.Player;
+import com.example.catanfx.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -135,7 +136,7 @@ public class allPlayersSideComp implements Initializable {
     void openInventory(ActionEvent event) {
         Button b = (Button)event.getSource();
         if(b.equals(inventory0)){
-            System.out.println("Inventory 0");
+            HelloApplication.changeScene("playerInventory.fxml");
         }
         else if(b.equals(inventory1)){
             System.out.println("Inventory 1");
