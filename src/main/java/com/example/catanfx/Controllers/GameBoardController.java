@@ -55,24 +55,6 @@ public class GameBoardController implements Initializable {
     @FXML
     private Polygon tile19;
 
-    @FXML
-    private ImageView road1;
-
-    @FXML
-    private ImageView road2;
-
-    @FXML
-    private ImageView road3;
-
-    @FXML
-    private ImageView road4;
-
-    @FXML
-    private ImageView road5;
-
-    @FXML
-    private ImageView road6;
-
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
