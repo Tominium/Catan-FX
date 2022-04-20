@@ -17,6 +17,7 @@ public class HelloApplication extends Application {
         primaryStage = stage;
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("mainMenu.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
+        scene.getStylesheets().add(HelloApplication.class.getResource("/CSS/bootstrap2.css").toExternalForm());
         primaryStage.setTitle("Settlers Of Catan");
         primaryStage.setScene(scene);
         primaryStage.show();
