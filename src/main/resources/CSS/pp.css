@@ -1,0 +1,72 @@
+.btn {
+    -fx-text-alignment: center;
+    vertical-align: middle;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-text-fill: black;
+    -fx-background-color: #53B3E2;
+    -fx-border-color: black;
+}
+
+.scroll-bar:vertical .track{
+    -fx-background-color : white;
+    -fx-border-color :transparent;
+    -fx-background-radius : 0.0em;
+    -fx-border-radius :2.0em;
+}
+
+#logScrollPane .scroll-bar:vertical .track{
+    -fx-background-color : #e5e4e7;
+    }
+
+.scroll-bar:vertical .increment-button ,
+.scroll-bar:vertical .decrement-button {
+    -fx-background-color :transparent;
+    -fx-background-radius : 0.0em;
+    -fx-padding :0.0 10.0 0.0 0.0;
+
+}
+
+ .scroll-bar .increment-arrow,
+ .scroll-bar .decrement-arrow{
+    -fx-shape : " ";
+    -fx-padding :0.15em 0.0;
+}
+
+ .scroll-bar:vertical .increment-arrow,
+ .scroll-bar:vertical .decrement-arrow{
+    -fx-shape : " ";
+    -fx-padding :0.0 0.15em;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color : #d1d1d1;
+    -fx-background-insets : 2.0, 0.0, 0.0;
+    -fx-background-radius : 2.0em;
+}
+
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color :derive(#4D4C4F,10.0%);
+    -fx-background-insets : 2.0, 0.0, 0.0;
+    -fx-background-radius : 2.0em;
+}
+
+.text-field {
+    -fx-prompt-text-fill: grey;
+}
+
+#rules {
+    -fx-border-color: grey;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-background-radius: 0;
+}
+
+#rules:focused {
+    -fx-background-color: -fx-focus-color, -fx-background;
+}
+
+#namefield {
+    -fx-focus-color: transparent;
+}
