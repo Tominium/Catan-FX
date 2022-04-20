@@ -43,7 +43,7 @@ public class Player {
     public void upgradeStruct(Structure s){
         for(int i=0; i<structures.size(); i++){
             if(structures.get(i).equals(s)){
-                structures.set(i, new City("City", s.getColor(), s.getPos()));
+                structures.set(i, new City("City", s.getColor(), s.getImage()));
                 return;
             }
         }
