@@ -4,13 +4,20 @@ import com.example.catanfx.GamePieces.Player;
 import com.example.catanfx.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -136,7 +143,17 @@ public class allPlayersSideComp implements Initializable {
     void openInventory(ActionEvent event) {
         Button b = (Button)event.getSource();
         if(b.equals(inventory0)){
-            HelloApplication.changeScene("playerInventory.fxml");
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/catanfx/playerInventory.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root1));
+                stage.show();
+            } catch(Exception e) {
+                e.printStackTrace();
+            }
+
+            //HelloApplication.changeScene("playerInventory.fxml");
         }
         else if(b.equals(inventory1)){
             System.out.println("Inventory 1");
