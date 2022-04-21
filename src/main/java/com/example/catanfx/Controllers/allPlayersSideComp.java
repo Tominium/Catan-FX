@@ -1,4 +1,5 @@
 package com.example.catanfx.Controllers;
+import com.example.catanfx.GamePieces.Cards.ResourceCard;
 import com.example.catanfx.GamePieces.GameState;
 import com.example.catanfx.GamePieces.Player;
 import com.example.catanfx.HelloApplication;
@@ -12,6 +13,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -21,6 +23,7 @@ import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.LinkedList;
 import java.util.ResourceBundle;
 
 public class allPlayersSideComp implements Initializable {
@@ -141,6 +144,12 @@ public class allPlayersSideComp implements Initializable {
         textArea3.setText(text);
     }
 
+    public void updateInventory(Player p){
+        LinkedList<ResourceCard> hand = p.getRC();
+        ImageView iv = new ImageView();
+
+    }
+
     @FXML
     void openInventory(ActionEvent event) {
         Button b = (Button)event.getSource();
@@ -150,6 +159,8 @@ public class allPlayersSideComp implements Initializable {
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root1));
+                stage.initModality(Modality.APPLICATION_MODAL);
+                stage.setResizable(false);
                 stage.show();
             } catch(Exception e) {
                 e.printStackTrace();
@@ -163,6 +174,8 @@ public class allPlayersSideComp implements Initializable {
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root1));
+                stage.initModality(Modality.APPLICATION_MODAL);
+                stage.setResizable(false);
                 stage.show();
             } catch(Exception e) {
                 e.printStackTrace();
@@ -174,6 +187,8 @@ public class allPlayersSideComp implements Initializable {
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root1));
+                stage.initModality(Modality.APPLICATION_MODAL);
+                stage.setResizable(false);
                 stage.show();
             } catch(Exception e) {
                 e.printStackTrace();
@@ -185,6 +200,8 @@ public class allPlayersSideComp implements Initializable {
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root1));
+                stage.initModality(Modality.APPLICATION_MODAL);
+                stage.setResizable(false);
                 stage.show();
             } catch(Exception e) {
                 e.printStackTrace();
