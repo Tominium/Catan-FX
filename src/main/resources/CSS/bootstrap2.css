@@ -58,7 +58,7 @@
 .button {
     -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border-color, -fx-inner-border-color, -fx-body-color;
     -fx-background-insets: 0px -1px -1px 0px, 0px, 0px, 1px;
-    -fx-background-radius: 3px, 2px, 2px, 1px;
+    -fx-background-radius: 3px;
     /*-fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em;*/
 }
 .button:hover {
