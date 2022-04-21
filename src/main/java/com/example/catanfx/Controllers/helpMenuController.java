@@ -13,14 +13,10 @@ public class helpMenuController {
 
     @FXML
     void nextPage(ActionEvent event) {
-
-
     }
     @FXML
     void previousPage(ActionEvent event) {
-
     }
-
 }
 
 
