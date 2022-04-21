@@ -6,9 +6,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
@@ -156,13 +158,37 @@ public class allPlayersSideComp implements Initializable {
             //HelloApplication.changeScene("playerInventory.fxml");
         }
         else if(b.equals(inventory1)){
-            System.out.println("Inventory 1");
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/catanfx/playerInventory.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root1));
+                stage.show();
+            } catch(Exception e) {
+                e.printStackTrace();
+            }
         }
         else if(b.equals(inventory2)){
-            System.out.println("Inventory 2");
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/catanfx/playerInventory.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root1));
+                stage.show();
+            } catch(Exception e) {
+                e.printStackTrace();
+            }
         }
         else if(b.equals(inventory3)){
-            System.out.println("Inventory 3");
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/catanfx/playerInventory.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root1));
+                stage.show();
+            } catch(Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 
