@@ -1,6 +1,7 @@
 package com.example.catanfx.Controllers;
 
 import com.example.catanfx.GamePieces.GameState;
+import com.example.catanfx.GamePieces.HelpMenu;
 import com.example.catanfx.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -57,14 +58,7 @@ public class MainMenuController implements Initializable {
 
     @FXML
     public void helpMenu(ActionEvent actionEvent) {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/catanfx/helpMenu.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root1));
-            stage.show();
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
+     //display help menu class
+        new HelpMenu();
     }
 }

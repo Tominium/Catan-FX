@@ -7,7 +7,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="593.0" prefWidth="1009.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.catanfx.Controllers.helpMenuController">
    <children>
-      <Button fx:id="nButton" alignment="TOP_CENTER" layoutX="818.0" layoutY="554.0" mnemonicParsing="false" onAction="#nextPage" prefHeight="25.0" prefWidth="177.0" text="Next" textAlignment="CENTER" />
+      <Button fx:id="nButton" alignment="TOP_CENTER" layoutX="818.0" layoutY="554.0" mnemonicParsing="false" onAction="#displayImage" prefHeight="25.0" prefWidth="177.0" text="Next" textAlignment="CENTER" />
       <ImageView fitHeight="527.0" fitWidth="468.0" layoutX="97.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Assets/Images/0002.jpg" />
