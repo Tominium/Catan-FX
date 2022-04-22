@@ -67,6 +67,8 @@
 
 .button:armed {
     -fx-background-color: #3daee6, #3daee6, #3daee6, #3daee6;
+    -fx-border-width: 5px;
+    -fx-border-color: #ff0000;
 }
 
 /**** Disabled Items ****/

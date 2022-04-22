@@ -36,7 +36,7 @@ public class ResourceCard {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ResourceCard that = (ResourceCard) o;
-        return that.getType().equals(getType());
+        return that.getType().toLowerCase().equals(getType().toLowerCase());
     }
 
     @Override
