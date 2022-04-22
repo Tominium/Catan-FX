@@ -14,6 +14,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.ImageView;
+import javafx.scene.image.PixelWriter;
+import javafx.scene.image.WritableImage;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -21,6 +23,10 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import javax.imageio.ImageIO;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.LinkedList;
@@ -147,6 +153,9 @@ public class allPlayersSideComp implements Initializable {
     public void updateInventory(Player p){
         LinkedList<ResourceCard> hand = p.getRC();
         ImageView iv = new ImageView();
+        for(int i = 0; i < hand.size(); i++){
+            ImageView IV = BFtoIV(hand.get(i).getFront());
+        }
 
     }
 
@@ -207,6 +216,24 @@ public class allPlayersSideComp implements Initializable {
                 e.printStackTrace();
             }
         }
+    }
+
+    public ImageView BFtoIV(BufferedImage b){
+        BufferedImage bf = b;
+
+        WritableImage wr = null;
+        if (bf != null) {
+            wr = new WritableImage(bf.getWidth(), bf.getHeight());
+            PixelWriter pw = wr.getPixelWriter();
+            for (int x = 0; x < bf.getWidth(); x++) {
+                for (int y = 0; y < bf.getHeight(); y++) {
+                    pw.setArgb(x, y, bf.getRGB(x, y));
+                }
+            }
+        }
+
+        ImageView imView = new ImageView(wr);
+        return imView;
     }
 
 }
