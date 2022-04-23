@@ -1,5 +1,6 @@
 package com.example.catanfx.Controllers;
 
+import com.example.catanfx.GamePieces.GameState;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -23,7 +24,8 @@ public class generalInfoCompController {
             stage.setScene(new Scene(root1));
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.setResizable(false);
-            stage.show();
+            stage.showAndWait();
+            GameState.trade(tradeController.sel, tradeController.getTrade()[0], tradeController.getTrade()[1]);
         } catch(Exception e) {
             e.printStackTrace();
         }
