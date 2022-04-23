@@ -15,7 +15,7 @@ public class GameState {
 
     public static ArrayList<Player> players;
     private static ArrayList<Tile> tiles;
-    private static int turnNumber;
+    public static int turnNumber;
     //private GameBoardGraphic fullGameBoard;
     //private ResourceDeck rcDeck;
     //private DevelopmentDeck dcDeck;
@@ -28,7 +28,7 @@ public class GameState {
         tiles = new ArrayList<Tile>();
 //        dice = new Dice();
 //        thief = new Thief();
-        Frame f = new Frame();
+        turnNumber = 0;
     }
 
     private static void setColors(int num){
@@ -71,20 +71,14 @@ public class GameState {
         return turnNumber+1;
     }
 
-    public static void canTrade(Player p, ResourceCard[] send, ResourceCard[] receive) {
-        if (players.get(turnNumber).getRC().contains(send)&&p.getRC().contains(receive))
-            trade(p, send, receive);
-    }
-
-
-    public static void trade(Player p, ResourceCard[] send, ResourceCard[] receive) {
-        for(int i = 0; i < send.length; i++) {
-            p.addRC(send[i]);
-            players.get(turnNumber).removeRCard(send[i]);
+    public static void trade(Player p, ArrayList<ResourceCard> send, ArrayList<ResourceCard> receive) {
+        for(int i = 0; i < send.size(); i++) {
+            p.addRC(send.get(i));
+            players.get(turnNumber).removeRCard(send.get(i));
         }
-        for(int i = 0; i < receive.length; i++) {
-            players.get(turnNumber).addRC(receive[i]);
-            p.removeRCard(receive[i]);
+        for(int i = 0; i < receive.size(); i++) {
+            players.get(turnNumber).addRC(receive.get(i));
+            p.removeRCard(receive.get(i));
         }
     }
 
