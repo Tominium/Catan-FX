@@ -21,7 +21,7 @@ public class Tile{
     public Tile(Polygon p){
         if(nameList==null){
             nameList = new ArrayList<>();
-            nameList.addAll(List.of(new String[]{"forest", "forest", "forest", "forest", "brick", "brick", "brick", "desert", "field", "field", "field", "field", "pasture", "pasture", "pasture", "pasture", "ore", "ore", "ore"}));
+            nameList.addAll(List.of(new String[]{"lumber", "lumber", "lumber", "lumber", "brick", "brick", "brick", "desert", "grain", "grain", "grain", "grain", "wool", "wool", "wool", "wool", "ore", "ore", "ore"}));
             Collections.shuffle(nameList);
             Collections.shuffle(nameList);
             Collections.shuffle(nameList);
