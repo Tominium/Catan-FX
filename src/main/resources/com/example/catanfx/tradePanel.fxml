@@ -25,29 +25,29 @@
       </ImageView>
       <ImageView fx:id="card2" fitHeight="150.0" fitWidth="200.0" layoutX="172.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../Assets/Resource_Cards/brick.png" />
+            <Image url="@../../../Assets/Resource_Cards/lumber.png" />
          </image>
       </ImageView>
       <ImageView fx:id="card3" fitHeight="150.0" fitWidth="200.0" layoutX="301.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../Assets/Resource_Cards/brick.png" />
+            <Image url="@../../../Assets/Resource_Cards/grain.png" />
          </image>
       </ImageView>
       <ImageView fx:id="card4" fitHeight="150.0" fitWidth="200.0" layoutX="104.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../Assets/Resource_Cards/brick.png" />
+            <Image url="@../../../Assets/Resource_Cards/wool.png" />
          </image>
       </ImageView>
       <ImageView fx:id="card5" fitHeight="150.0" fitWidth="200.0" layoutX="226.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../Assets/Resource_Cards/brick.png" />
+            <Image url="@../../../Assets/Resource_Cards/ore.png" />
          </image>
       </ImageView>
-      <ComboBox fx:id="cb1" layoutX="79.0" layoutY="214.0" prefHeight="25.0" prefWidth="2.0" promptText="0" />
-      <ComboBox fx:id="cb2" layoutX="201.0" layoutY="214.0" prefHeight="25.0" prefWidth="2.0" promptText="0" />
-      <ComboBox fx:id="cb3" layoutX="330.0" layoutY="214.0" prefHeight="25.0" prefWidth="2.0" promptText="0" />
-      <ComboBox fx:id="cb4" layoutX="133.0" layoutY="427.0" prefHeight="25.0" prefWidth="2.0" promptText="0" />
-      <ComboBox fx:id="cb5" layoutX="255.0" layoutY="427.0" prefHeight="25.0" prefWidth="2.0" promptText="0" />
+      <ComboBox fx:id="cb1" layoutX="69.0" layoutY="214.0" prefHeight="25.0" prefWidth="60.0" />
+      <ComboBox fx:id="cb2" layoutX="196.0" layoutY="214.0" prefHeight="25.0" prefWidth="60.0" />
+      <ComboBox fx:id="cb3" layoutX="325.0" layoutY="214.0" prefHeight="25.0" prefWidth="60.0" />
+      <ComboBox fx:id="cb4" layoutX="128.0" layoutY="427.0" prefHeight="25.0" prefWidth="60.0" />
+      <ComboBox fx:id="cb5" layoutX="250.0" layoutY="427.0" prefHeight="25.0" prefWidth="60.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="427.0" layoutX="457.0" layoutY="46.0" stroke="BLACK" strokeType="INSIDE" width="376.0" />
       <Text layoutX="511.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Trade Partner" wrappingWidth="267.46484375">
          <font>
@@ -74,7 +74,12 @@
             <Font size="30.0" />
          </font>
       </RadioButton>
-      <Button fx:id="next" layoutX="393.0" layoutY="478.0" mnemonicParsing="false" text="Next">
+      <Button fx:id="next" layoutX="393.0" layoutY="478.0" mnemonicParsing="false" onAction="#next" text="Next">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="trade" disable="true" layoutX="393.0" layoutY="478.0" mnemonicParsing="false" onAction="#complete" text="Trade" visible="false">
          <font>
             <Font size="21.0" />
          </font>
