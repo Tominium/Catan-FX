@@ -133,14 +133,6 @@ public class tradeController implements Initializable {
             alert.showAndWait();
             return;
         }
-        if((cb1.getValue()==null&&cb2.getValue()==null&&cb3.getValue()==null&&cb4.getValue()==null&&cb5.getValue()==null)||(cb1.getValue()==0&&cb2.getValue()==0&&cb3.getValue()==0&&cb4.getValue()==0&&cb5.getValue()==0)){
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Error");
-            alert.setHeaderText(null);
-            alert.setContentText("Please Select Resources To Trade");
-            alert.showAndWait();
-            return;
-        }
         recordTrade();
         cb1.getItems().clear();cb2.getItems().clear();cb3.getItems().clear();cb4.getItems().clear();cb5.getItems().clear();
         p1.setDisable(true);p2.setDisable(true);p3.setDisable(true);p4.setDisable(true);
