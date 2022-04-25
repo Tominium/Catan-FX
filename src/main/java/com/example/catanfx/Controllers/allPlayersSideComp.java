@@ -67,6 +67,10 @@ public class allPlayersSideComp implements Initializable {
        updatePane0();
        updatePane1();
        updatePane2();
+       textArea0.textProperty().addListener((obs,old,niu)->{
+           System.out.println("Doggies");
+       });
+
        if(pane3.isVisible()){updatePane3();}
     }
 
@@ -154,11 +158,10 @@ public class allPlayersSideComp implements Initializable {
         LinkedList<ResourceCard> hand = p.getRC();
         ImageView iv = new ImageView();
         for(int i = 0; i < hand.size(); i++){
-            ImageView IV = BFtoIV(hand.get(i).getFront());
+            ImageView IV = hand.get(i).getFront();
         }
 
     }
-
     @FXML
     void openInventory(ActionEvent event) {
         Button b = (Button)event.getSource();
@@ -216,24 +219,6 @@ public class allPlayersSideComp implements Initializable {
                 e.printStackTrace();
             }
         }
-    }
-
-    public ImageView BFtoIV(BufferedImage b){
-        BufferedImage bf = b;
-
-        WritableImage wr = null;
-        if (bf != null) {
-            wr = new WritableImage(bf.getWidth(), bf.getHeight());
-            PixelWriter pw = wr.getPixelWriter();
-            for (int x = 0; x < bf.getWidth(); x++) {
-                for (int y = 0; y < bf.getHeight(); y++) {
-                    pw.setArgb(x, y, bf.getRGB(x, y));
-                }
-            }
-        }
-
-        ImageView imView = new ImageView(wr);
-        return imView;
     }
 
 }

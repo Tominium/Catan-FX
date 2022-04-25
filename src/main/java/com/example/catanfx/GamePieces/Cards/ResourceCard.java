@@ -1,29 +1,23 @@
 package com.example.catanfx.GamePieces.Cards;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.IOException;
+import javafx.scene.image.ImageView;
 import java.util.Objects;
 
 public class ResourceCard {
     private String rc;
-    private BufferedImage rcFront;
-    private BufferedImage rcBack;
+    private ImageView rcFront;
+    private ImageView rcBack;
 
     public ResourceCard(String rcName) {
         rc = rcName;
-        try {
-            rcFront = ImageIO.read(ResourceCard.class.getResource("/Assets/Resource_Cards/"+rc+".png"));
-            rcBack = ImageIO.read(ResourceCard.class.getResource("/Assets/Resource_Cards/back.png"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        rcFront = new ImageView(ResourceCard.class.getResource("/Assets/Resource_Cards/"+rc+".png").toExternalForm());
+        rcBack = new ImageView(ResourceCard.class.getResource("/Assets/Resource_Cards/back.png").toExternalForm());
     }
 
-    public BufferedImage getFront(){
+    public ImageView getFront(){
         return rcFront;
     }
-    public BufferedImage getBack(){
+    public ImageView getBack(){
         return rcBack;
     }
 
