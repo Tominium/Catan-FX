@@ -218,4 +218,10 @@ public class allPlayersSideComp implements Initializable {
         }
     }
 
+    public void updateAll() {
+        updatePane0();
+        updatePane1();
+        updatePane2();
+        updatePane3();
+    }
 }
