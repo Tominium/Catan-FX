@@ -70,7 +70,6 @@ public class allPlayersSideComp implements Initializable {
        textArea0.textProperty().addListener((obs,old,niu)->{
            System.out.println("Doggies");
        });
-
        if(pane3.isVisible()){updatePane3();}
     }
 
@@ -171,6 +170,7 @@ public class allPlayersSideComp implements Initializable {
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root1));
+                updateInventory(GameState.getAllPlayers().get(0));
                 stage.initModality(Modality.APPLICATION_MODAL);
                 stage.setResizable(false);
                 stage.show();
