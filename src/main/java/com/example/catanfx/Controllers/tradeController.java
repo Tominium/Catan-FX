@@ -98,21 +98,24 @@ public class tradeController implements Initializable {
     }
 
     private void showCards(LinkedList<ResourceCard> arr){
+        cb1.getItems().clear();cb2.getItems().clear();cb3.getItems().clear();cb4.getItems().clear();cb5.getItems().clear();
+        cb1.getItems().add(0);cb2.getItems().add(0);cb3.getItems().add(0);cb4.getItems().add(0);cb5.getItems().add(0);
         if(arr.contains(new ResourceCard("brick"))){
-            IntStream.rangeClosed(0, Collections.frequency(arr, new ResourceCard("brick"))).boxed().forEach(cb1.getItems()::add);
+            IntStream.rangeClosed(1, Collections.frequency(arr, new ResourceCard("brick"))).boxed().forEach(cb1.getItems()::add);
         }
         if(arr.contains(new ResourceCard("lumber"))){
-            IntStream.rangeClosed(0, Collections.frequency(arr, new ResourceCard("lumber"))).boxed().forEach(cb2.getItems()::add);
+            IntStream.rangeClosed(1, Collections.frequency(arr, new ResourceCard("lumber"))).boxed().forEach(cb2.getItems()::add);
         }
         if(arr.contains(new ResourceCard("grain"))){
-            IntStream.rangeClosed(0, Collections.frequency(arr, new ResourceCard("grain"))).boxed().forEach(cb3.getItems()::add);
+            IntStream.rangeClosed(1, Collections.frequency(arr, new ResourceCard("grain"))).boxed().forEach(cb3.getItems()::add);
         }
         if(arr.contains(new ResourceCard("wool"))){
-            IntStream.rangeClosed(0, Collections.frequency(arr, new ResourceCard("wool"))).boxed().forEach(cb4.getItems()::add);
+            IntStream.rangeClosed(1, Collections.frequency(arr, new ResourceCard("wool"))).boxed().forEach(cb4.getItems()::add);
         }
         if(arr.contains(new ResourceCard("ore"))){
-            IntStream.rangeClosed(0, Collections.frequency(arr, new ResourceCard("ore"))).boxed().forEach(cb5.getItems()::add);
+            IntStream.rangeClosed(1, Collections.frequency(arr, new ResourceCard("ore"))).boxed().forEach(cb5.getItems()::add);
         }
+        cb1.getSelectionModel().select(0);cb2.getSelectionModel().select(0);cb3.getSelectionModel().select(0);cb4.getSelectionModel().select(0);cb5.getSelectionModel().select(0);
     }
 
     private void deselect(RadioButton temp){
@@ -124,7 +127,14 @@ public class tradeController implements Initializable {
 
     @FXML
     void next(ActionEvent event) {
-
+        if((cb1.getValue()==null&&cb2.getValue()==null&&cb3.getValue()==null&&cb4.getValue()==null&&cb5.getValue()==null)||(cb1.getValue()==0&&cb2.getValue()==0&&cb3.getValue()==0&&cb4.getValue()==0&&cb5.getValue()==0)){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText("Please Select Resources To Trade");
+            alert.showAndWait();
+            return;
+        }
         if(!p1.isSelected()&&!p2.isSelected()&&!p3.isSelected()&&!p4.isSelected()){
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Error");
@@ -134,7 +144,6 @@ public class tradeController implements Initializable {
             return;
         }
         recordTrade();
-        cb1.getItems().clear();cb2.getItems().clear();cb3.getItems().clear();cb4.getItems().clear();cb5.getItems().clear();
         p1.setDisable(true);p2.setDisable(true);p3.setDisable(true);p4.setDisable(true);
         next.setDisable(true); next.setVisible(false); trade.setDisable(false); trade.setVisible(true);
         showCards(sel.getRC());
