@@ -1,16 +1,48 @@
 package com.example.catanfx.Controllers;
 
 import com.example.catanfx.GamePieces.GameState;
+import com.example.catanfx.GamePieces.Misc.Dice;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceDialog;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+
 public class generalInfoCompController {
+
+    @FXML
+    private Button buildButton;
+
+    @FXML
+    private Button buyButton;
+
+    @FXML
+    private Group dice;
+
+    @FXML
+    private ImageView dice1;
+
+    @FXML
+    private ImageView dice2;
+
+    @FXML
+    private Button nextButton;
+
+    @FXML
+    private Button passDiceButton;
 
     @FXML
     private Button tradeButton;
@@ -30,5 +62,54 @@ public class generalInfoCompController {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    void rollDice(MouseEvent event) {
+        int[] arr = Dice.rollDice();
+        dice1.setImage(new Image(generalInfoCompController.class.getResource("/Assets/Dice/" + arr[0] + ".png").toExternalForm()));
+        dice2.setImage(new Image(generalInfoCompController.class.getResource("/Assets/Dice/" + arr[1] + ".png").toExternalForm()));
+        dice.setVisible(false); dice.setDisable(true);
+        tradeButton.setVisible(true); tradeButton.setDisable(false);
+        nextButton.setDisable(false); nextButton.setVisible(true);
+    }
+
+    @FXML
+    void build(ActionEvent event) {
+        String [] arrayData = {"Road", "Settlement", "City"};
+        List<String> dialogData = Arrays.asList(arrayData);
+
+        ChoiceDialog dialog = new ChoiceDialog(dialogData.get(0), dialogData);
+        dialog.setGraphic(null);
+        dialog.setTitle("Building");
+        dialog.setHeaderText("Select Structure To Build");
+
+        Optional<String> result = dialog.showAndWait();
+        String selected = "cancelled.";
+
+        if (result.isPresent()) {
+
+            selected = result.get();
+        }
+    }
+
+    @FXML
+    void buyCard(ActionEvent event) {
+
+    }
+
+    @FXML
+    void passDice(ActionEvent event) {
+
+    }
+
+    @FXML
+    void next(ActionEvent event) {
+        tradeButton.setVisible(false); tradeButton.setDisable(true);
+        nextButton.setVisible(false); nextButton.setDisable(true);
+        buildButton.setVisible(true); buildButton.setDisable(false);
+        buyButton.setVisible(true); buyButton.setDisable(false);
+        passDiceButton.setVisible(true); passDiceButton.setDisable(false);
+    }
+
 
 }
