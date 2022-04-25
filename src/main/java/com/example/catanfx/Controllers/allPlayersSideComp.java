@@ -67,9 +67,6 @@ public class allPlayersSideComp implements Initializable {
        updatePane0();
        updatePane1();
        updatePane2();
-       textArea0.textProperty().addListener((obs,old,niu)->{
-           System.out.println("Doggies");
-       });
 
        if(pane3.isVisible()){updatePane3();}
     }
