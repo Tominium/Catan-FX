@@ -2,6 +2,7 @@ package com.example.catanfx.GamePieces;
 
 import com.example.catanfx.GamePieces.Cards.DevelopmentCard;
 import com.example.catanfx.GamePieces.Cards.ResourceCard;
+import com.example.catanfx.GamePieces.Misc.Dice;
 import com.example.catanfx.GamePieces.Structures.Structure;
 
 import javax.sound.sampled.Port;
@@ -29,6 +30,7 @@ public class GameState {
 //        dice = new Dice();
 //        thief = new Thief();
         turnNumber = 0;
+        new Dice();
     }
 
     private static void setColors(int num){
