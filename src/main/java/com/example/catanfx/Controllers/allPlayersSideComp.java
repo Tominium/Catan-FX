@@ -164,14 +164,8 @@ public class allPlayersSideComp implements Initializable {
         textArea3.setText(text);
     }
 
-    public void updateInventory(Player p){
-        LinkedList<ResourceCard> hand = p.getRC();
-        ImageView iv = new ImageView();
-        for(int i = 0; i < hand.size(); i++){
-            ImageView IV = hand.get(i).getFront();
-        }
 
-    }
+
     @FXML
     void openInventory(ActionEvent event) {
         Button b = (Button)event.getSource();
@@ -184,6 +178,7 @@ public class allPlayersSideComp implements Initializable {
                 stage.initModality(Modality.APPLICATION_MODAL);
                 stage.setResizable(false);
                 stage.show();
+                InventoryController.updateInventory();
             } catch(Exception e) {
                 e.printStackTrace();
             }

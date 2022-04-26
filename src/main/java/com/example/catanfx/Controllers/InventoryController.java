@@ -18,6 +18,8 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 import java.awt.image.BufferedImage;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.LinkedList;
 
@@ -30,7 +32,7 @@ public class InventoryController {
     private AnchorPane pane;
 
     @FXML
-    private GridPane IVpics;
+    private static GridPane pics;
 
     Stage stage;
 
@@ -39,22 +41,30 @@ public class InventoryController {
         stage.close();
     }
 
-    public void updateInventory(Player p){
-        LinkedList<ResourceCard> hand = p.getRC();
-        int index = 0;
-        for(int i = 0; i < 5; i++){
-            for(int j = 0; j < 4; j++){
-                if(hand.get(index).getFront() != null) {
-                    IVpics.add(hand.get(index).getFront(), i, j);
-                    index++;
-                }
-                else{
-                    break;
-                }
-            }
-        }
-        System.out.println("bruh");
+    public static void updateInventory(){
+        //LinkedList<ResourceCard> hand = p.getRC();
+//        int index = 0;
+//        for(int i = 0; i < 5; i++){
+//            for(int j = 0; j < 4; j++){
+//                if(hand.get(index).getFront() != null) {
+//                    IVpics.add(hand.get(index).getFront(), i, j);
+//                    index++;
+//                }
+//                else{
+//                    break;
+//                }
+//            }
+//        }
+//        System.out.println("bruh");
 
+        Image image = null;
+        try {
+            image = new Image(new FileInputStream("Assets/Resource_Cards/brick.png"));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        pics.getChildren().add(new ImageView(image));
+        System.out.println("So this works huh");
 
 
     }

@@ -20,7 +20,7 @@
             <Font size="33.0" />
          </font>
       </Button>
-      <GridPane layoutX="54.0" layoutY="107.0" prefHeight="516.0" prefWidth="955.0">
+      <GridPane fx:id="pics" layoutX="54.0" layoutY="107.0" prefHeight="516.0" prefWidth="955.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
