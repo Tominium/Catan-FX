@@ -7,10 +7,7 @@ import com.example.catanfx.GamePieces.Structures.Structure;
 
 import javax.sound.sampled.Port;
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.LinkedList;
+import java.util.*;
 
 public class GameState {
 
@@ -84,35 +81,47 @@ public class GameState {
         }
     }
 
-    public static boolean canBuild(Structure s) {
+    public static boolean canBuild(String s) {
 
-        ResourceCard[] road = new ResourceCard[2];
-        road[0] = new ResourceCard("brick");
-        road[1] = new ResourceCard("lumber");
-        ResourceCard[] settlement = new ResourceCard[4];
-        road[0] = new ResourceCard("brick");
-        road[1] = new ResourceCard("lumber");
-        road[2] = new ResourceCard("wheat");
-        road[3] = new ResourceCard("wool");
         ResourceCard[] city = new ResourceCard[5];
-        road[0] = new ResourceCard("wheat");
-        road[1] = new ResourceCard("wheat");
-        road[2] = new ResourceCard("ore");
-        road[3] = new ResourceCard("ore");
-        road[4] = new ResourceCard("ore");
+        city[0] = new ResourceCard("grain");
+        city[1] = new ResourceCard("grain");
+        city[2] = new ResourceCard("ore");
+        city[3] = new ResourceCard("ore");
+        city[4] = new ResourceCard("ore");
 
 
-        if(s.getType().equals("road"))
-            return hasResources(road);
-        else if(s.getType().equals("settlement"))
-            return hasResources(settlement);
+        if(s.equals("road"))
+            return canBuildRoad();
+        else if(s.equals("settlement"))
+            return canBuildStructure();
         else
-            return hasResources(city);
+            return canBuildStructure();
     }
 
-    public static boolean hasResources(ResourceCard[] needed) {
-        return players.get(turnNumber).getRC().contains(needed);
+    private static boolean canBuildRoad(){
+        LinkedList<ResourceCard> rc = players.get(turnNumber).getRC();
+        if(Collections.frequency(rc, new ResourceCard("brick")) < 1){return false;}
+        if(Collections.frequency(rc, new ResourceCard("lumber")) < 1) {return  false;}
+        return true;
     }
+
+    private static boolean canBuildStructure(){
+        LinkedList<ResourceCard> rc = players.get(turnNumber).getRC();
+        if(Collections.frequency(rc, new ResourceCard("brick")) < 1){return false;}
+        if(Collections.frequency(rc, new ResourceCard("lumber")) < 1) {return  false;}
+        if(Collections.frequency(rc, new ResourceCard("grain")) < 1) {return  false;}
+        if(Collections.frequency(rc, new ResourceCard("wool")) < 1) {return  false;}
+        return true;
+    }
+
+    private static boolean canBuildCity(){
+        LinkedList<ResourceCard> rc = players.get(turnNumber).getRC();
+        if(Collections.frequency(rc, new ResourceCard("grain")) < 2){return false;}
+        if(Collections.frequency(rc, new ResourceCard("ore")) < 3) {return  false;}
+        return true;
+    }
+
 
     public static boolean canPlace(Structure s, Point p) {
         return true;

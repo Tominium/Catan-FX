@@ -10,6 +10,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 
 
+
 public class HelpMenu extends JFrame {
 
     private JButton previousPageBtn;
@@ -49,9 +50,10 @@ public class HelpMenu extends JFrame {
         setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         setResizable(false);
         setLayout(null);
-        //change the background color
+        //set a background image
+        setContentPane(new JLabel(new ImageIcon("src/main/resources/Assets/Images/CoolPic.jpg")));
+        setVisible(true);
         getContentPane().setBackground(new Color(245, 245, 220));
-
         JLabel page = new JLabel(new ImageIcon(page1));
         page.setBounds(0, 0, 800, 600);
         add(page);
@@ -59,9 +61,10 @@ public class HelpMenu extends JFrame {
 
 
         previousPageBtn = new JButton("Previous Page");
-        previousPageBtn.setBackground(Color.WHITE);
-        previousPageBtn.setFont(new Font("Times New Roman", Font.PLAIN, 10));
-        previousPageBtn.setBounds(10, 550, 100, 20);
+        previousPageBtn.setBackground(new Color(245, 245, 220));
+        previousPageBtn.setFont(new Font("Architect's Daughter", Font.PLAIN, 11));
+        previousPageBtn.setBounds(10, 550, 110, 30);
+        previousPageBtn.setBorder(BorderFactory.createLineBorder(new Color(245, 245, 220)));
         previousPageBtn.addActionListener(new ActionListener() {
                                               public void actionPerformed(ActionEvent e) {
                                                   if (currentPage == page1) {
@@ -104,10 +107,10 @@ public class HelpMenu extends JFrame {
         );
         add(previousPageBtn);
         nextPageBtn = new JButton("Next Page");
-        //change the button color
-        nextPageBtn.setBackground(Color.WHITE);
-        nextPageBtn.setBounds(680, 550, 100, 20);
-        nextPageBtn.setFont(new Font("Times New Roman", Font.PLAIN, 10));
+        nextPageBtn.setBackground(new Color(245, 245, 220));
+        nextPageBtn.setBounds(670, 550, 100, 30);
+        nextPageBtn.setFont(new Font("Architect's Daughter", Font.PLAIN, 13));
+        nextPageBtn.setBorder(BorderFactory.createLineBorder(new Color(245, 245, 220)));
         nextPageBtn.addActionListener(new ActionListener() {
                                           public void actionPerformed(ActionEvent e) {
                                               if (currentPage == page1) {
@@ -147,6 +150,7 @@ public class HelpMenu extends JFrame {
                                           }
                                       }
         );
+
         add(nextPageBtn);
         setTitle("Help");
         setSize(800, 650);
@@ -154,7 +158,6 @@ public class HelpMenu extends JFrame {
         setResizable(false);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setLayout(null);
-        setBackground(Color.BLACK);
         add(page);
         add(nextPageBtn);
         add(previousPageBtn);
