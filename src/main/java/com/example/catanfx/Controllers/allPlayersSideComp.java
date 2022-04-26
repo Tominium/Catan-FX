@@ -3,6 +3,7 @@ import com.example.catanfx.GamePieces.Cards.ResourceCard;
 import com.example.catanfx.GamePieces.GameState;
 import com.example.catanfx.GamePieces.Player;
 import com.example.catanfx.HelloApplication;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -67,8 +68,20 @@ public class allPlayersSideComp implements Initializable {
        updatePane0();
        updatePane1();
        updatePane2();
-
        if(pane3.isVisible()){updatePane3();}
+
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                Runnable updater = new Runnable() {
+                    @Override
+                    public void run() {updateAll();}};
+                while (true) {try {Thread.sleep(500);} catch (InterruptedException ex) {}
+                    Platform.runLater(updater);}}});
+        // don't let thread prevent JVM shutdown
+        thread.setDaemon(true);
+        thread.start();
+
     }
 
     public void updatePane0(){
