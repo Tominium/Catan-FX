@@ -230,6 +230,8 @@ public class allPlayersSideComp implements Initializable {
         updatePane0();
         updatePane1();
         updatePane2();
-        updatePane3();
+        if(pane3.isVisible()){
+            updatePane3();
+        }
     }
 }
