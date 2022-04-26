@@ -163,16 +163,7 @@ public class tradeController implements Initializable {
             return;
         }
         recordTrade();
-
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("allPlayersSideComp.fxml"));
-        try {
-            Parent root = loader.load();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        allPlayersSideComp dac = loader.getController();
-        dac.updateAll();
-
+        GameState.trade(tradeController.sel, tradeController.getTrade()[0], tradeController.getTrade()[1]);
         Stage stage = (Stage) trade.getScene().getWindow();
         // do what you have to do
         stage.close();

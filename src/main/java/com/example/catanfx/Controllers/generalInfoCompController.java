@@ -2,6 +2,7 @@ package com.example.catanfx.Controllers;
 
 import com.example.catanfx.GamePieces.GameState;
 import com.example.catanfx.GamePieces.Misc.Dice;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,6 +18,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -57,7 +59,6 @@ public class generalInfoCompController {
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.setResizable(false);
             stage.showAndWait();
-            GameState.trade(tradeController.sel, tradeController.getTrade()[0], tradeController.getTrade()[1]);
         } catch(Exception e) {
             e.printStackTrace();
         }
