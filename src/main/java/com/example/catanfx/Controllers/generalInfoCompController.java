@@ -2,7 +2,6 @@ package com.example.catanfx.Controllers;
 
 import com.example.catanfx.GamePieces.GameState;
 import com.example.catanfx.GamePieces.Misc.Dice;
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,8 +16,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-
-import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -88,8 +85,16 @@ public class generalInfoCompController {
         String selected = "cancelled.";
 
         if (result.isPresent()) {
-
-            selected = result.get();
+            if(GameState.canBuild((result.get().toLowerCase()))){
+                System.out.println("TEOEWOWOWO");
+            }
+            else{
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Error");
+                alert.setHeaderText(null);
+                alert.setContentText("Not Enough Resources to Build " + result.get() + "!");
+                alert.showAndWait();
+            }
         }
     }
 
