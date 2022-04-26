@@ -178,7 +178,6 @@ public class allPlayersSideComp implements Initializable {
                 stage.initModality(Modality.APPLICATION_MODAL);
                 stage.setResizable(false);
                 stage.show();
-                InventoryController.updateInventory();
             } catch(Exception e) {
                 e.printStackTrace();
             }
