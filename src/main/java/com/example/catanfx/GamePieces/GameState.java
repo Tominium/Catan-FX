@@ -96,7 +96,7 @@ public class GameState {
         else if(s.equals("settlement"))
             return canBuildStructure();
         else
-            return canBuildStructure();
+            return canBuildCity();
     }
 
     private static boolean canBuildRoad(){
