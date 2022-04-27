@@ -1,5 +1,6 @@
 package com.example.catanfx.Controllers;
 
+import com.example.catanfx.GamePieces.Structures.Road;
 import com.example.catanfx.GamePieces.Tile;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -10,6 +11,7 @@ import javafx.scene.shape.Polygon;
 
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class GameBoardController implements Initializable {
@@ -200,12 +202,16 @@ public class GameBoardController implements Initializable {
     @FXML
     private ImageView road9;
 
+    private ArrayList<Road> roadsMap;
+
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         tilesBook = new ArrayList<>();
         tilesBook.add(new Tile(tile1));tilesBook.add(new Tile(tile2));tilesBook.add(new Tile(tile3));tilesBook.add(new Tile(tile4));tilesBook.add(new Tile(tile5));tilesBook.add(new Tile(tile6));tilesBook.add(new Tile(tile7));tilesBook.add(new Tile(tile8));tilesBook.add(new Tile(tile9));tilesBook.add(new Tile(tile10));tilesBook.add(new Tile(tile11));tilesBook.add(new Tile(tile12));tilesBook.add(new Tile(tile13));tilesBook.add(new Tile(tile14));tilesBook.add(new Tile(tile15));tilesBook.add(new Tile(tile16));tilesBook.add(new Tile(tile17));tilesBook.add(new Tile(tile18));tilesBook.add(new Tile(tile19));
+        roadsMap = new ArrayList<>();
+        roadsMap.add(new Road("road", "white", road1));
     }
 
     public void highlightRoad(MouseEvent mouseEvent) {
