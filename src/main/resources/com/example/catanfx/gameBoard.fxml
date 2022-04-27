@@ -403,4 +403,274 @@
          <Image url="@../../../Assets/Road/white.png" />
       </image>
    </ImageView>
+   <ImageView fx:id="sett13" fitHeight="54.0" fitWidth="46.0" layoutX="523.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett11" fitHeight="54.0" fitWidth="46.0" layoutX="393.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett9" fitHeight="54.0" fitWidth="46.0" layoutX="262.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett6" fitHeight="54.0" fitWidth="46.0" layoutX="587.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett4" fitHeight="54.0" fitWidth="46.0" layoutX="457.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett5" fitHeight="54.0" fitWidth="46.0" layoutX="523.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett2" fitHeight="54.0" fitWidth="46.0" layoutX="324.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett3" fitHeight="54.0" fitWidth="46.0" layoutX="393.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett7" fitHeight="54.0" fitWidth="46.0" layoutX="654.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett14" fitHeight="54.0" fitWidth="46.0" layoutX="587.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett15" fitHeight="54.0" fitWidth="46.0" layoutX="654.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett17" fitHeight="54.0" fitWidth="46.0" layoutX="133.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett39" fitHeight="54.0" fitWidth="46.0" layoutX="197.0" layoutY="512.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett29" fitHeight="54.0" fitWidth="46.0" layoutX="197.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett18" fitHeight="54.0" fitWidth="46.0" layoutX="197.0" layoutY="303.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett8" fitHeight="46.0" fitWidth="46.0" layoutX="197.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett10" fitHeight="54.0" fitWidth="46.0" layoutX="329.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett27" fitHeight="54.0" fitWidth="46.0" layoutX="782.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett25" fitHeight="54.0" fitWidth="46.0" layoutX="654.0" layoutY="323.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett23" fitHeight="54.0" fitWidth="46.0" layoutX="522.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett21" fitHeight="54.0" fitWidth="46.0" layoutX="392.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett19" fitHeight="54.0" fitWidth="46.0" layoutX="265.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett30" fitHeight="54.0" fitWidth="46.0" layoutX="264.0" layoutY="406.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett28" fitHeight="54.0" fitWidth="46.0" layoutX="133.0" layoutY="406.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett33" fitHeight="54.0" fitWidth="46.0" layoutX="457.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett31" fitHeight="54.0" fitWidth="46.0" layoutX="327.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett32" fitHeight="54.0" fitWidth="46.0" layoutX="393.0" layoutY="406.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett12" fitHeight="54.0" fitWidth="46.0" layoutX="457.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett38" fitHeight="54.0" fitWidth="46.0" layoutX="786.0" layoutY="406.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett37" fitHeight="54.0" fitWidth="46.0" layoutX="718.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett36" fitHeight="54.0" fitWidth="46.0" layoutX="654.0" layoutY="406.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett35" fitHeight="54.0" fitWidth="46.0" layoutX="587.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett34" fitHeight="54.0" fitWidth="46.0" layoutX="522.0" layoutY="406.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett44" fitHeight="54.0" fitWidth="46.0" layoutX="523.0" layoutY="535.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett43" fitHeight="54.0" fitWidth="46.0" layoutX="457.0" layoutY="512.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett42" fitHeight="54.0" fitWidth="46.0" layoutX="392.0" layoutY="535.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett41" fitHeight="54.0" fitWidth="46.0" layoutX="327.0" layoutY="512.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett40" fitHeight="54.0" fitWidth="46.0" layoutX="262.0" layoutY="535.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett45" fitHeight="54.0" fitWidth="46.0" layoutX="587.0" layoutY="512.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett47" fitHeight="54.0" fitWidth="46.0" layoutX="718.0" layoutY="512.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett46" fitHeight="54.0" fitWidth="46.0" layoutX="654.0" layoutY="535.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett50" fitHeight="54.0" fitWidth="46.0" layoutX="393.0" layoutY="615.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett49" fitHeight="54.0" fitWidth="46.0" layoutX="327.0" layoutY="638.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett48" fitHeight="54.0" fitWidth="46.0" layoutX="259.0" layoutY="615.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett54" fitHeight="54.0" fitWidth="46.0" layoutX="654.0" layoutY="615.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett53" fitHeight="54.0" fitWidth="46.0" layoutX="587.0" layoutY="638.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett52" fitHeight="54.0" fitWidth="46.0" layoutX="523.0" layoutY="615.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett51" fitHeight="54.0" fitWidth="46.0" layoutX="457.0" layoutY="638.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett16" fitHeight="54.0" fitWidth="46.0" layoutX="718.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett20" fitHeight="54.0" fitWidth="46.0" layoutX="327.0" layoutY="303.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett22" fitHeight="54.0" fitWidth="46.0" layoutX="457.0" layoutY="303.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett24" fitHeight="54.0" fitWidth="46.0" layoutX="587.0" layoutY="303.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett26" fitHeight="54.0" fitWidth="46.0" layoutX="718.0" layoutY="303.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sett1" fitHeight="54.0" fitWidth="46.0" layoutX="265.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Settlement/white.png" />
+      </image>
+   </ImageView>
 </AnchorPane>

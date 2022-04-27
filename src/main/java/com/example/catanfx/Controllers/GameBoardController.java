@@ -1,5 +1,6 @@
 package com.example.catanfx.Controllers;
 
+import com.example.catanfx.GamePieces.Structures.Road;
 import com.example.catanfx.GamePieces.Tile;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -10,6 +11,7 @@ import javafx.scene.shape.Polygon;
 
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class GameBoardController implements Initializable {
@@ -200,12 +202,17 @@ public class GameBoardController implements Initializable {
     @FXML
     private ImageView road9;
 
+    private ArrayList<Road> roadsMap;
+
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         tilesBook = new ArrayList<>();
         tilesBook.add(new Tile(tile1));tilesBook.add(new Tile(tile2));tilesBook.add(new Tile(tile3));tilesBook.add(new Tile(tile4));tilesBook.add(new Tile(tile5));tilesBook.add(new Tile(tile6));tilesBook.add(new Tile(tile7));tilesBook.add(new Tile(tile8));tilesBook.add(new Tile(tile9));tilesBook.add(new Tile(tile10));tilesBook.add(new Tile(tile11));tilesBook.add(new Tile(tile12));tilesBook.add(new Tile(tile13));tilesBook.add(new Tile(tile14));tilesBook.add(new Tile(tile15));tilesBook.add(new Tile(tile16));tilesBook.add(new Tile(tile17));tilesBook.add(new Tile(tile18));tilesBook.add(new Tile(tile19));
+        roadsMap = new ArrayList<>();
+        roadsMap.add(new Road("road", "white", road1));roadsMap.add(new Road("road", "white", road2));roadsMap.add(new Road("road", "white", road3));roadsMap.add(new Road("road", "white", road4));roadsMap.add(new Road("road", "white", road5));roadsMap.add(new Road("road", "white", road6));roadsMap.add(new Road("road", "white", road7));roadsMap.add(new Road("road", "white", road8));roadsMap.add(new Road("road", "white", road9));roadsMap.add(new Road("road", "white", road10));roadsMap.add(new Road("road", "white", road11));roadsMap.add(new Road("road", "white", road12));roadsMap.add(new Road("road", "white", road13));roadsMap.add(new Road("road", "white", road14));roadsMap.add(new Road("road", "white", road15));roadsMap.add(new Road("road", "white", road16));roadsMap.add(new Road("road", "white", road17));roadsMap.add(new Road("road", "white", road18));roadsMap.add(new Road("road", "white", road19));roadsMap.add(new Road("road", "white", road20));roadsMap.add(new Road("road", "white", road21));roadsMap.add(new Road("road", "white", road22));roadsMap.add(new Road("road", "white", road23));roadsMap.add(new Road("road", "white", road24));roadsMap.add(new Road("road", "white", road25));roadsMap.add(new Road("road", "white", road26));roadsMap.add(new Road("road", "white", road27));roadsMap.add(new Road("road", "white", road28));roadsMap.add(new Road("road", "white", road29));roadsMap.add(new Road("road", "white", road30));roadsMap.add(new Road("road", "white", road31));roadsMap.add(new Road("road", "white", road32));roadsMap.add(new Road("road", "white", road33));roadsMap.add(new Road("road", "white", road34));roadsMap.add(new Road("road", "white", road35));roadsMap.add(new Road("road", "white", road36));roadsMap.add(new Road("road", "white", road37));roadsMap.add(new Road("road", "white", road38));roadsMap.add(new Road("road", "white", road39));roadsMap.add(new Road("road", "white", road40));roadsMap.add(new Road("road", "white", road41));roadsMap.add(new Road("road", "white", road42));roadsMap.add(new Road("road", "white", road43));roadsMap.add(new Road("road", "white", road44));roadsMap.add(new Road("road", "white", road45));roadsMap.add(new Road("road", "white", road46));roadsMap.add(new Road("road", "white", road47));roadsMap.add(new Road("road", "white", road48));roadsMap.add(new Road("road", "white", road49));roadsMap.add(new Road("road", "white", road50));roadsMap.add(new Road("road", "white", road51));roadsMap.add(new Road("road", "white", road52));roadsMap.add(new Road("road", "white", road53));roadsMap.add(new Road("road", "white", road54));roadsMap.add(new Road("road", "white", road55));roadsMap.add(new Road("road", "white", road56));roadsMap.add(new Road("road", "white", road57));roadsMap.add(new Road("road", "white", road58));roadsMap.add(new Road("road", "white", road59));roadsMap.add(new Road("road", "white", road60));roadsMap.add(new Road("road", "white", road61));roadsMap.add(new Road("road", "white", road62));roadsMap.add(new Road("road", "white", road63));roadsMap.add(new Road("road", "white", road64));roadsMap.add(new Road("road", "white", road65));roadsMap.add(new Road("road", "white", road66));roadsMap.add(new Road("road", "white", road67));roadsMap.add(new Road("road", "white", road68));roadsMap.add(new Road("road", "white", road69));roadsMap.add(new Road("road", "white", road70));roadsMap.add(new Road("road", "white", road71));roadsMap.add(new Road("road", "white", road72));
+
     }
 
     public void highlightRoad(MouseEvent mouseEvent) {
