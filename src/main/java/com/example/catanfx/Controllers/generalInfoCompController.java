@@ -10,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ChoiceDialog;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -66,7 +67,7 @@ public class generalInfoCompController {
         int[] arr = Dice.rollDice();
         dice1.setImage(new Image(generalInfoCompController.class.getResource("/Assets/Dice/" + arr[0] + ".png").toExternalForm()));
         dice2.setImage(new Image(generalInfoCompController.class.getResource("/Assets/Dice/" + arr[1] + ".png").toExternalForm()));
-        dice.setVisible(false); dice.setDisable(true);
+        dice.setDisable(true);
         tradeButton.setVisible(true); tradeButton.setDisable(false);
         nextButton.setDisable(false); nextButton.setVisible(true);
     }
@@ -100,12 +101,24 @@ public class generalInfoCompController {
 
     @FXML
     void buyCard(ActionEvent event) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Confirmation Dialog");
+        alert.setContentText("Please Confirm Your Purchase of A Development Card");
 
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.get() == ButtonType.OK){
+            // ... user chose OK
+        } else {
+            // ... user chose CANCEL or closed the dialog
+        }
     }
 
     @FXML
     void passDice(ActionEvent event) {
-
+        buildButton.setVisible(false); buildButton.setDisable(true);
+        buyButton.setVisible(false); buyButton.setDisable(true);
+        passDiceButton.setVisible(false); passDiceButton.setDisable(true);
+        dice.setDisable(false);
     }
 
     @FXML
