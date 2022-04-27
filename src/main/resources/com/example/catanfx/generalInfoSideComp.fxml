@@ -41,17 +41,17 @@
             <Image url="@../../../Assets/DevCards/back.png" />
          </image>
       </ImageView>
-      <Group fx:id="dice" layoutY="678.0">
+      <Group fx:id="dice" layoutX="2.0" layoutY="430.0">
          <children>
             <Rectangle id="rectangle" arcHeight="5.0" arcWidth="5.0" height="238.0" layoutX="-2.0" stroke="BLACK" strokeType="INSIDE" width="369.0" />
             <Circle fill="#ff1f1f" layoutX="182.0" layoutY="50.0" onMousePressed="#rollDice" radius="50.0" stroke="BLACK" strokeType="INSIDE" />
             <Text layoutX="159.0" layoutY="54.0" onMousePressed="#rollDice" strokeType="OUTSIDE" strokeWidth="0.0" text="Roll Dice" />
-            <ImageView fx:id="dice1" fitHeight="150.0" fitWidth="200.0" layoutX="10.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="dice2" fitHeight="150.0" fitWidth="200.0" layoutX="208.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../Assets/Dice/1.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="dice2" fitHeight="150.0" fitWidth="200.0" layoutX="208.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="dice1" fitHeight="150.0" fitWidth="200.0" layoutX="10.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../Assets/Dice/1.png" />
                </image>
