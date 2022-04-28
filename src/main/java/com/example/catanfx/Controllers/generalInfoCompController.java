@@ -87,7 +87,7 @@ public class generalInfoCompController {
 
         if (result.isPresent()) {
             if(GameState.canBuild((result.get().toLowerCase()))){
-                System.out.println("TEOEWOWOWO");
+                GameBoardController.setCanBuild();
             }
             else{
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);

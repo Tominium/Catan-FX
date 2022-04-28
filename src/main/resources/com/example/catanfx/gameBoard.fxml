@@ -43,634 +43,634 @@
     <Polygon fx:id="hexSea4" fill="DODGERBLUE" layoutX="814.0" layoutY="355.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
     <Polygon fx:id="hexSea3" fill="DODGERBLUE" layoutX="749.0" layoutY="253.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
     <Polygon fx:id="harbour2" fill="DODGERBLUE" layoutX="685.0" layoutY="153.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-   <ImageView fx:id="road1" fitHeight="54.0" fitWidth="54.0" layoutX="258.0" layoutY="158.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="road1" fitHeight="54.0" fitWidth="54.0" layoutX="258.0" layoutY="158.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road2" fitHeight="54.0" fitWidth="54.0" layoutX="388.0" layoutY="158.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="road2" fitHeight="54.0" fitWidth="54.0" layoutX="388.0" layoutY="158.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road3" fitHeight="54.0" fitWidth="54.0" layoutX="519.0" layoutY="158.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="road3" fitHeight="54.0" fitWidth="54.0" layoutX="519.0" layoutY="158.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road4" fitHeight="54.0" fitWidth="54.0" layoutX="650.0" layoutY="158.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="road4" fitHeight="54.0" fitWidth="54.0" layoutX="650.0" layoutY="158.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road5" fitHeight="54.0" fitWidth="54.0" layoutX="193.0" layoutY="260.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="road5" fitHeight="54.0" fitWidth="54.0" layoutX="193.0" layoutY="260.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road6" fitHeight="54.0" fitWidth="54.0" layoutX="323.0" layoutY="260.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="road6" fitHeight="54.0" fitWidth="54.0" layoutX="323.0" layoutY="260.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road7" fitHeight="54.0" fitWidth="54.0" layoutX="453.0" layoutY="261.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="road7" fitHeight="54.0" fitWidth="54.0" layoutX="453.0" layoutY="261.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road8" fitHeight="54.0" fitWidth="54.0" layoutX="583.0" layoutY="260.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="road8" fitHeight="54.0" fitWidth="54.0" layoutX="583.0" layoutY="260.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road9" fitHeight="54.0" fitWidth="54.0" layoutX="714.0" layoutY="260.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="road9" fitHeight="54.0" fitWidth="54.0" layoutX="714.0" layoutY="260.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road10" fitHeight="54.0" fitWidth="54.0" layoutX="129.0" layoutY="361.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="road10" fitHeight="54.0" fitWidth="54.0" layoutX="129.0" layoutY="361.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road11" fitHeight="54.0" fitWidth="54.0" layoutX="260.0" layoutY="364.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="road11" fitHeight="54.0" fitWidth="54.0" layoutX="260.0" layoutY="364.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road12" fitHeight="54.0" fitWidth="54.0" layoutX="388.0" layoutY="361.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="road12" fitHeight="54.0" fitWidth="54.0" layoutX="388.0" layoutY="361.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road13" fitHeight="54.0" fitWidth="54.0" layoutX="518.0" layoutY="366.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="road13" fitHeight="54.0" fitWidth="54.0" layoutX="518.0" layoutY="366.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road14" fitHeight="54.0" fitWidth="54.0" layoutX="650.0" layoutY="366.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="road14" fitHeight="54.0" fitWidth="54.0" layoutX="650.0" layoutY="366.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road15" fitHeight="54.0" fitWidth="54.0" layoutX="779.0" layoutY="363.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="road15" fitHeight="54.0" fitWidth="54.0" layoutX="779.0" layoutY="363.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road16" fitHeight="54.0" fitWidth="54.0" layoutX="193.0" layoutY="466.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="road16" fitHeight="54.0" fitWidth="54.0" layoutX="193.0" layoutY="466.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road17" fitHeight="54.0" fitWidth="54.0" layoutX="323.0" layoutY="466.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="road17" fitHeight="54.0" fitWidth="54.0" layoutX="323.0" layoutY="466.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road18" fitHeight="54.0" fitWidth="54.0" layoutX="453.0" layoutY="466.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="road18" fitHeight="54.0" fitWidth="54.0" layoutX="453.0" layoutY="466.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road19" fitHeight="54.0" fitWidth="54.0" layoutX="583.0" layoutY="466.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="road19" fitHeight="54.0" fitWidth="54.0" layoutX="583.0" layoutY="466.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road20" fitHeight="54.0" fitWidth="54.0" layoutX="714.0" layoutY="466.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="road20" fitHeight="54.0" fitWidth="54.0" layoutX="714.0" layoutY="466.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road21" fitHeight="54.0" fitWidth="54.0" layoutX="258.0" layoutY="573.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="road21" fitHeight="54.0" fitWidth="54.0" layoutX="258.0" layoutY="573.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road22" fitHeight="54.0" fitWidth="54.0" layoutX="388.0" layoutY="573.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="road22" fitHeight="54.0" fitWidth="54.0" layoutX="388.0" layoutY="573.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road23" fitHeight="54.0" fitWidth="54.0" layoutX="519.0" layoutY="573.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="road23" fitHeight="54.0" fitWidth="54.0" layoutX="519.0" layoutY="573.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road24" fitHeight="54.0" fitWidth="54.0" layoutX="650.0" layoutY="573.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="road24" fitHeight="54.0" fitWidth="54.0" layoutX="650.0" layoutY="573.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road25" fitHeight="54.0" fitWidth="54.0" layoutX="353.0" layoutY="106.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
+   <ImageView fx:id="road25" fitHeight="54.0" fitWidth="54.0" layoutX="353.0" layoutY="106.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road26" fitHeight="54.0" fitWidth="54.0" layoutX="486.0" layoutY="108.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
+   <ImageView fx:id="road26" fitHeight="54.0" fitWidth="54.0" layoutX="486.0" layoutY="108.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road27" fitHeight="54.0" fitWidth="54.0" layoutX="617.0" layoutY="109.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
+   <ImageView fx:id="road27" fitHeight="54.0" fitWidth="54.0" layoutX="617.0" layoutY="109.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road28" fitHeight="54.0" fitWidth="54.0" layoutX="549.0" layoutY="209.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
+   <ImageView fx:id="road28" fitHeight="54.0" fitWidth="54.0" layoutX="549.0" layoutY="209.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road29" fitHeight="54.0" fitWidth="54.0" layoutX="684.0" layoutY="211.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
+   <ImageView fx:id="road29" fitHeight="54.0" fitWidth="54.0" layoutX="684.0" layoutY="211.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road30" fitHeight="54.0" fitWidth="54.0" layoutX="421.0" layoutY="210.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
+   <ImageView fx:id="road30" fitHeight="54.0" fitWidth="54.0" layoutX="421.0" layoutY="210.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road31" fitHeight="54.0" fitWidth="54.0" layoutX="289.0" layoutY="210.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
+   <ImageView fx:id="road31" fitHeight="54.0" fitWidth="54.0" layoutX="289.0" layoutY="210.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road32" fitHeight="54.0" fitWidth="54.0" layoutX="486.0" layoutY="313.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
+   <ImageView fx:id="road32" fitHeight="54.0" fitWidth="54.0" layoutX="486.0" layoutY="313.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road33" fitHeight="54.0" fitWidth="54.0" layoutX="745.0" layoutY="312.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
+   <ImageView fx:id="road33" fitHeight="54.0" fitWidth="54.0" layoutX="745.0" layoutY="312.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road34" fitHeight="54.0" fitWidth="54.0" layoutX="616.0" layoutY="313.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
+   <ImageView fx:id="road34" fitHeight="54.0" fitWidth="54.0" layoutX="616.0" layoutY="313.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road35" fitHeight="54.0" fitWidth="54.0" layoutX="355.0" layoutY="312.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
+   <ImageView fx:id="road35" fitHeight="54.0" fitWidth="54.0" layoutX="355.0" layoutY="312.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road36" fitHeight="54.0" fitWidth="54.0" layoutX="225.0" layoutY="313.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
+   <ImageView fx:id="road36" fitHeight="54.0" fitWidth="54.0" layoutX="225.0" layoutY="313.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road37" fitHeight="54.0" fitWidth="54.0" layoutX="160.0" layoutY="415.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
+   <ImageView fx:id="road37" fitHeight="54.0" fitWidth="54.0" layoutX="160.0" layoutY="415.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road38" fitHeight="54.0" fitWidth="54.0" layoutX="289.0" layoutY="416.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
+   <ImageView fx:id="road38" fitHeight="54.0" fitWidth="54.0" layoutX="289.0" layoutY="416.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road39" fitHeight="54.0" fitWidth="54.0" layoutX="420.0" layoutY="416.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
+   <ImageView fx:id="road39" fitHeight="54.0" fitWidth="54.0" layoutX="420.0" layoutY="416.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road40" fitHeight="54.0" fitWidth="54.0" layoutX="551.0" layoutY="417.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
+   <ImageView fx:id="road40" fitHeight="54.0" fitWidth="54.0" layoutX="551.0" layoutY="417.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road41" fitHeight="54.0" fitWidth="54.0" layoutX="682.0" layoutY="417.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
+   <ImageView fx:id="road41" fitHeight="54.0" fitWidth="54.0" layoutX="682.0" layoutY="417.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road42" fitHeight="54.0" fitWidth="54.0" layoutX="223.0" layoutY="521.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
+   <ImageView fx:id="road42" fitHeight="54.0" fitWidth="54.0" layoutX="223.0" layoutY="521.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road43" fitHeight="54.0" fitWidth="54.0" layoutX="356.0" layoutY="521.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
+   <ImageView fx:id="road43" fitHeight="54.0" fitWidth="54.0" layoutX="356.0" layoutY="521.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road44" fitHeight="54.0" fitWidth="54.0" layoutX="485.0" layoutY="521.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
+   <ImageView fx:id="road44" fitHeight="54.0" fitWidth="54.0" layoutX="485.0" layoutY="521.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road45" fitHeight="54.0" fitWidth="54.0" layoutX="617.0" layoutY="521.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
+   <ImageView fx:id="road45" fitHeight="54.0" fitWidth="54.0" layoutX="617.0" layoutY="521.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road46" fitHeight="54.0" fitWidth="54.0" layoutX="291.0" layoutY="624.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
+   <ImageView fx:id="road46" fitHeight="54.0" fitWidth="54.0" layoutX="291.0" layoutY="624.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road47" fitHeight="54.0" fitWidth="54.0" layoutX="420.0" layoutY="624.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
+   <ImageView fx:id="road47" fitHeight="54.0" fitWidth="54.0" layoutX="420.0" layoutY="624.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road48" fitHeight="54.0" fitWidth="54.0" layoutX="551.0" layoutY="624.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
+   <ImageView fx:id="road48" fitHeight="54.0" fitWidth="54.0" layoutX="551.0" layoutY="624.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="117.9">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road49" fitHeight="54.0" fitWidth="54.0" layoutX="421.0" layoutY="313.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
+   <ImageView fx:id="road49" fitHeight="54.0" fitWidth="54.0" layoutX="421.0" layoutY="313.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road50" fitHeight="54.0" fitWidth="54.0" layoutX="289.0" layoutY="313.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
+   <ImageView fx:id="road50" fitHeight="54.0" fitWidth="54.0" layoutX="289.0" layoutY="313.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road51" fitHeight="54.0" fitWidth="54.0" layoutX="160.0" layoutY="313.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
+   <ImageView fx:id="road51" fitHeight="54.0" fitWidth="54.0" layoutX="160.0" layoutY="313.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road52" fitHeight="54.0" fitWidth="54.0" layoutX="551.0" layoutY="312.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
+   <ImageView fx:id="road52" fitHeight="54.0" fitWidth="54.0" layoutX="551.0" layoutY="312.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road53" fitHeight="54.0" fitWidth="54.0" layoutX="682.0" layoutY="313.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
+   <ImageView fx:id="road53" fitHeight="54.0" fitWidth="54.0" layoutX="682.0" layoutY="313.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road54" fitHeight="54.0" fitWidth="54.0" layoutX="226.0" layoutY="416.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
+   <ImageView fx:id="road54" fitHeight="54.0" fitWidth="54.0" layoutX="226.0" layoutY="416.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road55" fitHeight="54.0" fitWidth="54.0" layoutX="356.0" layoutY="416.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
+   <ImageView fx:id="road55" fitHeight="54.0" fitWidth="54.0" layoutX="356.0" layoutY="416.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road56" fitHeight="54.0" fitWidth="54.0" layoutX="486.0" layoutY="416.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
+   <ImageView fx:id="road56" fitHeight="54.0" fitWidth="54.0" layoutX="486.0" layoutY="416.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road57" fitHeight="54.0" fitWidth="54.0" layoutX="617.0" layoutY="416.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
+   <ImageView fx:id="road57" fitHeight="54.0" fitWidth="54.0" layoutX="617.0" layoutY="416.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road58" fitHeight="54.0" fitWidth="54.0" layoutX="746.0" layoutY="416.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
+   <ImageView fx:id="road58" fitHeight="54.0" fitWidth="54.0" layoutX="746.0" layoutY="416.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road59" fitHeight="54.0" fitWidth="54.0" layoutX="289.0" layoutY="522.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
+   <ImageView fx:id="road59" fitHeight="54.0" fitWidth="54.0" layoutX="289.0" layoutY="522.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road60" fitHeight="54.0" fitWidth="54.0" layoutX="422.0" layoutY="520.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
+   <ImageView fx:id="road60" fitHeight="54.0" fitWidth="54.0" layoutX="422.0" layoutY="520.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road61" fitHeight="54.0" fitWidth="54.0" layoutX="552.0" layoutY="521.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
+   <ImageView fx:id="road61" fitHeight="54.0" fitWidth="54.0" layoutX="552.0" layoutY="521.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road62" fitHeight="54.0" fitWidth="54.0" layoutX="683.0" layoutY="522.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
+   <ImageView fx:id="road62" fitHeight="54.0" fitWidth="54.0" layoutX="683.0" layoutY="522.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road63" fitHeight="54.0" fitWidth="54.0" layoutX="356.0" layoutY="624.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
+   <ImageView fx:id="road63" fitHeight="54.0" fitWidth="54.0" layoutX="356.0" layoutY="624.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road64" fitHeight="54.0" fitWidth="54.0" layoutX="487.0" layoutY="624.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
+   <ImageView fx:id="road64" fitHeight="54.0" fitWidth="54.0" layoutX="487.0" layoutY="624.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road65" fitHeight="54.0" fitWidth="54.0" layoutX="617.0" layoutY="624.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
+   <ImageView fx:id="road65" fitHeight="54.0" fitWidth="54.0" layoutX="617.0" layoutY="624.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road66" fitHeight="54.0" fitWidth="54.0" layoutX="224.0" layoutY="210.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
+   <ImageView fx:id="road66" fitHeight="54.0" fitWidth="54.0" layoutX="224.0" layoutY="210.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road67" fitHeight="54.0" fitWidth="54.0" layoutX="356.0" layoutY="210.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
+   <ImageView fx:id="road67" fitHeight="54.0" fitWidth="54.0" layoutX="356.0" layoutY="210.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road68" fitHeight="54.0" fitWidth="54.0" layoutX="486.0" layoutY="210.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
+   <ImageView fx:id="road68" fitHeight="54.0" fitWidth="54.0" layoutX="486.0" layoutY="210.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road69" fitHeight="54.0" fitWidth="54.0" layoutX="616.0" layoutY="210.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
+   <ImageView fx:id="road69" fitHeight="54.0" fitWidth="54.0" layoutX="616.0" layoutY="210.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road70" fitHeight="54.0" fitWidth="54.0" layoutX="290.0" layoutY="108.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
+   <ImageView fx:id="road70" fitHeight="54.0" fitWidth="54.0" layoutX="290.0" layoutY="108.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road71" fitHeight="54.0" fitWidth="54.0" layoutX="420.0" layoutY="108.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
+   <ImageView fx:id="road71" fitHeight="54.0" fitWidth="54.0" layoutX="420.0" layoutY="108.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="road72" fitHeight="54.0" fitWidth="54.0" layoutX="551.0" layoutY="108.0" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
+   <ImageView fx:id="road72" fitHeight="54.0" fitWidth="54.0" layoutX="551.0" layoutY="108.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true" rotate="62.1">
       <image>
-         <Image url="@../../../Assets/Road/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett13" fitHeight="54.0" fitWidth="46.0" layoutX="523.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett13" fitHeight="54.0" fitWidth="46.0" layoutX="523.0" layoutY="200.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett11" fitHeight="54.0" fitWidth="46.0" layoutX="393.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett11" fitHeight="54.0" fitWidth="46.0" layoutX="393.0" layoutY="200.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett9" fitHeight="54.0" fitWidth="46.0" layoutX="262.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett9" fitHeight="54.0" fitWidth="46.0" layoutX="262.0" layoutY="200.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett6" fitHeight="54.0" fitWidth="46.0" layoutX="587.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett6" fitHeight="54.0" fitWidth="46.0" layoutX="587.0" layoutY="97.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett4" fitHeight="54.0" fitWidth="46.0" layoutX="457.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett4" fitHeight="54.0" fitWidth="46.0" layoutX="457.0" layoutY="97.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett5" fitHeight="54.0" fitWidth="46.0" layoutX="523.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett5" fitHeight="54.0" fitWidth="46.0" layoutX="523.0" layoutY="120.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett2" fitHeight="54.0" fitWidth="46.0" layoutX="324.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett2" fitHeight="54.0" fitWidth="46.0" layoutX="324.0" layoutY="97.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett3" fitHeight="54.0" fitWidth="46.0" layoutX="393.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett3" fitHeight="54.0" fitWidth="46.0" layoutX="393.0" layoutY="120.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett7" fitHeight="54.0" fitWidth="46.0" layoutX="654.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett7" fitHeight="54.0" fitWidth="46.0" layoutX="654.0" layoutY="120.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett14" fitHeight="54.0" fitWidth="46.0" layoutX="587.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett14" fitHeight="54.0" fitWidth="46.0" layoutX="587.0" layoutY="223.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett15" fitHeight="54.0" fitWidth="46.0" layoutX="654.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett15" fitHeight="54.0" fitWidth="46.0" layoutX="654.0" layoutY="200.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett17" fitHeight="54.0" fitWidth="46.0" layoutX="133.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett17" fitHeight="54.0" fitWidth="46.0" layoutX="133.0" layoutY="326.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett39" fitHeight="54.0" fitWidth="46.0" layoutX="197.0" layoutY="512.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett39" fitHeight="54.0" fitWidth="46.0" layoutX="197.0" layoutY="512.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett29" fitHeight="54.0" fitWidth="46.0" layoutX="197.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett29" fitHeight="54.0" fitWidth="46.0" layoutX="197.0" layoutY="435.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett18" fitHeight="54.0" fitWidth="46.0" layoutX="197.0" layoutY="303.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett18" fitHeight="54.0" fitWidth="46.0" layoutX="197.0" layoutY="303.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett8" fitHeight="46.0" fitWidth="46.0" layoutX="197.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett8" fitHeight="46.0" fitWidth="46.0" layoutX="197.0" layoutY="223.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett10" fitHeight="54.0" fitWidth="46.0" layoutX="329.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett10" fitHeight="54.0" fitWidth="46.0" layoutX="329.0" layoutY="223.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett27" fitHeight="54.0" fitWidth="46.0" layoutX="782.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett27" fitHeight="54.0" fitWidth="46.0" layoutX="782.0" layoutY="326.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett25" fitHeight="54.0" fitWidth="46.0" layoutX="654.0" layoutY="323.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett25" fitHeight="54.0" fitWidth="46.0" layoutX="654.0" layoutY="323.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett23" fitHeight="54.0" fitWidth="46.0" layoutX="522.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett23" fitHeight="54.0" fitWidth="46.0" layoutX="522.0" layoutY="326.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett21" fitHeight="54.0" fitWidth="46.0" layoutX="392.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett21" fitHeight="54.0" fitWidth="46.0" layoutX="392.0" layoutY="326.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett19" fitHeight="54.0" fitWidth="46.0" layoutX="265.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett19" fitHeight="54.0" fitWidth="46.0" layoutX="265.0" layoutY="326.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett30" fitHeight="54.0" fitWidth="46.0" layoutX="264.0" layoutY="406.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett30" fitHeight="54.0" fitWidth="46.0" layoutX="264.0" layoutY="406.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett28" fitHeight="54.0" fitWidth="46.0" layoutX="133.0" layoutY="406.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett28" fitHeight="54.0" fitWidth="46.0" layoutX="133.0" layoutY="406.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett33" fitHeight="54.0" fitWidth="46.0" layoutX="457.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett33" fitHeight="54.0" fitWidth="46.0" layoutX="457.0" layoutY="435.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett31" fitHeight="54.0" fitWidth="46.0" layoutX="327.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett31" fitHeight="54.0" fitWidth="46.0" layoutX="327.0" layoutY="435.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett32" fitHeight="54.0" fitWidth="46.0" layoutX="393.0" layoutY="406.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett32" fitHeight="54.0" fitWidth="46.0" layoutX="393.0" layoutY="406.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett12" fitHeight="54.0" fitWidth="46.0" layoutX="457.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett12" fitHeight="54.0" fitWidth="46.0" layoutX="457.0" layoutY="223.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett38" fitHeight="54.0" fitWidth="46.0" layoutX="786.0" layoutY="406.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett38" fitHeight="54.0" fitWidth="46.0" layoutX="786.0" layoutY="406.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett37" fitHeight="54.0" fitWidth="46.0" layoutX="718.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett37" fitHeight="54.0" fitWidth="46.0" layoutX="718.0" layoutY="435.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett36" fitHeight="54.0" fitWidth="46.0" layoutX="654.0" layoutY="406.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett36" fitHeight="54.0" fitWidth="46.0" layoutX="654.0" layoutY="406.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett35" fitHeight="54.0" fitWidth="46.0" layoutX="587.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett35" fitHeight="54.0" fitWidth="46.0" layoutX="587.0" layoutY="435.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett34" fitHeight="54.0" fitWidth="46.0" layoutX="522.0" layoutY="406.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett34" fitHeight="54.0" fitWidth="46.0" layoutX="522.0" layoutY="406.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett44" fitHeight="54.0" fitWidth="46.0" layoutX="523.0" layoutY="535.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett44" fitHeight="54.0" fitWidth="46.0" layoutX="523.0" layoutY="535.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett43" fitHeight="54.0" fitWidth="46.0" layoutX="457.0" layoutY="512.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett43" fitHeight="54.0" fitWidth="46.0" layoutX="457.0" layoutY="512.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett42" fitHeight="54.0" fitWidth="46.0" layoutX="392.0" layoutY="535.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett42" fitHeight="54.0" fitWidth="46.0" layoutX="392.0" layoutY="535.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett41" fitHeight="54.0" fitWidth="46.0" layoutX="327.0" layoutY="512.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett41" fitHeight="54.0" fitWidth="46.0" layoutX="327.0" layoutY="512.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett40" fitHeight="54.0" fitWidth="46.0" layoutX="262.0" layoutY="535.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett40" fitHeight="54.0" fitWidth="46.0" layoutX="262.0" layoutY="535.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett45" fitHeight="54.0" fitWidth="46.0" layoutX="587.0" layoutY="512.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett45" fitHeight="54.0" fitWidth="46.0" layoutX="587.0" layoutY="512.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett47" fitHeight="54.0" fitWidth="46.0" layoutX="718.0" layoutY="512.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett47" fitHeight="54.0" fitWidth="46.0" layoutX="718.0" layoutY="512.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett46" fitHeight="54.0" fitWidth="46.0" layoutX="654.0" layoutY="535.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett46" fitHeight="54.0" fitWidth="46.0" layoutX="654.0" layoutY="535.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett50" fitHeight="54.0" fitWidth="46.0" layoutX="393.0" layoutY="615.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett50" fitHeight="54.0" fitWidth="46.0" layoutX="393.0" layoutY="615.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett49" fitHeight="54.0" fitWidth="46.0" layoutX="327.0" layoutY="638.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett49" fitHeight="54.0" fitWidth="46.0" layoutX="327.0" layoutY="638.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett48" fitHeight="54.0" fitWidth="46.0" layoutX="259.0" layoutY="615.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett48" fitHeight="54.0" fitWidth="46.0" layoutX="259.0" layoutY="615.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett54" fitHeight="54.0" fitWidth="46.0" layoutX="654.0" layoutY="615.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett54" fitHeight="54.0" fitWidth="46.0" layoutX="654.0" layoutY="615.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett53" fitHeight="54.0" fitWidth="46.0" layoutX="587.0" layoutY="638.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett53" fitHeight="54.0" fitWidth="46.0" layoutX="587.0" layoutY="638.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett52" fitHeight="54.0" fitWidth="46.0" layoutX="523.0" layoutY="615.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett52" fitHeight="54.0" fitWidth="46.0" layoutX="523.0" layoutY="615.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett51" fitHeight="54.0" fitWidth="46.0" layoutX="457.0" layoutY="638.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett51" fitHeight="54.0" fitWidth="46.0" layoutX="457.0" layoutY="638.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett16" fitHeight="54.0" fitWidth="46.0" layoutX="718.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett16" fitHeight="54.0" fitWidth="46.0" layoutX="718.0" layoutY="223.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett20" fitHeight="54.0" fitWidth="46.0" layoutX="327.0" layoutY="303.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett20" fitHeight="54.0" fitWidth="46.0" layoutX="327.0" layoutY="303.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett22" fitHeight="54.0" fitWidth="46.0" layoutX="457.0" layoutY="303.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett22" fitHeight="54.0" fitWidth="46.0" layoutX="457.0" layoutY="303.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett24" fitHeight="54.0" fitWidth="46.0" layoutX="587.0" layoutY="303.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett24" fitHeight="54.0" fitWidth="46.0" layoutX="587.0" layoutY="303.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett26" fitHeight="54.0" fitWidth="46.0" layoutX="718.0" layoutY="303.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett26" fitHeight="54.0" fitWidth="46.0" layoutX="718.0" layoutY="303.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett1" fitHeight="54.0" fitWidth="46.0" layoutX="265.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett1" fitHeight="54.0" fitWidth="46.0" layoutX="265.0" layoutY="120.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Settlement/white.png" />
+         <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
 </AnchorPane>
