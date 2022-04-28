@@ -1,5 +1,6 @@
 package com.example.catanfx.Controllers;
 
+import com.example.catanfx.GamePieces.Cards.DevelopmentCard;
 import com.example.catanfx.GamePieces.Cards.ResourceCard;
 import com.example.catanfx.GamePieces.Player;
 import javafx.event.ActionEvent;
@@ -25,6 +26,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.ResourceBundle;
 
@@ -51,35 +53,39 @@ public class InventoryController implements Initializable {
     @FXML
     private Label woolCount;
 
+    @FXML
+    private Label knightCount;
+
+    @FXML
+    private Label monopolyCount;
+
+    @FXML
+    private Label YoPCount;
+
     Stage stage;
+
+    private static Player p;
 
     public void exitInventory(ActionEvent e) throws IOException {
         stage = (Stage)pane.getScene().getWindow();
         stage.close();
     }
 
-    public static void updateInventory(){
-        //LinkedList<ResourceCard> hand = p.getRC();
-//        int index = 0;
-//        for(int i = 0; i < 5; i++){
-//            for(int j = 0; j < 4; j++){
-//                if(hand.get(index).getFront() != null) {
-//                    IVpics.add(hand.get(index).getFront(), i, j);
-//                    index++;
-//                }
-//                else{
-//                    break;
-//                }
-//            }
-//        }
-//        System.out.println("bruh");
 
-
-
-    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        brickCount.setText(Collections.frequency(p.getRC(), new ResourceCard("brick")) + "x");
+        grainCount.setText(Collections.frequency(p.getRC(), new ResourceCard("grain")) + "x");
+        lumberCount.setText(Collections.frequency(p.getRC(), new ResourceCard("lumber")) + "x");
+        oreCount.setText(Collections.frequency(p.getRC(), new ResourceCard("ore")) + "x");
+        woolCount.setText(Collections.frequency(p.getRC(), new ResourceCard("wool")) + "x");
+        knightCount.setText(Collections.frequency(p.getDC(), new DevelopmentCard("knight")) + "x");
+        monopolyCount.setText(Collections.frequency(p.getDC(), new DevelopmentCard("monopoly")) + "x");
+        YoPCount.setText(Collections.frequency(p.getDC(), new DevelopmentCard("yearofplenty")) + "x");
+    }
 
+    public static void selectPlayer(Player pp){
+        p = pp;
     }
 }

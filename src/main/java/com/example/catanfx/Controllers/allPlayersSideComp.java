@@ -171,6 +171,7 @@ public class allPlayersSideComp implements Initializable {
         Button b = (Button)event.getSource();
         if(b.equals(inventory0)){
             try {
+                InventoryController.selectPlayer(GameState.getAllPlayers().get(0));
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/catanfx/playerInventory.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
@@ -186,6 +187,7 @@ public class allPlayersSideComp implements Initializable {
         }
         else if(b.equals(inventory1)){
             try {
+                InventoryController.selectPlayer(GameState.getAllPlayers().get(1));
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/catanfx/playerInventory.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
@@ -199,6 +201,7 @@ public class allPlayersSideComp implements Initializable {
         }
         else if(b.equals(inventory2)){
             try {
+                InventoryController.selectPlayer(GameState.getAllPlayers().get(2));
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/catanfx/playerInventory.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
@@ -212,6 +215,7 @@ public class allPlayersSideComp implements Initializable {
         }
         else if(b.equals(inventory3)){
             try {
+                InventoryController.selectPlayer(GameState.getAllPlayers().get(3));
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/catanfx/playerInventory.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();

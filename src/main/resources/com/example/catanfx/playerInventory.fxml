@@ -19,55 +19,100 @@
             <Font size="33.0" />
          </font>
       </Button>
-      <ImageView fitHeight="263.0" fitWidth="192.0" layoutX="33.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="263.0" fitWidth="150.0" layoutX="33.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Assets/Resource_Cards/brick.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="263.0" fitWidth="189.0" layoutX="233.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="263.0" fitWidth="150.0" layoutX="233.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Assets/Resource_Cards/grain.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="263.0" fitWidth="189.0" layoutX="433.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="263.0" fitWidth="150.0" layoutX="433.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Assets/Resource_Cards/lumber.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="271.0" fitWidth="189.0" layoutX="633.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="271.0" fitWidth="150.0" layoutX="633.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Assets/Resource_Cards/ore.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="263.0" fitWidth="189.0" layoutX="833.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="263.0" fitWidth="150.0" layoutX="833.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Assets/Resource_Cards/wool.png" />
          </image>
       </ImageView>
-      <Label fx:id="brickCount" layoutX="116.0" layoutY="408.0" prefHeight="54.0" prefWidth="42.0" text="0x">
+      <Label fx:id="brickCount" layoutX="87.0" layoutY="304.0" prefHeight="54.0" prefWidth="42.0" text="0x">
          <font>
             <Font size="37.0" />
          </font>
       </Label>
-      <Label fx:id="grainCount" layoutX="307.0" layoutY="408.0" prefHeight="54.0" prefWidth="42.0" text="0x">
+      <Label fx:id="grainCount" layoutX="287.0" layoutY="304.0" prefHeight="54.0" prefWidth="42.0" text="0x">
          <font>
             <Font size="37.0" />
          </font>
       </Label>
-      <Label fx:id="lumberCount" layoutX="506.0" layoutY="408.0" prefHeight="54.0" prefWidth="42.0" text="0x">
+      <Label fx:id="lumberCount" layoutX="487.0" layoutY="304.0" prefHeight="54.0" prefWidth="42.0" text="0x">
          <font>
             <Font size="37.0" />
          </font>
       </Label>
-      <Label fx:id="oreCount" layoutX="707.0" layoutY="408.0" prefHeight="54.0" prefWidth="42.0" text="0x">
+      <Label fx:id="oreCount" layoutX="687.0" layoutY="304.0" prefHeight="54.0" prefWidth="42.0" text="0x">
          <font>
             <Font size="37.0" />
          </font>
       </Label>
-      <Label fx:id="woolCount" layoutX="907.0" layoutY="408.0" prefHeight="54.0" prefWidth="42.0" text="0x">
+      <Label fx:id="woolCount" layoutX="887.0" layoutY="304.0" prefHeight="54.0" prefWidth="42.0" text="0x">
          <font>
             <Font size="37.0" />
          </font>
       </Label>
+      <ImageView fitHeight="263.0" fitWidth="150.0" layoutX="233.0" layoutY="369.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/DevCards/knight.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="263.0" fitWidth="150.0" layoutX="433.0" layoutY="369.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/DevCards/monopoly.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="263.0" fitWidth="150.0" layoutX="633.0" layoutY="369.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/DevCards/yearofplenty.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="YoPCount" layoutX="687.0" layoutY="574.0" prefHeight="54.0" prefWidth="42.0" text="0x">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Label>
+      <Label fx:id="knightCount" layoutX="287.0" layoutY="574.0" prefHeight="54.0" prefWidth="42.0" text="0x">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Label>
+      <Label fx:id="monopolyCount" layoutX="487.0" layoutY="574.0" prefHeight="54.0" prefWidth="42.0" text="0x">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Label>
+      <Button layoutX="265.0" layoutY="621.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="87.0" text="Use">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="465.0" layoutY="621.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="87.0" text="Use">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="665.0" layoutY="621.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="87.0" text="Use">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
