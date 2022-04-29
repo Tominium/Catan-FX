@@ -54,22 +54,22 @@
             <Font size="28.0" />
          </font>
       </Text>
-      <RadioButton fx:id="p1" layoutX="566.0" layoutY="93.0" mnemonicParsing="false" onAction="#choosePlayer" text="Player 1">
+      <RadioButton fx:id="p1" layoutX="566.0" layoutY="71.0" mnemonicParsing="false" onAction="#choosePlayer" text="Player 1">
          <font>
             <Font size="30.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="p2" layoutX="566.0" layoutY="186.0" mnemonicParsing="false" onAction="#choosePlayer" text="Player 2">
+      <RadioButton fx:id="p2" layoutX="566.0" layoutY="156.0" mnemonicParsing="false" onAction="#choosePlayer" text="Player 2">
          <font>
             <Font size="30.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="p3" layoutX="566.0" layoutY="283.0" mnemonicParsing="false" onAction="#choosePlayer" text="Player 3">
+      <RadioButton fx:id="p3" layoutX="566.0" layoutY="240.0" mnemonicParsing="false" onAction="#choosePlayer" text="Player 3">
          <font>
             <Font size="30.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="p4" layoutX="566.0" layoutY="381.0" mnemonicParsing="false" onAction="#choosePlayer" text="Player 4">
+      <RadioButton fx:id="p4" layoutX="566.0" layoutY="324.0" mnemonicParsing="false" onAction="#choosePlayer" text="Player 4">
          <font>
             <Font size="30.0" />
          </font>
@@ -84,5 +84,10 @@
             <Font size="21.0" />
          </font>
       </Button>
+      <RadioButton fx:id="bankTrade" layoutX="566.0" layoutY="405.0" mnemonicParsing="false" onAction="#choosePlayer" text="Bank">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </RadioButton>
    </children>
 </AnchorPane>
