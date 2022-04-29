@@ -1,6 +1,7 @@
 package com.example.catanfx.Controllers;
 
 import com.example.catanfx.GamePieces.GameState;
+import com.example.catanfx.GamePieces.HelpMenu;
 import com.example.catanfx.GamePieces.Misc.Dice;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -39,6 +40,9 @@ public class generalInfoCompController {
     private ImageView dice2;
 
     @FXML
+    private ImageView help;
+
+    @FXML
     private Button nextButton;
 
     @FXML
@@ -57,7 +61,7 @@ public class generalInfoCompController {
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.setResizable(false);
             stage.showAndWait();
-        } catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -68,13 +72,15 @@ public class generalInfoCompController {
         dice1.setImage(new Image(generalInfoCompController.class.getResource("/Assets/Dice/" + arr[0] + ".png").toExternalForm()));
         dice2.setImage(new Image(generalInfoCompController.class.getResource("/Assets/Dice/" + arr[1] + ".png").toExternalForm()));
         dice.setDisable(true);
-        tradeButton.setVisible(true); tradeButton.setDisable(false);
-        nextButton.setDisable(false); nextButton.setVisible(true);
+        tradeButton.setVisible(true);
+        tradeButton.setDisable(false);
+        nextButton.setDisable(false);
+        nextButton.setVisible(true);
     }
 
     @FXML
     void build(ActionEvent event) {
-        String [] arrayData = {"Road", "Settlement", "City"};
+        String[] arrayData = {"Road", "Settlement", "City"};
         List<String> dialogData = Arrays.asList(arrayData);
 
         ChoiceDialog dialog = new ChoiceDialog(dialogData.get(0), dialogData);
@@ -86,10 +92,9 @@ public class generalInfoCompController {
         String selected = "cancelled.";
 
         if (result.isPresent()) {
-            if(GameState.canBuild((result.get().toLowerCase()))){
+            if (GameState.canBuild((result.get().toLowerCase()))) {
                 GameBoardController.setCanBuild();
-            }
-            else{
+            } else {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Error");
                 alert.setHeaderText(null);
@@ -106,7 +111,7 @@ public class generalInfoCompController {
         alert.setContentText("Please Confirm Your Purchase of A Development Card");
 
         Optional<ButtonType> result = alert.showAndWait();
-        if (result.get() == ButtonType.OK){
+        if (result.get() == ButtonType.OK) {
             // ... user chose OK
         } else {
             // ... user chose CANCEL or closed the dialog
@@ -115,20 +120,30 @@ public class generalInfoCompController {
 
     @FXML
     void passDice(ActionEvent event) {
-        buildButton.setVisible(false); buildButton.setDisable(true);
-        buyButton.setVisible(false); buyButton.setDisable(true);
-        passDiceButton.setVisible(false); passDiceButton.setDisable(true);
+        buildButton.setVisible(false);
+        buildButton.setDisable(true);
+        buyButton.setVisible(false);
+        buyButton.setDisable(true);
+        passDiceButton.setVisible(false);
+        passDiceButton.setDisable(true);
         dice.setDisable(false);
     }
 
     @FXML
     void next(ActionEvent event) {
-        tradeButton.setVisible(false); tradeButton.setDisable(true);
-        nextButton.setVisible(false); nextButton.setDisable(true);
-        buildButton.setVisible(true); buildButton.setDisable(false);
-        buyButton.setVisible(true); buyButton.setDisable(false);
-        passDiceButton.setVisible(true); passDiceButton.setDisable(false);
+        tradeButton.setVisible(false);
+        tradeButton.setDisable(true);
+        nextButton.setVisible(false);
+        nextButton.setDisable(true);
+        buildButton.setVisible(true);
+        buildButton.setDisable(false);
+        buyButton.setVisible(true);
+        buyButton.setDisable(false);
+        passDiceButton.setVisible(true);
+        passDiceButton.setDisable(false);
     }
-
-
+    @FXML
+    void openHelp(MouseEvent event) {
+        new HelpMenu();
+    }
 }

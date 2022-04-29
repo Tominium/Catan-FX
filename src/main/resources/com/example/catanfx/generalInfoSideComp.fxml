@@ -63,5 +63,10 @@
       <Button fx:id="buildButton" disable="true" layoutX="87.0" layoutY="731.0" mnemonicParsing="false" onAction="#build" prefHeight="66.0" prefWidth="192.0" text="Build" visible="false" />
       <Button fx:id="buyButton" disable="true" layoutX="87.0" layoutY="830.0" mnemonicParsing="false" onAction="#buyCard" prefHeight="66.0" prefWidth="192.0" text="Buy Development Card" visible="false" />
       <Button fx:id="passDiceButton" disable="true" layoutX="87.0" layoutY="924.0" mnemonicParsing="false" onAction="#passDice" prefHeight="66.0" prefWidth="192.0" text="Pass Dice" visible="false" />
+      <ImageView fx:id="help" fitHeight="100.0" fitWidth="79.0" layoutX="290.0" layoutY="932.0" onMouseClicked="#openHelp" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/Images/question%20mark%20(1).png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

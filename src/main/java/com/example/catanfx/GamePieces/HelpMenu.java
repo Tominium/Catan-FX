@@ -45,7 +45,7 @@ public class HelpMenu extends JFrame {
 
     public HelpMenu() {
         super("Help Menu");
-        setSize(800, 600);
+        setSize(1000, 600);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         setResizable(false);
