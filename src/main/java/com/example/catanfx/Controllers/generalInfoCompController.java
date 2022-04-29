@@ -91,9 +91,20 @@ public class generalInfoCompController {
         Optional<String> result = dialog.showAndWait();
         String selected = "cancelled.";
 
-        if (result.isPresent()) {
+        if (result.get().equals("Road")) {
             if (GameState.canBuild((result.get().toLowerCase()))) {
-                GameBoardController.setCanBuild();
+                GameBoardController.setCanBuildRoad();
+            } else {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Error");
+                alert.setHeaderText(null);
+                alert.setContentText("Not Enough Resources to Build " + result.get() + "!");
+                alert.showAndWait();
+            }
+        }
+        if (result.get().equals("Settlement")) {
+            if (GameState.canBuild((result.get().toLowerCase()))) {
+                GameBoardController.setCanBuildSettlement();
             } else {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Error");

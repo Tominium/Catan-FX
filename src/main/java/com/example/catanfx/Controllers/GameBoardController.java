@@ -16,6 +16,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.ResourceBundle;
+import java.util.Set;
 
 public class GameBoardController implements Initializable {
 
@@ -365,37 +366,29 @@ public class GameBoardController implements Initializable {
     private ImageView sett9;
 
 
-    //private ArrayList<Road> roadsMap;
-    private ArrayList<Settlement> settMap;
 //    private ArrayList<Tile> tilesBook;
     private HashMap<Polygon, Tile> tilesBook;
     private HashMap<ImageView, Road> roadsMap;
-
-    private static boolean canBuild;
+    private HashMap<ImageView, Settlement> settMap;
+    private static boolean canBuildRoad;
+    private static boolean canBuildSettlement;
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         tilesBook = new HashMap<>();
         tilesBook.put(tile1, new Tile(tile1));tilesBook.put(tile2, new Tile(tile2));tilesBook.put(tile3, new Tile(tile3));tilesBook.put(tile4, new Tile(tile4));tilesBook.put(tile5, new Tile(tile5));tilesBook.put(tile6, new Tile(tile6));tilesBook.put(tile7, new Tile(tile7));tilesBook.put(tile8, new Tile(tile8));tilesBook.put(tile9, new Tile(tile9));tilesBook.put(tile10, new Tile(tile10));tilesBook.put(tile11, new Tile(tile11));tilesBook.put(tile12, new Tile(tile12));tilesBook.put(tile13, new Tile(tile13));tilesBook.put(tile14, new Tile(tile14));tilesBook.put(tile15, new Tile(tile15));tilesBook.put(tile16, new Tile(tile16));tilesBook.put(tile17, new Tile(tile17));tilesBook.put(tile18, new Tile(tile18));tilesBook.put(tile19, new Tile(tile19));
-
-//        tilesBook = new ArrayList<>();
-//        tilesBook.add(new Tile(tile1));tilesBook.add(new Tile(tile2));tilesBook.add(new Tile(tile3));tilesBook.add(new Tile(tile4));tilesBook.add(new Tile(tile5));tilesBook.add(new Tile(tile6));tilesBook.add(new Tile(tile7));tilesBook.add(new Tile(tile8));tilesBook.add(new Tile(tile9));tilesBook.add(new Tile(tile10));tilesBook.add(new Tile(tile11));tilesBook.add(new Tile(tile12));tilesBook.add(new Tile(tile13));tilesBook.add(new Tile(tile14));tilesBook.add(new Tile(tile15));tilesBook.add(new Tile(tile16));tilesBook.add(new Tile(tile17));tilesBook.add(new Tile(tile18));tilesBook.add(new Tile(tile19));
-//        roadsMap = new ArrayList<>();
-//        roadsMap.add(new Road("road", "white", road1));roadsMap.add(new Road("road", "white", road2));roadsMap.add(new Road("road", "white", road3));roadsMap.add(new Road("road", "white", road4));roadsMap.add(new Road("road", "white", road5));roadsMap.add(new Road("road", "white", road6));roadsMap.add(new Road("road", "white", road7));roadsMap.add(new Road("road", "white", road8));roadsMap.add(new Road("road", "white", road9));roadsMap.add(new Road("road", "white", road10));roadsMap.add(new Road("road", "white", road11));roadsMap.add(new Road("road", "white", road12));roadsMap.add(new Road("road", "white", road13));roadsMap.add(new Road("road", "white", road14));roadsMap.add(new Road("road", "white", road15));roadsMap.add(new Road("road", "white", road16));roadsMap.add(new Road("road", "white", road17));roadsMap.add(new Road("road", "white", road18));roadsMap.add(new Road("road", "white", road19));roadsMap.add(new Road("road", "white", road20));roadsMap.add(new Road("road", "white", road21));roadsMap.add(new Road("road", "white", road22));roadsMap.add(new Road("road", "white", road23));roadsMap.add(new Road("road", "white", road24));roadsMap.add(new Road("road", "white", road25));roadsMap.add(new Road("road", "white", road26));roadsMap.add(new Road("road", "white", road27));roadsMap.add(new Road("road", "white", road28));roadsMap.add(new Road("road", "white", road29));roadsMap.add(new Road("road", "white", road30));roadsMap.add(new Road("road", "white", road31));roadsMap.add(new Road("road", "white", road32));roadsMap.add(new Road("road", "white", road33));roadsMap.add(new Road("road", "white", road34));roadsMap.add(new Road("road", "white", road35));roadsMap.add(new Road("road", "white", road36));roadsMap.add(new Road("road", "white", road37));roadsMap.add(new Road("road", "white", road38));roadsMap.add(new Road("road", "white", road39));roadsMap.add(new Road("road", "white", road40));roadsMap.add(new Road("road", "white", road41));roadsMap.add(new Road("road", "white", road42));roadsMap.add(new Road("road", "white", road43));roadsMap.add(new Road("road", "white", road44));roadsMap.add(new Road("road", "white", road45));roadsMap.add(new Road("road", "white", road46));roadsMap.add(new Road("road", "white", road47));roadsMap.add(new Road("road", "white", road48));roadsMap.add(new Road("road", "white", road49));roadsMap.add(new Road("road", "white", road50));roadsMap.add(new Road("road", "white", road51));roadsMap.add(new Road("road", "white", road52));roadsMap.add(new Road("road", "white", road53));roadsMap.add(new Road("road", "white", road54));roadsMap.add(new Road("road", "white", road55));roadsMap.add(new Road("road", "white", road56));roadsMap.add(new Road("road", "white", road57));roadsMap.add(new Road("road", "white", road58));roadsMap.add(new Road("road", "white", road59));roadsMap.add(new Road("road", "white", road60));roadsMap.add(new Road("road", "white", road61));roadsMap.add(new Road("road", "white", road62));roadsMap.add(new Road("road", "white", road63));roadsMap.add(new Road("road", "white", road64));roadsMap.add(new Road("road", "white", road65));roadsMap.add(new Road("road", "white", road66));roadsMap.add(new Road("road", "white", road67));roadsMap.add(new Road("road", "white", road68));roadsMap.add(new Road("road", "white", road69));roadsMap.add(new Road("road", "white", road70));roadsMap.add(new Road("road", "white", road71));roadsMap.add(new Road("road", "white", road72));
-        settMap = new ArrayList<>();
-        settMap.add(new Settlement("settlement","white",sett1));settMap.add(new Settlement("settlement","white",sett2));settMap.add(new Settlement("settlement","white",sett3));settMap.add(new Settlement("settlement","white",sett4));settMap.add(new Settlement("settlement","white",sett5));settMap.add(new Settlement("settlement","white",sett6));settMap.add(new Settlement("settlement","white",sett7));settMap.add(new Settlement("settlement","white",sett8));settMap.add(new Settlement("settlement","white",sett9));settMap.add(new Settlement("settlement","white",sett10));settMap.add(new Settlement("settlement","white",sett11));settMap.add(new Settlement("settlement","white",sett12));settMap.add(new Settlement("settlement","white",sett13));settMap.add(new Settlement("settlement","white",sett14));settMap.add(new Settlement("settlement","white",sett15));settMap.add(new Settlement("settlement","white",sett16));settMap.add(new Settlement("settlement","white",sett17));settMap.add(new Settlement("settlement","white",sett18));settMap.add(new Settlement("settlement","white",sett19));settMap.add(new Settlement("settlement","white",sett20));settMap.add(new Settlement("settlement","white",sett21));settMap.add(new Settlement("settlement","white",sett22));settMap.add(new Settlement("settlement","white",sett23));settMap.add(new Settlement("settlement","white",sett24));settMap.add(new Settlement("settlement","white",sett25));settMap.add(new Settlement("settlement","white",sett26));settMap.add(new Settlement("settlement","white",sett27));settMap.add(new Settlement("settlement","white",sett28));settMap.add(new Settlement("settlement","white",sett29));settMap.add(new Settlement("settlement","white",sett30));settMap.add(new Settlement("settlement","white",sett31));settMap.add(new Settlement("settlement","white",sett32));settMap.add(new Settlement("settlement","white",sett33));settMap.add(new Settlement("settlement","white",sett34));settMap.add(new Settlement("settlement","white",sett35));settMap.add(new Settlement("settlement","white",sett36));settMap.add(new Settlement("settlement","white",sett37));settMap.add(new Settlement("settlement","white",sett38));settMap.add(new Settlement("settlement","white",sett39));settMap.add(new Settlement("settlement","white",sett40));settMap.add(new Settlement("settlement","white",sett41));settMap.add(new Settlement("settlement","white",sett42));settMap.add(new Settlement("settlement","white",sett43));settMap.add(new Settlement("settlement","white",sett44));settMap.add(new Settlement("settlement","white",sett45));settMap.add(new Settlement("settlement","white",sett46));settMap.add(new Settlement("settlement","white",sett47));settMap.add(new Settlement("settlement","white",sett48));settMap.add(new Settlement("settlement","white",sett49));settMap.add(new Settlement("settlement","white",sett50));settMap.add(new Settlement("settlement","white",sett51));settMap.add(new Settlement("settlement","white",sett52));settMap.add(new Settlement("settlement","white",sett53));settMap.add(new Settlement("settlement","white",sett54));
-
+        settMap = new HashMap<>();
+        settMap.put(sett1, new Settlement("settlement", "white", sett1));settMap.put(sett2, new Settlement("settlement", "white", sett2));settMap.put(sett3, new Settlement("settlement", "white", sett3));settMap.put(sett4, new Settlement("settlement", "white", sett4));settMap.put(sett5, new Settlement("settlement", "white", sett5));settMap.put(sett6, new Settlement("settlement", "white", sett6));settMap.put(sett7, new Settlement("settlement", "white", sett7));settMap.put(sett8, new Settlement("settlement", "white", sett8));settMap.put(sett9, new Settlement("settlement", "white", sett9));settMap.put(sett10, new Settlement("settlement", "white", sett10));settMap.put(sett11, new Settlement("settlement", "white", sett11));settMap.put(sett12, new Settlement("settlement", "white", sett12));settMap.put(sett13, new Settlement("settlement", "white", sett13));settMap.put(sett14, new Settlement("settlement", "white", sett14));settMap.put(sett15, new Settlement("settlement", "white", sett15));settMap.put(sett16, new Settlement("settlement", "white", sett16));settMap.put(sett17, new Settlement("settlement", "white", sett17));settMap.put(sett18, new Settlement("settlement", "white", sett18));settMap.put(sett19, new Settlement("settlement", "white", sett19));settMap.put(sett20, new Settlement("settlement", "white", sett20));settMap.put(sett21, new Settlement("settlement", "white", sett21));settMap.put(sett22, new Settlement("settlement", "white", sett22));settMap.put(sett23, new Settlement("settlement", "white", sett23));settMap.put(sett24, new Settlement("settlement", "white", sett24));settMap.put(sett25, new Settlement("settlement", "white", sett25));settMap.put(sett26, new Settlement("settlement", "white", sett26));settMap.put(sett27, new Settlement("settlement", "white", sett27));settMap.put(sett28, new Settlement("settlement", "white", sett28));settMap.put(sett29, new Settlement("settlement", "white", sett29));settMap.put(sett30, new Settlement("settlement", "white", sett30));settMap.put(sett31, new Settlement("settlement", "white", sett31));settMap.put(sett32, new Settlement("settlement", "white", sett32));settMap.put(sett33, new Settlement("settlement", "white", sett33));settMap.put(sett34, new Settlement("settlement", "white", sett34));settMap.put(sett35, new Settlement("settlement", "white", sett35));settMap.put(sett36, new Settlement("settlement", "white", sett36));settMap.put(sett37, new Settlement("settlement", "white", sett37));settMap.put(sett38, new Settlement("settlement", "white", sett38));settMap.put(sett39, new Settlement("settlement", "white", sett39));settMap.put(sett40, new Settlement("settlement", "white", sett40));settMap.put(sett41, new Settlement("settlement", "white", sett41));settMap.put(sett42, new Settlement("settlement", "white", sett42));settMap.put(sett43, new Settlement("settlement", "white", sett43));settMap.put(sett44, new Settlement("settlement", "white", sett44));settMap.put(sett45, new Settlement("settlement", "white", sett45));settMap.put(sett46, new Settlement("settlement", "white", sett46));settMap.put(sett47, new Settlement("settlement", "white", sett47));settMap.put(sett48, new Settlement("settlement", "white", sett48));settMap.put(sett49, new Settlement("settlement", "white", sett49));settMap.put(sett50, new Settlement("settlement", "white", sett50));settMap.put(sett51, new Settlement("settlement", "white", sett51));settMap.put(sett52, new Settlement("settlement", "white", sett52));settMap.put(sett53, new Settlement("settlement", "white", sett53));settMap.put(sett54, new Settlement("settlement", "white", sett54));
         roadsMap = new HashMap<>();
         roadsMap.put(road1, new Road("road", "white", road1));roadsMap.put(road2, new Road("road", "white", road2));roadsMap.put(road3, new Road("road", "white", road3));roadsMap.put(road4, new Road("road", "white", road4));roadsMap.put(road5, new Road("road", "white", road5));roadsMap.put(road6, new Road("road", "white", road6));roadsMap.put(road7, new Road("road", "white", road7));roadsMap.put(road8, new Road("road", "white", road8));roadsMap.put(road9, new Road("road", "white", road9));roadsMap.put(road10, new Road("road", "white", road10));roadsMap.put(road11, new Road("road", "white", road11));roadsMap.put(road12, new Road("road", "white", road12));roadsMap.put(road13, new Road("road", "white", road13));roadsMap.put(road14, new Road("road", "white", road14));roadsMap.put(road15, new Road("road", "white", road15));roadsMap.put(road16, new Road("road", "white", road16));roadsMap.put(road17, new Road("road", "white", road17));roadsMap.put(road18, new Road("road", "white", road18));roadsMap.put(road19, new Road("road", "white", road19));roadsMap.put(road20, new Road("road", "white", road20));roadsMap.put(road21, new Road("road", "white", road21));roadsMap.put(road22, new Road("road", "white", road22));roadsMap.put(road23, new Road("road", "white", road23));roadsMap.put(road24, new Road("road", "white", road24));roadsMap.put(road25, new Road("road", "white", road25));roadsMap.put(road26, new Road("road", "white", road26));roadsMap.put(road27, new Road("road", "white", road27));roadsMap.put(road28, new Road("road", "white", road28));roadsMap.put(road29, new Road("road", "white", road29));roadsMap.put(road30, new Road("road", "white", road30));roadsMap.put(road31, new Road("road", "white", road31));roadsMap.put(road32, new Road("road", "white", road32));roadsMap.put(road33, new Road("road", "white", road33));roadsMap.put(road34, new Road("road", "white", road34));roadsMap.put(road35, new Road("road", "white", road35));roadsMap.put(road36, new Road("road", "white", road36));roadsMap.put(road37, new Road("road", "white", road37));roadsMap.put(road38, new Road("road", "white", road38));roadsMap.put(road39, new Road("road", "white", road39));roadsMap.put(road40, new Road("road", "white", road40));roadsMap.put(road41, new Road("road", "white", road41));roadsMap.put(road42, new Road("road", "white", road42));roadsMap.put(road43, new Road("road", "white", road43));roadsMap.put(road44, new Road("road", "white", road44));roadsMap.put(road45, new Road("road", "white", road45));roadsMap.put(road46, new Road("road", "white", road46));roadsMap.put(road47, new Road("road", "white", road47));roadsMap.put(road48, new Road("road", "white", road48));roadsMap.put(road49, new Road("road", "white", road49));roadsMap.put(road50, new Road("road", "white", road50));roadsMap.put(road52, new Road("road", "white", road52));roadsMap.put(road53, new Road("road", "white", road53));roadsMap.put(road54, new Road("road", "white", road54));roadsMap.put(road55, new Road("road", "white", road55));roadsMap.put(road56, new Road("road", "white", road56));roadsMap.put(road57, new Road("road", "white", road57));roadsMap.put(road58, new Road("road", "white", road58));roadsMap.put(road59, new Road("road", "white", road59));roadsMap.put(road60, new Road("road", "white", road60));roadsMap.put(road61, new Road("road", "white", road61));roadsMap.put(road62, new Road("road", "white", road62));roadsMap.put(road63, new Road("road", "white", road63));roadsMap.put(road64, new Road("road", "white", road64));roadsMap.put(road65, new Road("road", "white", road65));roadsMap.put(road66, new Road("road", "white", road66));roadsMap.put(road67, new Road("road", "white", road67));roadsMap.put(road68, new Road("road", "white", road68));roadsMap.put(road69, new Road("road", "white", road69));roadsMap.put(road70, new Road("road", "white", road70));roadsMap.put(road71, new Road("road", "white", road71));roadsMap.put(road72, new Road("road", "white", road72));roadsMap.put(road51, new Road("road", "white", road51));
-
-        canBuild = false;
+        canBuildRoad = false; canBuildSettlement = false;
     }
 
     @FXML
     public void highlightRoad(MouseEvent mouseEvent) {
         ImageView img = (ImageView)mouseEvent.getSource();
-        if(!roadsMap.get(img).isVisible() && canBuild){
+        if(!roadsMap.get(img).isVisible() && canBuildRoad){
             img.setImage(new Image(GameBoardController.class.getResource("/Assets/Road/white.png").toExternalForm()));
         }
     }
@@ -403,7 +396,7 @@ public class GameBoardController implements Initializable {
     @FXML
     public void stopHighlightRoad(MouseEvent mouseEvent) {
         ImageView img = (ImageView)mouseEvent.getSource();
-        if(!roadsMap.get(img).isVisible() && canBuild){
+        if(!roadsMap.get(img).isVisible() && canBuildRoad){
             img.setImage(new Image(GameBoardController.class.getResource("/Assets/Empty.png").toExternalForm()));
         }
     }
@@ -411,26 +404,43 @@ public class GameBoardController implements Initializable {
     @FXML
     void buildRoad(MouseEvent event) {
         ImageView img = (ImageView)event.getSource();
-        if(canBuild){
+        if(canBuildRoad){
             roadsMap.get(img).setVisible(true);
-            img.setImage(new Image(GameBoardController.class.getResource("/Assets/Road/" + GameState.getAllPlayers().get(0).getColor() + ".png").toExternalForm()));
+            img.setImage(new Image(GameBoardController.class.getResource("/Assets/Road/" + GameState.getAllPlayers().get(GameState.turnNumber).getColor() + ".png").toExternalForm()));
         }
-        canBuild = false;
+        canBuildRoad = false;
     }
 
     @FXML
     void noShowSettlement(MouseEvent event) {
         ImageView img = (ImageView)event.getSource();
-        img.setImage(new Image(GameBoardController.class.getResource("/Assets/Empty.png").toExternalForm()));
+        if(!settMap.get(img).isVisible() && canBuildSettlement){
+            img.setImage(new Image(GameBoardController.class.getResource("/Assets/Empty.png").toExternalForm()));
+        }
     }
 
     @FXML
     void showSettlement(MouseEvent event) {
         ImageView img = (ImageView)event.getSource();
-        img.setImage(new Image(GameBoardController.class.getResource("/Assets/Settlement/white.png").toExternalForm()));
+        if(!settMap.get(img).isVisible() && canBuildSettlement){
+            img.setImage(new Image(GameBoardController.class.getResource("/Assets/Settlement/white.png").toExternalForm()));
+        }
     }
 
-    public static void setCanBuild(){
-        canBuild = true;
+    @FXML
+    void buildSettlement(MouseEvent event) {
+        ImageView img = (ImageView)event.getSource();
+        if(canBuildSettlement){
+            settMap.get(img).setVisible(true);
+            img.setImage(new Image(GameBoardController.class.getResource("/Assets/Settlement/" + GameState.getAllPlayers().get(GameState.turnNumber).getColor() + ".png").toExternalForm()));
+        }
+        canBuildSettlement = false;
+    }
+
+    public static void setCanBuildRoad(){
+        canBuildRoad = true;
+    }
+    public static void setCanBuildSettlement(){
+        canBuildSettlement = true;
     }
 }
