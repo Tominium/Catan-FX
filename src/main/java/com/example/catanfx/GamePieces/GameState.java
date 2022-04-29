@@ -66,8 +66,13 @@ public class GameState {
         return players.get(turnNumber).getDC();
     }
 
-    public static int iterateTurn() {
-        return turnNumber+1;
+    public static void iterateTurn() {
+        if(turnNumber == players.size() - 1){
+            turnNumber = 0;
+        }else{
+            turnNumber++;
+        }
+
     }
 
     public static void trade(Player p, ArrayList<ResourceCard> send, ArrayList<ResourceCard> receive) {

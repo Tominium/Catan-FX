@@ -2,6 +2,7 @@ package com.example.catanfx.Controllers;
 
 import com.example.catanfx.GamePieces.Cards.DevelopmentCard;
 import com.example.catanfx.GamePieces.Cards.ResourceCard;
+import com.example.catanfx.GamePieces.GameState;
 import com.example.catanfx.GamePieces.Player;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -10,6 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -34,6 +36,15 @@ public class InventoryController implements Initializable {
 
     @FXML
     private Button X;
+
+    @FXML
+    private Button useKnight;
+
+    @FXML
+    private Button useMonopoly;
+
+    @FXML
+    private Button useYoP;
 
     @FXML
     private AnchorPane pane;
@@ -71,7 +82,38 @@ public class InventoryController implements Initializable {
         stage.close();
     }
 
+    public void UseKnightDC(){
+        if(GameState.turnNumber != GameState.getAllPlayers().indexOf(p)){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText("Unable to use a Development Card during someone else's turn");
 
+            alert.show();
+        }
+    }
+
+    public void UseMonopolyDC(){
+        if(GameState.turnNumber != GameState.getAllPlayers().indexOf(p)){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText("Unable to use a Development Card during someone else's turn");
+
+            alert.show();
+        }
+    }
+
+    public void UseYoPDC(){
+        if(GameState.turnNumber != GameState.getAllPlayers().indexOf(p)){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText("Unable to use a Development Card during someone else's turn");
+
+            alert.show();
+        }
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -88,4 +130,5 @@ public class InventoryController implements Initializable {
     public static void selectPlayer(Player pp){
         p = pp;
     }
+
 }

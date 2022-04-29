@@ -127,6 +127,7 @@ public class generalInfoCompController {
         passDiceButton.setVisible(false);
         passDiceButton.setDisable(true);
         dice.setDisable(false);
+        GameState.iterateTurn();
     }
 
     @FXML

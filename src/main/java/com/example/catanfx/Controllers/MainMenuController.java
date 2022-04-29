@@ -18,7 +18,8 @@ import javafx.stage.Stage;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class MainMenuController implements Initializable {
+public class
+MainMenuController implements Initializable {
 
     @FXML
     private ComboBox<Integer> choice;

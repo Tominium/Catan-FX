@@ -44,72 +44,72 @@
             <Image url="@../../../Assets/Resource_Cards/wool.png" />
          </image>
       </ImageView>
-      <Label fx:id="brickCount" layoutX="87.0" layoutY="304.0" prefHeight="54.0" prefWidth="42.0" text="0x">
+      <Label fx:id="brickCount" layoutX="87.0" layoutY="304.0" prefHeight="55.0" prefWidth="75.0" text="0x">
          <font>
             <Font size="37.0" />
          </font>
       </Label>
-      <Label fx:id="grainCount" layoutX="287.0" layoutY="304.0" prefHeight="54.0" prefWidth="42.0" text="0x">
+      <Label fx:id="grainCount" layoutX="287.0" layoutY="304.0" prefHeight="55.0" prefWidth="75.0" text="0x">
          <font>
             <Font size="37.0" />
          </font>
       </Label>
-      <Label fx:id="lumberCount" layoutX="487.0" layoutY="304.0" prefHeight="54.0" prefWidth="42.0" text="0x">
+      <Label fx:id="lumberCount" layoutX="487.0" layoutY="304.0" prefHeight="55.0" prefWidth="75.0" text="0x">
          <font>
             <Font size="37.0" />
          </font>
       </Label>
-      <Label fx:id="oreCount" layoutX="687.0" layoutY="304.0" prefHeight="54.0" prefWidth="42.0" text="0x">
+      <Label fx:id="oreCount" layoutX="687.0" layoutY="304.0" prefHeight="55.0" prefWidth="75.0" text="0x">
          <font>
             <Font size="37.0" />
          </font>
       </Label>
-      <Label fx:id="woolCount" layoutX="887.0" layoutY="304.0" prefHeight="54.0" prefWidth="42.0" text="0x">
+      <Label fx:id="woolCount" layoutX="887.0" layoutY="304.0" prefHeight="55.0" prefWidth="75.0" text="0x">
          <font>
             <Font size="37.0" />
          </font>
       </Label>
-      <ImageView fitHeight="263.0" fitWidth="150.0" layoutX="233.0" layoutY="369.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="263.0" fitWidth="150.0" layoutX="233.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Assets/DevCards/knight.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="263.0" fitWidth="150.0" layoutX="433.0" layoutY="369.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="263.0" fitWidth="150.0" layoutX="433.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Assets/DevCards/monopoly.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="263.0" fitWidth="150.0" layoutX="633.0" layoutY="369.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="263.0" fitWidth="150.0" layoutX="633.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Assets/DevCards/yearofplenty.png" />
          </image>
       </ImageView>
-      <Label fx:id="YoPCount" layoutX="687.0" layoutY="574.0" prefHeight="54.0" prefWidth="42.0" text="0x">
+      <Label fx:id="YoPCount" layoutX="687.0" layoutY="574.0" prefHeight="55.0" prefWidth="75.0" text="0x">
          <font>
             <Font size="37.0" />
          </font>
       </Label>
-      <Label fx:id="knightCount" layoutX="287.0" layoutY="574.0" prefHeight="54.0" prefWidth="42.0" text="0x">
+      <Label fx:id="knightCount" layoutX="287.0" layoutY="574.0" prefHeight="55.0" prefWidth="75.0" text="0x">
          <font>
             <Font size="37.0" />
          </font>
       </Label>
-      <Label fx:id="monopolyCount" layoutX="487.0" layoutY="574.0" prefHeight="54.0" prefWidth="42.0" text="0x">
+      <Label fx:id="monopolyCount" layoutX="487.0" layoutY="574.0" prefHeight="55.0" prefWidth="75.0" text="0x">
          <font>
             <Font size="37.0" />
          </font>
       </Label>
-      <Button layoutX="265.0" layoutY="621.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="87.0" text="Use">
+      <Button fx:id="useKnight" layoutX="265.0" layoutY="621.0" mnemonicParsing="false" onAction="#UseKnightDC" prefHeight="38.0" prefWidth="87.0" text="Use">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="465.0" layoutY="621.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="87.0" text="Use">
+      <Button fx:id="useMonopoly" layoutX="465.0" layoutY="621.0" mnemonicParsing="false" onAction="#UseMonopolyDC" prefHeight="38.0" prefWidth="87.0" text="Use">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="665.0" layoutY="621.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="87.0" text="Use">
+      <Button fx:id="useYoP" layoutX="665.0" layoutY="621.0" mnemonicParsing="false" onAction="#UseYoPDC" prefHeight="38.0" prefWidth="87.0" text="Use">
          <font>
             <Font size="18.0" />
          </font>
