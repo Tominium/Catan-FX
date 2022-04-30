@@ -41,8 +41,3 @@ public class HelloApplication extends Application {
         launch();
     }
 }
-
-//only 5 settlements
-//only 4 cities
-//only 15 roads
-//only 19 resources
