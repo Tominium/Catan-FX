@@ -87,19 +87,10 @@ public class GameState {
     }
 
     public static boolean canBuild(String s) {
-
-        ResourceCard[] city = new ResourceCard[5];
-        city[0] = new ResourceCard("grain");
-        city[1] = new ResourceCard("grain");
-        city[2] = new ResourceCard("ore");
-        city[3] = new ResourceCard("ore");
-        city[4] = new ResourceCard("ore");
-
-
         if(s.equals("road"))
             return canBuildRoad();
         else if(s.equals("settlement"))
-            return canBuildStructure();
+            return canBuildSettlement();
         else
             return canBuildCity();
     }
@@ -111,7 +102,7 @@ public class GameState {
         return true;
     }
 
-    private static boolean canBuildStructure(){
+    private static boolean canBuildSettlement(){
         LinkedList<ResourceCard> rc = players.get(turnNumber).getRC();
         if(Collections.frequency(rc, new ResourceCard("brick")) < 1){return false;}
         if(Collections.frequency(rc, new ResourceCard("lumber")) < 1) {return  false;}
@@ -173,8 +164,24 @@ public class GameState {
         return null;
     }
 
-    public static void build(Structure s) {
+    public static void buildRoad(){
+        getAllPlayers().get(turnNumber).removeRCard(new ResourceCard("brick"));
+        getAllPlayers().get(turnNumber).removeRCard(new ResourceCard("lumber"));
+    }
 
+    public static void buildSettlement(){
+        getAllPlayers().get(turnNumber).removeRCard(new ResourceCard("brick"));
+        getAllPlayers().get(turnNumber).removeRCard(new ResourceCard("lumber"));
+        getAllPlayers().get(turnNumber).removeRCard(new ResourceCard("grain"));
+        getAllPlayers().get(turnNumber).removeRCard(new ResourceCard("wool"));
+    }
+
+    public static void buildCity(){
+        getAllPlayers().get(turnNumber).removeRCard(new ResourceCard("grain"));
+        getAllPlayers().get(turnNumber).removeRCard(new ResourceCard("grain"));
+        getAllPlayers().get(turnNumber).removeRCard(new ResourceCard("ore"));
+        getAllPlayers().get(turnNumber).removeRCard(new ResourceCard("ore"));
+        getAllPlayers().get(turnNumber).removeRCard(new ResourceCard("ore"));
     }
 
     public static void useDevCard(DevelopmentCard dc) {
