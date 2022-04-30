@@ -405,6 +405,7 @@ public class GameBoardController implements Initializable {
     void buildRoad(MouseEvent event) {
         ImageView img = (ImageView)event.getSource();
         if(canBuildRoad){
+            GameState.buildRoad();
             roadsMap.get(img).setVisible(true);
             img.setImage(new Image(GameBoardController.class.getResource("/Assets/Road/" + GameState.getAllPlayers().get(GameState.turnNumber).getColor() + ".png").toExternalForm()));
         }
@@ -431,6 +432,7 @@ public class GameBoardController implements Initializable {
     void buildSettlement(MouseEvent event) {
         ImageView img = (ImageView)event.getSource();
         if(canBuildSettlement){
+            GameState.buildSettlement();
             settMap.get(img).setVisible(true);
             img.setImage(new Image(GameBoardController.class.getResource("/Assets/Settlement/" + GameState.getAllPlayers().get(GameState.turnNumber).getColor() + ".png").toExternalForm()));
         }
