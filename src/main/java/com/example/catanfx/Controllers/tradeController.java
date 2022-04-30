@@ -63,7 +63,7 @@ public class tradeController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         if(GameState.getAllPlayers().size()!=4){p4.setVisible(false); p4.setDisable(true);}
-        showCards(GameState.getAllPlayers().get(0).getRC());
+        showCards(GameState.getAllPlayers().get(GameState.turnNumber).getRC());
         trade1 = new ArrayList<>();
         trade2 = new ArrayList<>();
     }
