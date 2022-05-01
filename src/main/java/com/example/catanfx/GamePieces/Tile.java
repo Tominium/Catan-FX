@@ -30,7 +30,7 @@ public class Tile{
         poly = p;
         ImagePattern img = new ImagePattern(getImage());
         p.setFill(img);
-        tok = new Token(3);
+        tok = new Token(3, null);
     }
 
     public void setToken(Token tt){tok = tt;}
