@@ -8,6 +8,7 @@ import com.example.catanfx.GamePieces.Structures.Structure;
 import javax.sound.sampled.Port;
 import java.awt.*;
 import java.util.*;
+import java.util.spi.AbstractResourceBundleProvider;
 
 public class GameState {
 
@@ -19,6 +20,10 @@ public class GameState {
     //private DevelopmentDeck dcDeck;
 //    private static Dice dice;
 //    private static Thief thief;
+    public static boolean roundZeroRollDice;
+    public static boolean roundZeroBuildSettlement;
+    public static boolean roundZeroBuildRoad;
+    public static TreeMap<Integer, ArrayList<Integer>> zeroMap;
 
     public GameState(int numOfPlayers){
         players = new ArrayList<Player>();
@@ -28,6 +33,8 @@ public class GameState {
 //        thief = new Thief();
         turnNumber = 0;
         new Dice();
+        roundZeroRollDice = true;
+        zeroMap = new TreeMap<>();
     }
 
     private static void setColors(int num){
@@ -39,6 +46,16 @@ public class GameState {
             num--;
         }
         Collections.reverse(players);
+    }
+
+    private static void setPlayerNums(){
+        ArrayList<Player> temp = new ArrayList<>();
+        for(int a: zeroMap.keySet()){
+            for(int b: zeroMap.get(a)){
+                temp.add(players.get(b));
+            }
+        }
+        players = temp;
     }
 
     public static ArrayList<Player> getAllPlayers(){return players;}
@@ -170,10 +187,19 @@ public class GameState {
     }
 
     public static void buildSettlement(){
-        getAllPlayers().get(turnNumber).removeRCard(new ResourceCard("brick"));
-        getAllPlayers().get(turnNumber).removeRCard(new ResourceCard("lumber"));
-        getAllPlayers().get(turnNumber).removeRCard(new ResourceCard("grain"));
-        getAllPlayers().get(turnNumber).removeRCard(new ResourceCard("wool"));
+        if(roundZeroBuildSettlement){
+            turnNumber++;
+            if(turnNumber == 4){
+                turnNumber = 0;
+                roundZeroBuildSettlement = false;
+            }
+        }
+        else{
+            getAllPlayers().get(turnNumber).removeRCard(new ResourceCard("brick"));
+            getAllPlayers().get(turnNumber).removeRCard(new ResourceCard("lumber"));
+            getAllPlayers().get(turnNumber).removeRCard(new ResourceCard("grain"));
+            getAllPlayers().get(turnNumber).removeRCard(new ResourceCard("wool"));
+        }
     }
 
     public static void buildCity(){
@@ -188,5 +214,49 @@ public class GameState {
         for(int i = 0; i < players.get(turnNumber).getDC().size(); i++)
             if(players.get(turnNumber).getDC().get(i).equals(dc))
                 players.get(turnNumber).removeDCard(players.get(turnNumber).getDC().get(i));
+    }
+
+    public static void roundZeroRollDiceDice(int r){
+        if(turnNumber==0){
+            if(zeroMap.get(r)==null){
+                zeroMap.put(r, new ArrayList<>());
+            }
+            zeroMap.get(r).add(0);
+            turnNumber++;
+        }
+        else if(turnNumber==1){
+            if(zeroMap.get(r)==null){
+                zeroMap.put(r, new ArrayList<>());
+            }
+            zeroMap.get(r).add(1);
+            turnNumber++;
+        }
+        else if(turnNumber==2){
+            if(zeroMap.get(r)==null){
+                zeroMap.put(r, new ArrayList<>());
+            }
+            zeroMap.get(r).add(2);
+            turnNumber++;
+        }
+        else if(players.size()==4&&turnNumber==3){
+            if(zeroMap.get(r)==null){
+                zeroMap.put(r, new ArrayList<>());
+            }
+            zeroMap.get(r).add(3);
+            turnNumber++;
+        }
+        System.out.println(zeroMap);
+        if(players.size()==3&&turnNumber==3){
+            turnNumber = 0;
+            setPlayerNums();
+            roundZeroRollDice = false;
+            roundZeroBuildSettlement = true;
+        }
+        else if(players.size()==4&& turnNumber==4){
+            turnNumber = 0;
+            setPlayerNums();
+            roundZeroRollDice = false;
+            roundZeroBuildSettlement = true;
+        }
     }
 }

@@ -71,11 +71,17 @@ public class generalInfoCompController {
         int[] arr = Dice.rollDice();
         dice1.setImage(new Image(generalInfoCompController.class.getResource("/Assets/Dice/" + arr[0] + ".png").toExternalForm()));
         dice2.setImage(new Image(generalInfoCompController.class.getResource("/Assets/Dice/" + arr[1] + ".png").toExternalForm()));
-        dice.setDisable(true);
-        tradeButton.setVisible(true);
-        tradeButton.setDisable(false);
-        nextButton.setDisable(false);
-        nextButton.setVisible(true);
+        if(!GameState.roundZeroRollDice){
+            dice.setDisable(true);
+            tradeButton.setVisible(true);
+            tradeButton.setDisable(false);
+            nextButton.setDisable(false);
+            nextButton.setVisible(true);
+        }
+        else{
+            System.out.println(Dice.getRolledNum());
+            GameState.roundZeroRollDiceDice(Dice.getRolledNum());
+        }
     }
 
     @FXML
