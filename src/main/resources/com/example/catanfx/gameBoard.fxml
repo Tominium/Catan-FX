@@ -768,4 +768,14 @@
          <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
+   <ImageView fx:id="thief1" fitHeight="30.0" fitWidth="77.0" layoutX="210.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Tokens/output-onlinejpgtools.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="thief2" fitHeight="30.0" fitWidth="77.0" layoutX="340.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Tokens/output-onlinejpgtools.png" />
+      </image>
+   </ImageView>
 </AnchorPane>
