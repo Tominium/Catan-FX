@@ -3,12 +3,13 @@ package com.example.catanfx.GamePieces;
 import com.example.catanfx.GamePieces.Cards.DevelopmentCard;
 import com.example.catanfx.GamePieces.Cards.ResourceCard;
 import com.example.catanfx.GamePieces.Misc.Dice;
+import com.example.catanfx.GamePieces.Structures.Road;
 import com.example.catanfx.GamePieces.Structures.Structure;
+import javafx.scene.image.ImageView;
 
 import javax.sound.sampled.Port;
 import java.awt.*;
 import java.util.*;
-import java.util.spi.AbstractResourceBundleProvider;
 
 public class GameState {
 
@@ -23,7 +24,9 @@ public class GameState {
     public static boolean roundZeroRollDice;
     public static boolean roundZeroBuildSettlement;
     public static boolean roundZeroBuildRoad;
+    public static boolean turnDirc;
     public static TreeMap<Integer, ArrayList<Integer>> zeroMap;
+    public static HashMap<ImageView, Road> roadMap;
 
     public GameState(int numOfPlayers){
         players = new ArrayList<Player>();
@@ -35,6 +38,7 @@ public class GameState {
         new Dice();
         roundZeroRollDice = true;
         zeroMap = new TreeMap<>();
+        turnDirc = false;
     }
 
     private static void setColors(int num){
@@ -182,17 +186,35 @@ public class GameState {
     }
 
     public static void buildRoad(){
-        getAllPlayers().get(turnNumber).removeRCard(new ResourceCard("brick"));
-        getAllPlayers().get(turnNumber).removeRCard(new ResourceCard("lumber"));
+        if(roundZeroBuildRoad){
+            roundZeroBuildRoad = false;
+            roundZeroBuildSettlement = true;
+            if(turnDirc){
+                turnNumber--;
+            }
+            else {
+                turnNumber++;
+            }
+            if(turnNumber==players.size()){
+                    turnNumber--;
+                    turnDirc = true;
+            }
+            if(turnDirc && turnNumber==-1){
+                roundZeroBuildRoad = false;
+                roundZeroBuildSettlement = false;
+                turnNumber = 0;
+            }
+        }
+        else{
+            getAllPlayers().get(turnNumber).removeRCard(new ResourceCard("brick"));
+            getAllPlayers().get(turnNumber).removeRCard(new ResourceCard("lumber"));
+        }
     }
 
     public static void buildSettlement(){
         if(roundZeroBuildSettlement){
-            turnNumber++;
-            if(turnNumber == 4){
-                turnNumber = 0;
-                roundZeroBuildSettlement = false;
-            }
+            roundZeroBuildSettlement = false;
+            roundZeroBuildRoad = true;
         }
         else{
             getAllPlayers().get(turnNumber).removeRCard(new ResourceCard("brick"));
@@ -258,5 +280,22 @@ public class GameState {
             roundZeroRollDice = false;
             roundZeroBuildSettlement = true;
         }
+    }
+    public static boolean roundZeroRoadLogic(ImageView img){
+        ImageView imgf = players.get(turnNumber).getStructures().get(players.get(turnNumber).getStructures().size()-1).getImage();
+        return img.intersects(imgf.getLayoutBounds());
+    }
+
+    public static boolean roundZeroSettlementLogic(ImageView img){
+        for(Road r: roadMap.values()){
+            if(r.getImage().intersects(img.getLayoutBounds()) && r.isVisible()){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static  void setRoadMap(HashMap<ImageView, Road> roadHashMapMap){
+        roadMap = roadHashMapMap;
     }
 }
