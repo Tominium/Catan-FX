@@ -1,6 +1,7 @@
 package com.example.catanfx.GamePieces;
 
 import com.example.catanfx.GamePieces.Misc.Token;
+import javafx.scene.image.ImageView;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Polygon;
 import javafx.scene.image.Image;
@@ -17,20 +18,26 @@ public class Tile{
     private Polygon poly;
 
     private static ArrayList<String> nameList;
+    private static ArrayList<Integer> tokensNums;
 
-    public Tile(Polygon p){
+    public Tile(Polygon p, ImageView token){
         if(nameList==null){
             nameList = new ArrayList<>();
             nameList.addAll(List.of(new String[]{"lumber", "lumber", "lumber", "lumber", "brick", "brick", "brick", "desert", "grain", "grain", "grain", "grain", "wool", "wool", "wool", "wool", "ore", "ore", "ore"}));
             Collections.shuffle(nameList);
             Collections.shuffle(nameList);
             Collections.shuffle(nameList);
+            tokensNums = new ArrayList<>();
+            tokensNums.addAll(List.of(new Integer[]{5,2,6,3,8,10,9,12,11,4,8,10,9,4,5,6,3,11}));
         }
         type = nameList.remove(nameList.size()-1);
         poly = p;
         ImagePattern img = new ImagePattern(getImage());
         p.setFill(img);
-        tok = new Token(3, null);
+        if(!type.equals("desert")){
+            tok = new Token(tokensNums.remove(0), token);
+            System.out.println(type+":"+tok.getNumber());
+        }
     }
 
     public void setToken(Token tt){tok = tt;}
