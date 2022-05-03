@@ -1,5 +1,4 @@
 package com.example.catanfx.Controllers;
-
 import com.example.catanfx.GamePieces.GameState;
 import com.example.catanfx.GamePieces.Misc.Token;
 import com.example.catanfx.GamePieces.Structures.Road;
@@ -60,7 +59,6 @@ public class GameBoardController implements Initializable {
     private Polygon tile18;
     @FXML
     private Polygon tile19;
-
     @FXML
     private ImageView road1;
     @FXML
@@ -207,97 +205,66 @@ public class GameBoardController implements Initializable {
     private ImageView road9;
     @FXML
     private ImageView sett1;
-
     @FXML
     private ImageView sett10;
-
     @FXML
     private ImageView sett11;
-
     @FXML
     private ImageView sett12;
-
     @FXML
     private ImageView sett13;
-
     @FXML
     private ImageView sett14;
-
     @FXML
     private ImageView sett15;
-
     @FXML
     private ImageView sett16;
-
     @FXML
     private ImageView sett17;
-
     @FXML
     private ImageView sett18;
-
     @FXML
     private ImageView sett19;
-
     @FXML
     private ImageView sett2;
-
     @FXML
     private ImageView sett20;
-
     @FXML
     private ImageView sett21;
-
     @FXML
     private ImageView sett22;
-
     @FXML
     private ImageView sett23;
-
     @FXML
     private ImageView sett24;
-
     @FXML
     private ImageView sett25;
-
     @FXML
     private ImageView sett26;
-
     @FXML
     private ImageView sett27;
-
     @FXML
     private ImageView sett28;
-
     @FXML
     private ImageView sett29;
-
     @FXML
     private ImageView sett3;
-
     @FXML
     private ImageView sett30;
-
     @FXML
     private ImageView sett31;
-
     @FXML
     private ImageView sett32;
-
     @FXML
     private ImageView sett33;
-
     @FXML
     private ImageView sett34;
-
     @FXML
     private ImageView sett35;
-
     @FXML
     private ImageView sett36;
-
     @FXML
     private ImageView sett37;
-
     @FXML
     private ImageView sett38;
     @FXML
@@ -344,72 +311,49 @@ public class GameBoardController implements Initializable {
     private ImageView sett8;
     @FXML
     private ImageView sett9;
-
     @FXML
     private ImageView token1;
-
     @FXML
     private ImageView token10;
-
     @FXML
     private ImageView token11;
-
     @FXML
     private ImageView token12;
-
     @FXML
     private ImageView token13;
-
     @FXML
     private ImageView token14;
-
     @FXML
     private ImageView token15;
-
     @FXML
     private ImageView token16;
-
     @FXML
     private ImageView token17;
-
     @FXML
     private ImageView token18;
-
     @FXML
     private ImageView token19;
-
     @FXML
     private ImageView token2;
-
     @FXML
     private ImageView token3;
-
     @FXML
     private ImageView token4;
-
     @FXML
     private ImageView token5;
-
     @FXML
     private ImageView token6;
-
     @FXML
     private ImageView token7;
-
     @FXML
     private ImageView token8;
-
     @FXML
     private ImageView token9;
-
-
     private HashMap<Polygon, Tile> tilesBook;
     private HashMap<ImageView, Road> roadsMap;
     private HashMap<ImageView, Settlement> settMap;
     private static boolean canBuildRoad;
     private static boolean canBuildSettlement;
-
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         tilesBook = new HashMap<>();

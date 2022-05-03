@@ -768,4 +768,94 @@
          <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
+   <ImageView fx:id="thief1" fitHeight="30.0" fitWidth="77.0" layoutX="272.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Tokens/output-onlinejpgtools.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="thief2" fitHeight="30.0" fitWidth="77.0" layoutX="402.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Tokens/output-onlinejpgtools.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="thief11" fitHeight="30.0" fitWidth="77.0" layoutX="600.0" layoutY="273.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Tokens/output-onlinejpgtools.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="thief12" fitHeight="30.0" fitWidth="77.0" layoutX="466.0" layoutY="273.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Tokens/output-onlinejpgtools.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="thief13" fitHeight="30.0" fitWidth="77.0" layoutX="142.0" layoutY="376.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Tokens/output-onlinejpgtools.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="thief14" fitHeight="30.0" fitWidth="77.0" layoutX="338.0" layoutY="272.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Tokens/output-onlinejpgtools.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="thief15" fitHeight="30.0" fitWidth="77.0" layoutX="532.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Tokens/output-onlinejpgtools.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="thief16" fitHeight="30.0" fitWidth="77.0" layoutX="338.0" layoutY="481.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Tokens/output-onlinejpgtools.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="thief17" fitHeight="30.0" fitWidth="77.0" layoutX="206.0" layoutY="481.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Tokens/output-onlinejpgtools.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="thief18" fitHeight="30.0" fitWidth="77.0" layoutX="663.0" layoutY="376.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Tokens/output-onlinejpgtools.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="thief19" fitHeight="30.0" fitWidth="77.0" layoutX="531.0" layoutY="376.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Tokens/output-onlinejpgtools.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="thief110" fitHeight="30.0" fitWidth="77.0" layoutX="402.0" layoutY="376.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Tokens/output-onlinejpgtools.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="thief111" fitHeight="30.0" fitWidth="77.0" layoutX="272.0" layoutY="376.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Tokens/output-onlinejpgtools.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="thief134" fitHeight="30.0" fitWidth="77.0" layoutX="600.0" layoutY="481.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Tokens/output-onlinejpgtools.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="thief131" fitHeight="30.0" fitWidth="77.0" layoutX="466.0" layoutY="481.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Tokens/output-onlinejpgtools.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="thief132" fitHeight="30.0" fitWidth="77.0" layoutX="216.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Tokens/output-onlinejpgtools.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="thief133" fitHeight="30.0" fitWidth="77.0" layoutX="216.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Tokens/output-onlinejpgtools.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="thief135" fitHeight="30.0" fitWidth="77.0" layoutX="216.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Assets/Tokens/output-onlinejpgtools.png" />
+      </image>
+   </ImageView>
 </AnchorPane>
