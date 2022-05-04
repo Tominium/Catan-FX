@@ -27,6 +27,7 @@ public class GameState {
     public static boolean turnDirc;
     public static TreeMap<Integer, ArrayList<Integer>> zeroMap;
     public static HashMap<ImageView, Road> roadMap;
+    public static ArrayList<Tile> tilesBook;
 
     public GameState(int numOfPlayers){
         players = new ArrayList<Player>();
@@ -289,10 +290,19 @@ public class GameState {
 
     public static boolean roundZeroSettlementLogic(ImageView img){
         for(Road r: roadMap.values()){
-            if(r.getImage().getBoundsInParent().intersects(img.getBoundsInParent()) && r.isVisible() && !r.getColor().equals(players.get(turnNumber).getColor())){
+            if(r.isVisible() && !r.getColor().equals(players.get(turnNumber).getColor()) && r.getImage().getBoundsInParent().intersects(img.getBoundsInParent()) ){
                 return false;
             }
         }
+//        for(Tile tt: tilesBook){
+//            if(tt.getPoly().getBoundsInParent().intersects(img.getBoundsInParent())){
+//                for(Structure s: tt.getEdges()){
+//                    if(!s.getColor().equals(players.get(turnNumber).getColor()) && s.getImage().getBoundsInParent().intersects(img.getBoundsInParent())){
+//                        return false;
+//                    }
+//                }
+//            }
+//        }
         return true;
     }
 
