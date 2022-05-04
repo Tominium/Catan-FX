@@ -79,7 +79,6 @@ public class generalInfoCompController {
             nextButton.setVisible(true);
         }
         else{
-            System.out.println(Dice.getRolledNum());
             GameState.roundZeroRollDiceDice(Dice.getRolledNum());
         }
     }
