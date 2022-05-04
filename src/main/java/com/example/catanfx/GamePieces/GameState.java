@@ -282,13 +282,14 @@ public class GameState {
         }
     }
     public static boolean roundZeroRoadLogic(ImageView img){
-        ImageView imgf = players.get(turnNumber).getStructures().get(players.get(turnNumber).getStructures().size()-1).getImage();
-        return img.intersects(imgf.getLayoutBounds());
+        ImageView imgf = players.get(turnNumber).getSettlements().get(players.get(turnNumber).getSettlements().size()-1).getImage();
+        System.out.println(imgf.getBoundsInParent().intersects(img.getBoundsInParent()));
+        return imgf.getBoundsInParent().intersects(img.getBoundsInParent());
     }
 
     public static boolean roundZeroSettlementLogic(ImageView img){
         for(Road r: roadMap.values()){
-            if(r.getImage().intersects(img.getLayoutBounds()) && r.isVisible()){
+            if(r.getImage().getBoundsInParent().intersects(img.getBoundsInParent()) && r.isVisible() && !r.getColor().equals(players.get(turnNumber).getColor())){
                 return false;
             }
         }

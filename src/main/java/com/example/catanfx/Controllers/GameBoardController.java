@@ -372,7 +372,7 @@ public class GameBoardController implements Initializable {
         if(!roadsMap.get(img).isVisible() && canBuildRoad){
             img.setImage(new Image(GameBoardController.class.getResource("/Assets/Road/white.png").toExternalForm()));
         }
-        else if(!roadsMap.get(img).isVisible() && (GameState.roundZeroBuildRoad && GameState.roundZeroRoadLogic(img))){
+        else if(!roadsMap.get(img).isVisible() && GameState.roundZeroBuildRoad && GameState.roundZeroRoadLogic(img)){
             img.setImage(new Image(GameBoardController.class.getResource("/Assets/Road/white.png").toExternalForm()));
         }
     }
@@ -391,12 +391,14 @@ public class GameBoardController implements Initializable {
         if(canBuildRoad){
             GameState.buildRoad();
             roadsMap.get(img).setVisible(true);
+            GameState.getAllPlayers().get(GameState.turnNumber).addRoad(roadsMap.get(img));
+            canBuildRoad = false;
             img.setImage(new Image(GameBoardController.class.getResource("/Assets/Road/" + GameState.getAllPlayers().get(GameState.turnNumber).getColor() + ".png").toExternalForm()));
         }
-        canBuildRoad = false;
-        if(!roadsMap.get(img).isVisible() && (GameState.roundZeroBuildRoad && GameState.roundZeroRoadLogic(img))){
+        if(!roadsMap.get(img).isVisible() && GameState.roundZeroBuildRoad && GameState.roundZeroRoadLogic(img)){
             roadsMap.get(img).setVisible(true);
             img.setImage(new Image(GameBoardController.class.getResource("/Assets/Road/" + GameState.getAllPlayers().get(GameState.turnNumber).getColor() + ".png").toExternalForm()));
+            GameState.getAllPlayers().get(GameState.turnNumber).addRoad(roadsMap.get(img));
             GameState.buildRoad();
         }
     }
@@ -420,10 +422,10 @@ public class GameBoardController implements Initializable {
     @FXML
     void buildSettlement(MouseEvent event) {
         ImageView img = (ImageView)event.getSource();
-        if((canBuildSettlement || GameState.roundZeroBuildSettlement) && !settMap.get(img).isVisible()){
+        if((canBuildSettlement || (GameState.roundZeroBuildSettlement&&GameState.roundZeroSettlementLogic(img))) && !settMap.get(img).isVisible()){
             settMap.get(img).setVisible(true);
             img.setImage(new Image(GameBoardController.class.getResource("/Assets/Settlement/" + GameState.getAllPlayers().get(GameState.turnNumber).getColor() + ".png").toExternalForm()));
-            GameState.getAllPlayers().get(GameState.turnNumber).addStruct(settMap.get(img));
+            GameState.getAllPlayers().get(GameState.turnNumber).addSett(settMap.get(img));
             GameState.buildSettlement();
         }
         canBuildSettlement = false;
