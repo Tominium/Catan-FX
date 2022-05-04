@@ -21,6 +21,7 @@ public class DevelopmentDeck {
         deck.offer(new DevelopmentCard("Chapel", 1));
         deck.offer(new DevelopmentCard("Great Hall", 1));
         deck.offer(new DevelopmentCard("University", 1));
+        shuffle();
 
     }
 

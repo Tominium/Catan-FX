@@ -1,12 +1,10 @@
 package com.example.catanfx.GamePieces;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.awt.*;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.event.*;
-import java.awt.image.BufferedImage;
 import java.io.File;
 
 

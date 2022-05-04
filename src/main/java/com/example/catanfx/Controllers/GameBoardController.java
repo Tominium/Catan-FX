@@ -1,6 +1,5 @@
 package com.example.catanfx.Controllers;
 import com.example.catanfx.GamePieces.GameState;
-import com.example.catanfx.GamePieces.Misc.Token;
 import com.example.catanfx.GamePieces.Structures.Road;
 import com.example.catanfx.GamePieces.Structures.Settlement;
 import com.example.catanfx.GamePieces.Structures.Structure;
@@ -12,13 +11,10 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.Polygon;
 
-import javax.print.attribute.HashPrintJobAttributeSet;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.ResourceBundle;
-import java.util.Set;
-import java.util.jar.JarEntry;
 
 public class GameBoardController implements Initializable {
 

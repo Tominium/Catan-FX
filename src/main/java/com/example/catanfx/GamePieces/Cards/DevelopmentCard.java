@@ -2,9 +2,6 @@ package com.example.catanfx.GamePieces.Cards;
 
 import javafx.scene.image.ImageView;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.IOException;
 
 public class DevelopmentCard {
     private String dc;

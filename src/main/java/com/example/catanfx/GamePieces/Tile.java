@@ -1,6 +1,5 @@
 package com.example.catanfx.GamePieces;
 
-import com.example.catanfx.Controllers.GameBoardController;
 import com.example.catanfx.GamePieces.Misc.Token;
 import com.example.catanfx.GamePieces.Structures.Structure;
 import javafx.scene.image.ImageView;
@@ -8,7 +7,6 @@ import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Polygon;
 import javafx.scene.image.Image;
 
-import java.lang.reflect.AnnotatedArrayType;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
