@@ -1,19 +1,13 @@
 package com.example.catanfx.GamePieces.Structures;
 
 import javafx.scene.image.ImageView;
-
-import javax.imageio.ImageIO;
-import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.awt.image.Raster;
-import java.io.IOException;
 import java.util.Objects;
 
 public class Structure {
-    private String type;
-    private String color;
+    public String type;
+    public String color;
     public ImageView image;
-    private boolean isVisible;
+    public boolean isVisible;
 
     public Structure(String type, String color,ImageView image) {
         this.type = type;
