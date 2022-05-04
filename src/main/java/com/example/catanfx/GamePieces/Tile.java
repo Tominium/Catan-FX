@@ -41,7 +41,6 @@ public class Tile{
         p.setFill(img);
         if(!type.equals("desert")){
             tok = new Token(tokensNums.remove(0), token);
-            System.out.println(type+":"+tok.getNumber());
         }
         vertices = new ArrayList<>();
         edges = new ArrayList<>();
