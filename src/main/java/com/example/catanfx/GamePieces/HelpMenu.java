@@ -16,10 +16,11 @@ public class HelpMenu extends JFrame {
     private JButton previousPageBtn;
     private JButton nextPageBtn;
 
-    private BufferedImage page1, page2, page3, page4, page5, page6, page7, page8, page9, page10, page11, page12, page13, page14, page15, page16, currentPage;
+    private BufferedImage page0, page1, page2, page3, page4, page5, page6, page7, page8, page9, page10, page11, page12, page13, page14, page15, page16, currentPage;
 
     {
         try {
+            page0 = ImageIO.read(new File("src/main/resources/Assets/Images/instructions.jpg"));
             page1 = ImageIO.read(new File("src/main/resources/Assets/Images/0001.jpg"));
             page2 = ImageIO.read(new File("src/main/resources/Assets/Images/0002.jpg"));
             page3 = ImageIO.read(new File("src/main/resources/Assets/Images/0003.jpg"));
@@ -39,7 +40,7 @@ public class HelpMenu extends JFrame {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        currentPage = page1;
+        currentPage = page0;
 
     }
 
@@ -54,7 +55,7 @@ public class HelpMenu extends JFrame {
         setContentPane(new JLabel(new ImageIcon("src/main/resources/Assets/Images/CoolPic.jpg")));
         setVisible(true);
         getContentPane().setBackground(new Color(245, 245, 220));
-        JLabel page = new JLabel(new ImageIcon(page1));
+        JLabel page = new JLabel(new ImageIcon(page0));
         page.setBounds(0, 0, 800, 600);
         add(page);
 
@@ -67,9 +68,11 @@ public class HelpMenu extends JFrame {
         previousPageBtn.setBorder(BorderFactory.createLineBorder(new Color(245, 245, 220)));
         previousPageBtn.addActionListener(new ActionListener() {
                                               public void actionPerformed(ActionEvent e) {
-                                                  if (currentPage == page1) {
-                                                      currentPage = page1;
-                                                  } else if (currentPage == page2) {
+                                                  if (currentPage == page0) {
+                                                      currentPage = page0;
+                                                  } else if (currentPage == page1) {
+                                                      currentPage = page0;}
+                                                  else if (currentPage == page2) {
                                                       currentPage = page1;
                                                   } else if (currentPage == page3) {
                                                       currentPage = page2;
@@ -113,9 +116,11 @@ public class HelpMenu extends JFrame {
         nextPageBtn.setBorder(BorderFactory.createLineBorder(new Color(245, 245, 220)));
         nextPageBtn.addActionListener(new ActionListener() {
                                           public void actionPerformed(ActionEvent e) {
-                                              if (currentPage == page1) {
-                                                  currentPage = page2;
-                                              } else if (currentPage == page2) {
+                                              if (currentPage == page0) {
+                                                  currentPage = page1;
+                                              }  else if (currentPage == page1) {
+                                                  currentPage = page2;}
+                                              else if (currentPage == page2) {
                                                   currentPage = page3;
                                               } else if (currentPage == page3) {
                                                   currentPage = page4;
