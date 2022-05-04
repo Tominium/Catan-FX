@@ -407,14 +407,14 @@ public class GameBoardController implements Initializable {
         ImageView img = (ImageView)event.getSource();
         if(canBuildRoad){
             GameState.buildRoad();
+            roadsMap.get(img).setColor(GameState.getAllPlayers().get(GameState.turnNumber).getColor());
             roadsMap.get(img).setVisible(true);
             GameState.getAllPlayers().get(GameState.turnNumber).addRoad(roadsMap.get(img));
             canBuildRoad = false;
-            img.setImage(new Image(GameBoardController.class.getResource("/Assets/Road/" + GameState.getAllPlayers().get(GameState.turnNumber).getColor() + ".png").toExternalForm()));
         }
         if(!roadsMap.get(img).isVisible() && GameState.roundZeroBuildRoad && GameState.roundZeroRoadLogic(img)){
             roadsMap.get(img).setVisible(true);
-            img.setImage(new Image(GameBoardController.class.getResource("/Assets/Road/" + GameState.getAllPlayers().get(GameState.turnNumber).getColor() + ".png").toExternalForm()));
+            roadsMap.get(img).setColor(GameState.getAllPlayers().get(GameState.turnNumber).getColor());
             GameState.getAllPlayers().get(GameState.turnNumber).addRoad(roadsMap.get(img));
             GameState.buildRoad();
         }
@@ -441,7 +441,7 @@ public class GameBoardController implements Initializable {
         ImageView img = (ImageView)event.getSource();
         if((canBuildSettlement || (GameState.roundZeroBuildSettlement&&GameState.roundZeroSettlementLogic(settMap.get(img)))) && !settMap.get(img).isVisible()){
             settMap.get(img).setVisible(true);
-            img.setImage(new Image(GameBoardController.class.getResource("/Assets/Settlement/" + GameState.getAllPlayers().get(GameState.turnNumber).getColor() + ".png").toExternalForm()));
+            settMap.get(img).setColor(GameState.getAllPlayers().get(GameState.turnNumber).getColor());
             GameState.getAllPlayers().get(GameState.turnNumber).addSett(settMap.get(img));
             GameState.buildSettlement();
         }
@@ -454,4 +454,5 @@ public class GameBoardController implements Initializable {
     public static void setCanBuildSettlement(){
         canBuildSettlement = true;
     }
+
 }

@@ -206,6 +206,7 @@ public class GameState {
                 roundZeroBuildRoad = false;
                 roundZeroBuildSettlement = false;
                 turnNumber = 0;
+                roundZeroGiveResources();
             }
         }
         else{
@@ -294,10 +295,12 @@ public class GameState {
                 for(Structure s: tt.getEdges()){
                     if(!s.getColor().equalsIgnoreCase(players.get(turnNumber).getColor()) && s.getImage().getBoundsInParent().intersects(img.getImage().getBoundsInParent())){
                         if(roundZeroRoadIntersectSettlementLogic(s.getImage(), tt.getVertices())){
+                            System.out.println("DOg");
                             return false;
                         }
                     }
                     if(s.isVisible() && !s.getColor().equalsIgnoreCase(players.get(turnNumber).getColor()) && s.getImage().getBoundsInParent().intersects(img.getImage().getBoundsInParent()) ){
+                        System.out.println("CAT");
                         return false;
                     }
                 }
@@ -317,6 +320,19 @@ public class GameState {
             }
         }
         return false;
+    }
+
+    public static void roundZeroGiveResources(){
+        HashMap<String, ArrayList<String>> resources = new HashMap<>();
+        for(Player p: players){
+            Structure s = p.getSettlements().get(1);
+            for(Tile t: tilesBook){
+                if(!t.getType().equalsIgnoreCase("desert") && t.getVertices().contains(s)){
+                    p.addRC(new ResourceCard(t.getType()));
+                }
+            }
+        }
+
     }
 
 }
