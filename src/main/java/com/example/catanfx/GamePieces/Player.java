@@ -11,7 +11,9 @@ public class Player {
     private String color;
     private LinkedList<ResourceCard> resourceCards;
     private LinkedList<DevelopmentCard> devCards;
-    private LinkedList<Structure> structures;
+    private LinkedList<Structure> settlements;
+    private LinkedList<Structure> roads;
+    private LinkedList<Structure> cities;
     private int turnNum;
 
     public Player(String c, int turn){
@@ -19,14 +21,16 @@ public class Player {
         turnNum = turn;
         resourceCards = new LinkedList<>();
         devCards = new LinkedList<>();
-        structures = new LinkedList<>();
-//        for(int i=0; i<(Math.random()*20)+1; i++){
-//            resourceCards.add(new ResourceCard("brick"));
-//            resourceCards.add(new ResourceCard("lumber"));
-//            resourceCards.add(new ResourceCard("grain"));
-//            resourceCards.add(new ResourceCard("wool"));
-//            resourceCards.add(new ResourceCard("ore"));
-//        }
+        settlements = new LinkedList<>();
+        roads = new LinkedList<>();
+        cities = new LinkedList<>();
+        for(int i=0; i<(Math.random()*20)+1; i++){
+            resourceCards.add(new ResourceCard("brick"));
+            resourceCards.add(new ResourceCard("lumber"));
+            resourceCards.add(new ResourceCard("grain"));
+            resourceCards.add(new ResourceCard("wool"));
+            resourceCards.add(new ResourceCard("ore"));
+        }
     }
 
     public void removeRCard(ResourceCard c){
@@ -40,17 +44,19 @@ public class Player {
     public LinkedList<ResourceCard> getRC(){return resourceCards;}
     public int getTurnNum(){return turnNum;}
     public LinkedList<DevelopmentCard> getDC(){return devCards;}
-    public LinkedList<Structure> getStructures(){return structures;}
+    public LinkedList<Structure> getSettlements(){return settlements;}
 
     public void setRC(LinkedList<ResourceCard> rc){resourceCards = rc;}
     public void addRC(ResourceCard c){resourceCards.add(c);}
     public void addDC(DevelopmentCard c){devCards.add(c);}
     public void setDC(LinkedList<DevelopmentCard> d){devCards = d;}
-    public void addStruct(Structure s){structures.add(s);}
+    public void addSett(Structure s){settlements.add(s);}
+    public void addRoad(Structure s){roads.add(s);}
     public void upgradeStruct(Structure s){
-        for(int i=0; i<structures.size(); i++){
-            if(structures.get(i).equals(s)){
-                structures.set(i, new City("City", s.getColor(), s.getImage()));
+        for(int i=0; i<settlements.size(); i++){
+            if(settlements.get(i).equals(s)){
+                settlements.set(i, new City("City", s.getColor(), s.getImage()));
+                cities.add(settlements.remove(i));
                 return;
             }
         }
