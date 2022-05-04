@@ -101,7 +101,7 @@ public class GameState {
         for(Player p: players){
             for(Structure s: p.getSettlements()){
                 for (Tile t : tilesBook) {
-                    if (t.getToken().getNumber() == a) {
+                    if (!t.getType().equals("desert") && t.getToken().getNumber() == a) {
                         if (!t.getType().equalsIgnoreCase("desert") && t.getVertices().contains(s)) {
                             p.addRC(ResourceDeck.getCard(t.getType()));
                         }
