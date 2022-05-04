@@ -2,6 +2,7 @@ package com.example.catanfx.GamePieces;
 
 import com.example.catanfx.GamePieces.Cards.DevelopmentCard;
 import com.example.catanfx.GamePieces.Cards.ResourceCard;
+import com.example.catanfx.GamePieces.Cards.ResourceDeck;
 import com.example.catanfx.GamePieces.Misc.Dice;
 import com.example.catanfx.GamePieces.Structures.Road;
 import com.example.catanfx.GamePieces.Structures.Settlement;
@@ -18,8 +19,6 @@ public class GameState {
     private static ArrayList<Tile> tiles;
     public static int turnNumber;
     //private GameBoardGraphic fullGameBoard;
-    //private ResourceDeck rcDeck;
-    //private DevelopmentDeck dcDeck;
 //    private static Dice dice;
 //    private static Thief thief;
     public static boolean roundZeroRollDice;
@@ -33,9 +32,9 @@ public class GameState {
 
     public GameState(int numOfPlayers){
         players = new ArrayList<Player>();
+        new ResourceDeck();
         setColors(numOfPlayers);
         tiles = new ArrayList<Tile>();
-//        dice = new Dice();
 //        thief = new Thief();
         turnNumber = 0;
         new Dice();
@@ -96,7 +95,20 @@ public class GameState {
         }else{
             turnNumber++;
         }
+    }
 
+    public static void rollDiceGetResources(int a){
+        for(Player p: players){
+            for(Structure s: p.getSettlements()){
+                for (Tile t : tilesBook) {
+                    if (t.getToken().getNumber() == a) {
+                        if (!t.getType().equalsIgnoreCase("desert") && t.getVertices().contains(s)) {
+                            p.addRC(ResourceDeck.getCard(t.getType()));
+                        }
+                    }
+                }
+            }
+        }
     }
 
     public static void trade(Player p, ArrayList<ResourceCard> send, ArrayList<ResourceCard> receive) {
@@ -323,16 +335,14 @@ public class GameState {
     }
 
     public static void roundZeroGiveResources(){
-        HashMap<String, ArrayList<String>> resources = new HashMap<>();
         for(Player p: players){
             Structure s = p.getSettlements().get(1);
             for(Tile t: tilesBook){
                 if(!t.getType().equalsIgnoreCase("desert") && t.getVertices().contains(s)){
-                    p.addRC(new ResourceCard(t.getType()));
+                    p.addRC(ResourceDeck.getCard(t.getType()));
                 }
             }
         }
-
     }
 
 }
