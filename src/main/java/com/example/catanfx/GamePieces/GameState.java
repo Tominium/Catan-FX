@@ -4,6 +4,7 @@ import com.example.catanfx.GamePieces.Cards.DevelopmentCard;
 import com.example.catanfx.GamePieces.Cards.ResourceCard;
 import com.example.catanfx.GamePieces.Misc.Dice;
 import com.example.catanfx.GamePieces.Structures.Road;
+import com.example.catanfx.GamePieces.Structures.Settlement;
 import com.example.catanfx.GamePieces.Structures.Structure;
 import javafx.scene.image.ImageView;
 
@@ -28,6 +29,7 @@ public class GameState {
     public static TreeMap<Integer, ArrayList<Integer>> zeroMap;
     public static HashMap<ImageView, Road> roadMap;
     public static ArrayList<Tile> tilesBook;
+    public static ArrayList<Structure> setts;
 
     public GameState(int numOfPlayers){
         players = new ArrayList<Player>();
@@ -268,7 +270,6 @@ public class GameState {
             zeroMap.get(r).add(3);
             turnNumber++;
         }
-        System.out.println(zeroMap);
         if(players.size()==3&&turnNumber==3){
             turnNumber = 0;
             setPlayerNums();
@@ -284,29 +285,40 @@ public class GameState {
     }
     public static boolean roundZeroRoadLogic(ImageView img){
         ImageView imgf = players.get(turnNumber).getSettlements().get(players.get(turnNumber).getSettlements().size()-1).getImage();
-        System.out.println(imgf.getBoundsInParent().intersects(img.getBoundsInParent()));
         return imgf.getBoundsInParent().intersects(img.getBoundsInParent());
     }
 
-    public static boolean roundZeroSettlementLogic(ImageView img){
+    public static boolean roundZeroSettlementLogic(Settlement img){
         for(Road r: roadMap.values()){
-            if(r.isVisible() && !r.getColor().equals(players.get(turnNumber).getColor()) && r.getImage().getBoundsInParent().intersects(img.getBoundsInParent()) ){
+            if(r.isVisible() && !r.getColor().equals(players.get(turnNumber).getColor()) && r.getImage().getBoundsInParent().intersects(img.getImage().getBoundsInParent()) ){
                 return false;
             }
         }
-//        for(Tile tt: tilesBook){
-//            if(tt.getPoly().getBoundsInParent().intersects(img.getBoundsInParent())){
-//                for(Structure s: tt.getEdges()){
-//                    if(!s.getColor().equals(players.get(turnNumber).getColor()) && s.getImage().getBoundsInParent().intersects(img.getBoundsInParent())){
-//                        return false;
-//                    }
-//                }
-//            }
-//        }
+        for(Tile tt: tilesBook){
+            if(tt.getVertices().contains(img)){
+                for(Structure s: tt.getEdges()){
+                    if(!s.getColor().equals(players.get(turnNumber).getColor()) && s.getImage().getBoundsInParent().intersects(img.getImage().getBoundsInParent())){
+                        if(roundZeroRoadIntersectSettlementLogic(s.getImage(), tt.getVertices())){
+                            return false;
+                        }
+                    }
+                }
+            }
+        }
         return true;
     }
 
     public static  void setRoadMap(HashMap<ImageView, Road> roadHashMapMap){
         roadMap = roadHashMapMap;
     }
+
+    public static boolean roundZeroRoadIntersectSettlementLogic(ImageView img, ArrayList<Structure> verts){
+        for(Structure s: verts){
+            if(s.isVisible() && img.getBoundsInParent().intersects(s.getImage().getBoundsInParent())){
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
