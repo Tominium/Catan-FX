@@ -289,18 +289,16 @@ public class GameState {
     }
 
     public static boolean roundZeroSettlementLogic(Settlement img){
-        for(Road r: roadMap.values()){
-            if(r.isVisible() && !r.getColor().equals(players.get(turnNumber).getColor()) && r.getImage().getBoundsInParent().intersects(img.getImage().getBoundsInParent()) ){
-                return false;
-            }
-        }
         for(Tile tt: tilesBook){
             if(tt.getVertices().contains(img)){
                 for(Structure s: tt.getEdges()){
-                    if(!s.getColor().equals(players.get(turnNumber).getColor()) && s.getImage().getBoundsInParent().intersects(img.getImage().getBoundsInParent())){
+                    if(!s.getColor().equalsIgnoreCase(players.get(turnNumber).getColor()) && s.getImage().getBoundsInParent().intersects(img.getImage().getBoundsInParent())){
                         if(roundZeroRoadIntersectSettlementLogic(s.getImage(), tt.getVertices())){
                             return false;
                         }
+                    }
+                    if(s.isVisible() && !s.getColor().equalsIgnoreCase(players.get(turnNumber).getColor()) && s.getImage().getBoundsInParent().intersects(img.getImage().getBoundsInParent()) ){
+                        return false;
                     }
                 }
             }
@@ -314,7 +312,7 @@ public class GameState {
 
     public static boolean roundZeroRoadIntersectSettlementLogic(ImageView img, ArrayList<Structure> verts){
         for(Structure s: verts){
-            if(s.isVisible() && img.getBoundsInParent().intersects(s.getImage().getBoundsInParent())){
+            if(s.isVisible() && !s.getColor().equalsIgnoreCase(players.get(turnNumber).getColor()) &&img.getBoundsInParent().intersects(s.getImage().getBoundsInParent())){
                 return true;
             }
         }
