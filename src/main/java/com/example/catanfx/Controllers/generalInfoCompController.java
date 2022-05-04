@@ -53,16 +53,27 @@ public class generalInfoCompController {
 
     @FXML
     void openTrade(ActionEvent event) {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/catanfx/tradePanel.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root1));
-            stage.initModality(Modality.APPLICATION_MODAL);
-            stage.setResizable(false);
-            stage.showAndWait();
-        } catch (Exception e) {
-            e.printStackTrace();
+        String[] arrayData = {"Domestic Trade", "Maritime Trade"};
+        List<String> dialogData = Arrays.asList(arrayData);
+
+        ChoiceDialog dialog = new ChoiceDialog(dialogData.get(0), dialogData);
+        dialog.setGraphic(null);
+        dialog.setTitle("Trading");
+        dialog.setHeaderText("Select Trade Type");
+
+        Optional<String> result = dialog.showAndWait();
+        if(result.get().equals("Domestic Trade")){
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/catanfx/tradePanel.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root1));
+                stage.initModality(Modality.APPLICATION_MODAL);
+                stage.setResizable(false);
+                stage.showAndWait();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -94,7 +105,6 @@ public class generalInfoCompController {
         dialog.setHeaderText("Select Structure To Build");
 
         Optional<String> result = dialog.showAndWait();
-        String selected = "cancelled.";
 
         if (result.get().equals("Road")) {
             if (GameState.canBuild((result.get().toLowerCase()))) {
