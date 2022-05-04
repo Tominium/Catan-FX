@@ -1,13 +1,15 @@
 package com.example.catanfx.GamePieces;
 
+import com.example.catanfx.Controllers.GameBoardController;
 import com.example.catanfx.GamePieces.Misc.Token;
+import com.example.catanfx.GamePieces.Structures.Structure;
 import javafx.scene.image.ImageView;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Polygon;
 import javafx.scene.image.Image;
 
+import java.lang.reflect.AnnotatedArrayType;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -19,6 +21,9 @@ public class Tile{
 
     private static ArrayList<String> nameList;
     private static ArrayList<Integer> tokensNums;
+
+    private ArrayList<Structure> vertices;
+    private ArrayList<Structure> edges;
 
     public Tile(Polygon p, ImageView token){
         if(nameList==null){
@@ -38,6 +43,8 @@ public class Tile{
             tok = new Token(tokensNums.remove(0), token);
             System.out.println(type+":"+tok.getNumber());
         }
+        vertices = new ArrayList<>();
+        edges = new ArrayList<>();
     }
 
     public void setToken(Token tt){tok = tt;}
@@ -49,5 +56,24 @@ public class Tile{
 
     public String getType(){
         return type;
+    }
+
+    public void addVertex(Structure te){
+        vertices.add(te);
+    }
+
+    public void addEdges(Structure te){
+        edges.add(te);
+    }
+
+    public Polygon getPoly(){
+        return poly;
+    }
+
+    public ArrayList<Structure> getVertices(){
+        return vertices;
+    }
+    public ArrayList<Structure> getEdges(){
+        return edges;
     }
 }
