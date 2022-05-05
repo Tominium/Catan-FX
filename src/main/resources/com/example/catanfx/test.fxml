@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane centerShape="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="864.0" prefWidth="1553.0" scaleX="0.85" scaleY="0.85" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <SplitPane dividerPositions="0.5, 0.5" layoutX="-110.0" layoutY="-91.0" prefHeight="1033.0" prefWidth="1340.0">
+         <items>
+            <AnchorPane fx:id="anchorPane1" prefHeight="1021.0" prefWidth="431.0">
+               <children>
+                  <fx:include fx:id="allPlayersSideComp" source="allPlayersSideComp.fxml" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anchorPane2" centerShape="false" prefHeight="961.0" prefWidth="972.0">
+               <children>
+                  <fx:include fx:id="gameBoard" source="gameBoard.fxml" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anchorPane3" prefHeight="1031.0" prefWidth="433.0">
+               <children>
+                  <fx:include fx:id="generalComp" source="generalInfoSideComp.fxml" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
