@@ -351,4 +351,21 @@ public class GameState {
         p.addRC(r);
     }
 
+    public static void monopoly(Player p, String resource){
+        int resourceTotal = 0;
+        for(int i = 0; i < players.size(); i++){
+            if(players.indexOf(p) != i){
+                int count = Collections.frequency(players.get(i).getRC(), new ResourceCard(resource));
+                for(int j = 0; j < count; j++){
+                    players.get(i).removeRCard(new ResourceCard(resource));
+                    resourceTotal++;
+                }
+            }
+        }
+        for(int i = 0; i < resourceTotal; i++){
+            p.addRC(new ResourceCard(resource));
+        }
+
+    }
+
 }
