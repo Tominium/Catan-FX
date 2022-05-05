@@ -345,4 +345,10 @@ public class GameState {
         }
     }
 
+    public static void yearOfPlenty(Player p, String resource){
+        ResourceCard r = new ResourceCard(resource);
+        p.addRC(r);
+        p.addRC(r);
+    }
+
 }

@@ -6,11 +6,15 @@ import com.example.catanfx.GamePieces.GameState;
 import com.example.catanfx.GamePieces.Player;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
@@ -97,6 +101,29 @@ public class InventoryController implements Initializable {
             alert.setContentText("Unable to use a Development Card during someone else's turn");
 
             alert.show();
+        }
+        else if(Collections.frequency(p.getDC(), new DevelopmentCard("yearofplenty")) == 0){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText("You do not have enough!");
+
+            alert.show();
+        }
+        else {
+            stage = (Stage) pane.getScene().getWindow();
+            stage.close();
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/catanfx/YearOfPlenty.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root1));
+                stage.initModality(Modality.APPLICATION_MODAL);
+                stage.setResizable(false);
+                stage.showAndWait();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 
