@@ -8,11 +8,14 @@ import com.example.catanfx.GamePieces.Misc.Dice;
 import com.example.catanfx.GamePieces.Structures.Road;
 import com.example.catanfx.GamePieces.Structures.Settlement;
 import com.example.catanfx.GamePieces.Structures.Structure;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ChoiceDialog;
 import javafx.scene.image.ImageView;
 
 import javax.sound.sampled.Port;
 import java.awt.*;
 import java.util.*;
+import java.util.List;
 
 public class GameState {
 
@@ -115,6 +118,11 @@ public class GameState {
             }
         }
         else{
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Rolled Seven");
+            alert.setHeaderText(null);
+            alert.setContentText("You Rolled A Seven! Please Move the Thief!");
+            alert.showAndWait();
             rollSeven = true;
         }
     }
@@ -191,6 +199,33 @@ public class GameState {
 //    }
 
     public static void rollSeven() {
+        Set<String> colors = new TreeSet<>();
+        for(Tile ta: tilesBook){
+            if(!ta.getType().equalsIgnoreCase("desert") && ta.getToken().isThief()){
+                for(Structure s: ta.getVertices()){
+                    if(!s.getColor().equalsIgnoreCase("white")){
+                        colors.add(s.getColor());
+                    }
+                }
+                break;
+            }
+        }
+        if(!colors.isEmpty()){
+            String[] arrayData = colors.toArray(new String[0]);
+            List<String> dialogData = Arrays.asList(arrayData);
+
+            ChoiceDialog dialog = new ChoiceDialog(dialogData.get(0), dialogData);
+            dialog.setGraphic(null);
+            dialog.setTitle("Stealing");
+            dialog.setHeaderText("Select Player To Steal From");
+
+            Optional<String> result = dialog.showAndWait();
+            for(Player p: players){
+                if(p.getColor().equalsIgnoreCase(result.get())){
+
+                }
+            }
+        }
 
     }
 
