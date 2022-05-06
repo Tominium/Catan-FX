@@ -412,4 +412,23 @@ public class GameState {
         }
         return false;
     }
+
+    public static boolean newCard(Player p, String developmentCard){
+        DevelopmentCard d = new DevelopmentCard();
+        for(int i = 0; i < p.getDC().size(); i++){
+            if(p.getDC().get(i).getType().equals(developmentCard)){
+                d = p.getDC().get(i);
+            }
+        }
+        if(d.justBought()){
+            return true;
+        }
+        return false;
+    }
+
+    public static void oldCard(Player p){
+        for(int i = 0; i < p.getDC().size(); i++){
+            p.getDC().get(i).oldCardNow();
+        }
+    }
 }

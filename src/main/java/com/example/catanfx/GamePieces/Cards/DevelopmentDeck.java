@@ -52,6 +52,7 @@ public class DevelopmentDeck {
                 else{
                     shuffled.offer(new DevelopmentCard("victorypoint"));
                 }
+                used.add(random);
             }
             else{
                 i--;
