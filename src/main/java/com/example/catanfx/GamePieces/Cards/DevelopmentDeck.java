@@ -4,7 +4,7 @@ import java.util.*;
 
 public class DevelopmentDeck {
 
-    private static Deque<DevelopmentCard> deck;
+    public static Deque<DevelopmentCard> deck;
 
     public DevelopmentDeck() {
         deck = new ArrayDeque<DevelopmentCard>();
