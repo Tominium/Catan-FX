@@ -1,5 +1,6 @@
 package com.example.catanfx.Controllers;
 
+import com.example.catanfx.GamePieces.Cards.DevelopmentDeck;
 import com.example.catanfx.GamePieces.GameState;
 import com.example.catanfx.GamePieces.HelpMenu;
 import com.example.catanfx.GamePieces.Misc.Dice;
@@ -179,7 +180,16 @@ public class generalInfoCompController {
         Optional<ButtonType> result = alert.showAndWait();
         if (result.get() == ButtonType.OK) {
             if(GameState.check(GameState.getAllPlayers().get(GameState.turnNumber))) {
-                GameState.buyDC(GameState.getAllPlayers().get(GameState.turnNumber));
+                if(DevelopmentDeck.deck.size() != 0) {
+                    GameState.buyDC(GameState.getAllPlayers().get(GameState.turnNumber));
+                }
+                else{
+                    Alert alert3 = new Alert(Alert.AlertType.INFORMATION);
+                    alert3.setTitle("Error");
+                    alert3.setHeaderText(null);
+                    alert3.setContentText("There are no more Development Cards Left in the Deck!");
+                    alert3.showAndWait();
+                }
             }
             else{
                 Alert alert2 = new Alert(Alert.AlertType.INFORMATION);

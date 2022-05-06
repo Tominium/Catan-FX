@@ -161,6 +161,8 @@ public class GameState {
         return false;
     }
 
+
+
     private static boolean canBuildSettlement(){
         if(players.get(turnNumber).getSettlements().size() == 5){return false;}
         LinkedList<ResourceCard> rc = players.get(turnNumber).getRC();
@@ -373,6 +375,7 @@ public class GameState {
         ResourceCard r = new ResourceCard(resource);
         p.addRC(r);
         p.addRC(r);
+        p.removeDCard(new DevelopmentCard("yearofplenty"));
     }
 
     public static void monopoly(Player p, String resource){
@@ -389,6 +392,8 @@ public class GameState {
         for(int i = 0; i < resourceTotal; i++){
             p.addRC(new ResourceCard(resource));
         }
+        p.removeDCard(new DevelopmentCard("monopoly"));
+
     }
 
     public static void buyDC(Player p){
