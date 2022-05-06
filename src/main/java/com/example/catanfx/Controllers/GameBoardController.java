@@ -19,6 +19,24 @@ import java.util.ResourceBundle;
 public class GameBoardController implements Initializable {
 
     @FXML
+    private Polygon port1;
+    @FXML
+    private Polygon port3;
+    @FXML
+    private Polygon port4;
+    @FXML
+    private Polygon port5;
+    @FXML
+    private Polygon port6;
+    @FXML
+    private Polygon port7;
+    @FXML
+    private Polygon port8;
+    @FXML
+    private Polygon port9;
+
+
+    @FXML
     private Polygon tile1;
     @FXML
     private Polygon tile2;
@@ -382,7 +400,7 @@ public class GameBoardController implements Initializable {
     @FXML
     public void highlightRoad(MouseEvent mouseEvent) {
         ImageView img = (ImageView)mouseEvent.getSource();
-        if(!roadsMap.get(img).isVisible() && canBuildRoad){
+        if(!roadsMap.get(img).isVisible() && canBuildRoad && GameState.canPlaceRoad(roadsMap.get(img))){
             img.setImage(new Image(GameBoardController.class.getResource("/Assets/Road/white.png").toExternalForm()));
         }
         else if(!roadsMap.get(img).isVisible() && GameState.roundZeroBuildRoad && GameState.roundZeroRoadLogic(img)){
@@ -401,7 +419,7 @@ public class GameBoardController implements Initializable {
     @FXML
     void buildRoad(MouseEvent event) {
         ImageView img = (ImageView)event.getSource();
-        if(canBuildRoad){
+        if(!roadsMap.get(img).isVisible() && canBuildRoad && GameState.canPlaceRoad(roadsMap.get(img))){
             GameState.buildRoad();
             roadsMap.get(img).setColor(GameState.getAllPlayers().get(GameState.turnNumber).getColor());
             roadsMap.get(img).setVisible(true);
