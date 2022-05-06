@@ -40,6 +40,9 @@ public class Tile{
         if(!type.equals("desert")){
             tok = new Token(tokensNums.remove(0), token);
         }
+        else{
+            tok = new Token(-1, token);
+        }
         vertices = new ArrayList<>();
         edges = new ArrayList<>();
     }
