@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Polygon?>
 
-<AnchorPane prefHeight="755.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.catanfx.Controllers.GameBoardController">
+<AnchorPane prefHeight="755.0" prefWidth="972.0" scaleX="0.9" scaleY="0.9" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.catanfx.Controllers.GameBoardController">
     <Polygon id="tile1" fx:id="tile1" fill="DODGERBLUE" layoutX="358.0" layoutY="253.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
     <Polygon fx:id="tile2" fill="DODGERBLUE" layoutX="488.0" layoutY="253.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
     <Polygon fx:id="tile13" fill="DODGERBLUE" layoutX="424.0" layoutY="356.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
