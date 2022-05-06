@@ -2,6 +2,8 @@ package com.example.catanfx.GamePieces.Cards;
 
 import javafx.scene.image.ImageView;
 
+import java.util.Objects;
+
 
 public class DevelopmentCard {
     private String dc;
@@ -40,4 +42,16 @@ public class DevelopmentCard {
     public ImageView getFront(){ return dcFront; }
     public ImageView getBack(){ return dcBack; }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        DevelopmentCard that = (DevelopmentCard) o;
+        return that.getType().toLowerCase().equals(getType().toLowerCase());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(dc, dcFront, dcBack);
+    }
 }

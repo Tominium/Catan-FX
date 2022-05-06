@@ -62,6 +62,12 @@ public class InventoryController implements Initializable {
     @FXML
     private Label YoPCount;
 
+    @FXML
+    private Label VPCount;
+
+    @FXML
+    private Label roadBuildingCount;
+
     Stage stage;
 
     private static Player p;
@@ -157,9 +163,11 @@ public class InventoryController implements Initializable {
         lumberCount.setText(Collections.frequency(p.getRC(), new ResourceCard("lumber")) + "x");
         oreCount.setText(Collections.frequency(p.getRC(), new ResourceCard("ore")) + "x");
         woolCount.setText(Collections.frequency(p.getRC(), new ResourceCard("wool")) + "x");
+        roadBuildingCount.setText(Collections.frequency(p.getDC(), new DevelopmentCard("roadbuilding")) + "x");
         knightCount.setText(Collections.frequency(p.getDC(), new DevelopmentCard("knight")) + "x");
         monopolyCount.setText(Collections.frequency(p.getDC(), new DevelopmentCard("monopoly")) + "x");
         YoPCount.setText(Collections.frequency(p.getDC(), new DevelopmentCard("yearofplenty")) + "x");
+        VPCount.setText(Collections.frequency(p.getDC(), new DevelopmentCard("victorypoint")) + "x");
     }
 
     public static void selectPlayer(Player pp){

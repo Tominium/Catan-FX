@@ -1,6 +1,7 @@
 package com.example.catanfx.GamePieces;
 
 import com.example.catanfx.GamePieces.Cards.DevelopmentCard;
+import com.example.catanfx.GamePieces.Cards.DevelopmentDeck;
 import com.example.catanfx.GamePieces.Cards.ResourceCard;
 import com.example.catanfx.GamePieces.Cards.ResourceDeck;
 import com.example.catanfx.GamePieces.Misc.Dice;
@@ -33,6 +34,7 @@ public class GameState {
     public GameState(int numOfPlayers){
         players = new ArrayList<Player>();
         new ResourceDeck();
+        new DevelopmentDeck();
         setColors(numOfPlayers);
         tiles = new ArrayList<Tile>();
 //        thief = new Thief();
@@ -368,4 +370,20 @@ public class GameState {
 
     }
 
+    public static void buyDC(Player p){
+        DevelopmentCard d = DevelopmentDeck.getCard();
+        p.addDC(d);
+        p.removeRCard(new ResourceCard("grain"));
+        p.removeRCard(new ResourceCard("ore"));
+        p.removeRCard(new ResourceCard("wool"));
+    }
+
+    public static boolean check(Player p){
+        if(Collections.frequency(p.getRC(), new ResourceCard("grain")) >= 1
+        && Collections.frequency(p.getRC(), new ResourceCard("ore")) >= 1
+        && Collections.frequency(p.getRC(), new ResourceCard("wool")) >= 1){
+            return true;
+        }
+        return false;
+    }
 }

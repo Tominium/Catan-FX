@@ -47,9 +47,9 @@ public class Player {
     public LinkedList<Structure> getSettlements(){return settlements;}
 
     public void setRC(LinkedList<ResourceCard> rc){resourceCards = rc;}
+    public void setDC(LinkedList<DevelopmentCard> d){devCards = d;}
     public void addRC(ResourceCard c){resourceCards.add(c);}
     public void addDC(DevelopmentCard c){devCards.add(c);}
-    public void setDC(LinkedList<DevelopmentCard> d){devCards = d;}
     public void addSett(Structure s){settlements.add(s);}
     public void addRoad(Structure s){roads.add(s);}
     public void upgradeStruct(Structure s){

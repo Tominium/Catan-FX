@@ -138,7 +138,16 @@ public class generalInfoCompController {
 
         Optional<ButtonType> result = alert.showAndWait();
         if (result.get() == ButtonType.OK) {
-            // ... user chose OK
+            if(GameState.check(GameState.getAllPlayers().get(GameState.turnNumber))) {
+                GameState.buyDC(GameState.getAllPlayers().get(GameState.turnNumber));
+            }
+            else{
+                Alert alert2 = new Alert(Alert.AlertType.INFORMATION);
+                alert2.setTitle("Error");
+                alert2.setHeaderText(null);
+                alert2.setContentText("Not Enough Resources to Buy a Development Card");
+                alert2.showAndWait();
+            }
         } else {
             // ... user chose CANCEL or closed the dialog
         }
