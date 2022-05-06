@@ -30,6 +30,7 @@ public class GameState {
     public static HashMap<ImageView, Road> roadMap;
     public static ArrayList<Tile> tilesBook;
     public static ArrayList<Structure> setts;
+    public static boolean rollSeven;
 
     public GameState(int numOfPlayers){
         players = new ArrayList<Player>();
@@ -100,16 +101,21 @@ public class GameState {
     }
 
     public static void rollDiceGetResources(int a){
-        for(Player p: players){
-            for(Structure s: p.getSettlements()){
-                for (Tile t : tilesBook) {
-                    if (!t.getType().equals("desert") && t.getToken().getNumber() == a) {
-                        if (!t.getType().equalsIgnoreCase("desert") && t.getVertices().contains(s)) {
-                            p.addRC(ResourceDeck.getCard(t.getType()));
+        if(a!=7){
+            for (Player p : players) {
+                for (Structure s : p.getSettlements()) {
+                    for (Tile t : tilesBook) {
+                        if (!t.getType().equals("desert") && t.getToken().getNumber() == a) {
+                            if (!t.getType().equalsIgnoreCase("desert") && t.getVertices().contains(s)) {
+                                p.addRC(ResourceDeck.getCard(t.getType()));
+                            }
                         }
                     }
                 }
             }
+        }
+        else{
+            rollSeven = true;
         }
     }
 
@@ -166,7 +172,6 @@ public class GameState {
 //    }
 
     public static void rollSeven() {
-
 
     }
 
