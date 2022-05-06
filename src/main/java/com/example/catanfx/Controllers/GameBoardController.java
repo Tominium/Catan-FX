@@ -1,5 +1,6 @@
 package com.example.catanfx.Controllers;
 import com.example.catanfx.GamePieces.GameState;
+import com.example.catanfx.GamePieces.Misc.Token;
 import com.example.catanfx.GamePieces.Structures.Road;
 import com.example.catanfx.GamePieces.Structures.Settlement;
 import com.example.catanfx.GamePieces.Structures.Structure;
@@ -20,6 +21,9 @@ public class GameBoardController implements Initializable {
 
     @FXML
     private Polygon port1;
+
+    @FXML
+    private Polygon port2;
     @FXML
     private Polygon port3;
     @FXML
@@ -460,6 +464,35 @@ public class GameBoardController implements Initializable {
             GameState.buildSettlement();
         }
         canBuildSettlement = false;
+    }
+
+    @FXML
+    void highlightThief(MouseEvent event) {
+        if(GameState.rollSeven){
+            ImageView img = (ImageView) event.getSource();
+            Token.tokensMap.get(img).setThief(true);
+        }
+    }
+
+    public void unHighlightThief(MouseEvent mouseEvent) {
+        if(GameState.rollSeven){
+            ImageView img = (ImageView) mouseEvent.getSource();
+            Token.tokensMap.get(img).setThief(false);
+        }
+    }
+
+    public void moveThief(MouseEvent mouseEvent) {
+        if(GameState.rollSeven){
+            for (Token t : Token.tokensMap.values()) {
+                if (t.isThief()) {
+                    t.setThief(false);
+                }
+            }
+            ImageView img = (ImageView) mouseEvent.getSource();
+            Token.tokensMap.get(img).setThief(true);
+            GameState.rollSeven = false;
+            GameState.rollSeven();
+        }
     }
 
     public static void setCanBuildRoad(){
