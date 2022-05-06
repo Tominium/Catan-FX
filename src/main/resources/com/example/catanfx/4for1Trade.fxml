@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.0" prefWidth="857.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.catanfx.Controllers.tradeController">
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.0" prefWidth="857.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.catanfx.Controllers.FourforOneTradeController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="427.0" layoutX="38.0" layoutY="46.0" stroke="BLACK" strokeType="INSIDE" width="376.0" />
       <ImageView fx:id="card1" fitHeight="150.0" fitWidth="200.0" layoutX="50.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
@@ -43,17 +43,17 @@
             <Font size="28.0" />
          </font>
       </Text>
-      <RadioButton fx:id="p1" layoutX="511.0" layoutY="58.0" mnemonicParsing="false" onAction="#choosePlayer" text="Port">
+      <RadioButton fx:id="port" layoutX="511.0" layoutY="58.0" mnemonicParsing="false" onAction="#choosePlayer" text="Port">
          <font>
             <Font size="30.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="p2" layoutX="660.0" layoutY="58.0" mnemonicParsing="false" onAction="#choosePlayer" text="Bank">
+      <RadioButton fx:id="bank" layoutX="660.0" layoutY="58.0" mnemonicParsing="false" onAction="#choosePlayer" text="Bank">
          <font>
             <Font size="30.0" />
          </font>
       </RadioButton>
-      <Button fx:id="next" layoutX="377.0" layoutY="478.0" mnemonicParsing="false" onAction="#next" text="Continue">
+      <Button fx:id="cont" layoutX="377.0" layoutY="478.0" mnemonicParsing="false" onAction="#next" text="Continue">
          <font>
             <Font size="21.0" />
          </font>
@@ -99,52 +99,52 @@
             <Image url="@../../../Assets/Resource_Cards/ore.png" />
          </image>
       </ImageView>
-      <RadioButton layoutX="498.0" layoutY="287.0" mnemonicParsing="false">
+      <RadioButton fx:id="brick2" layoutX="498.0" layoutY="287.0" mnemonicParsing="false" onAction="#chooseResourceRecieved">
          <font>
             <Font size="20.0" />
          </font>
       </RadioButton>
-      <RadioButton layoutX="631.0" layoutY="287.0" mnemonicParsing="false">
+      <RadioButton fx:id="lumber2" layoutX="631.0" layoutY="287.0" mnemonicParsing="false" onAction="#chooseResourceRecieved">
          <font>
             <Font size="20.0" />
          </font>
       </RadioButton>
-      <RadioButton layoutX="765.0" layoutY="287.0" mnemonicParsing="false">
+      <RadioButton fx:id="grain2" layoutX="765.0" layoutY="287.0" mnemonicParsing="false" onAction="#chooseResourceRecieved">
          <font>
             <Font size="20.0" />
          </font>
       </RadioButton>
-      <RadioButton layoutX="562.0" layoutY="437.0" mnemonicParsing="false">
+      <RadioButton fx:id="wool2" layoutX="562.0" layoutY="437.0" mnemonicParsing="false" onAction="#chooseResourceRecieved">
          <font>
             <Font size="20.0" />
          </font>
       </RadioButton>
-      <RadioButton layoutX="706.0" layoutY="437.0" mnemonicParsing="false">
+      <RadioButton fx:id="ore2" layoutX="706.0" layoutY="437.0" mnemonicParsing="false" onAction="#chooseResourceRecieved">
          <font>
             <Font size="20.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="p11" layoutX="85.0" layoutY="208.0" mnemonicParsing="false" onAction="#choosePlayer">
+      <RadioButton fx:id="brick1" layoutX="85.0" layoutY="208.0" mnemonicParsing="false" onAction="#chooseResource">
          <font>
             <Font size="28.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="p111" layoutX="207.0" layoutY="208.0" mnemonicParsing="false" onAction="#choosePlayer">
+      <RadioButton fx:id="lumber1" layoutX="207.0" layoutY="208.0" mnemonicParsing="false" onAction="#chooseResource">
          <font>
             <Font size="28.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="p112" layoutX="336.0" layoutY="208.0" mnemonicParsing="false" onAction="#choosePlayer">
+      <RadioButton fx:id="grain1" layoutX="336.0" layoutY="208.0" mnemonicParsing="false" onAction="#chooseResource">
          <font>
             <Font size="28.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="p113" layoutX="139.0" layoutY="418.0" mnemonicParsing="false" onAction="#choosePlayer">
+      <RadioButton fx:id="wool1" layoutX="139.0" layoutY="420.0" mnemonicParsing="false" onAction="#chooseResource">
          <font>
             <Font size="28.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="p114" layoutX="261.0" layoutY="417.0" mnemonicParsing="false" onAction="#choosePlayer">
+      <RadioButton fx:id="ore1" layoutX="261.0" layoutY="419.0" mnemonicParsing="false" onAction="#chooseResource">
          <font>
             <Font size="28.0" />
          </font>
