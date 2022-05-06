@@ -5,44 +5,44 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Polygon?>
 
-<AnchorPane prefHeight="755.0" prefWidth="972.0" scaleX="0.9" scaleY="0.9" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.catanfx.Controllers.GameBoardController">
-    <Polygon id="tile1" fx:id="tile1" fill="DODGERBLUE" layoutX="358.0" layoutY="253.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="tile2" fill="DODGERBLUE" layoutX="488.0" layoutY="253.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="tile13" fill="DODGERBLUE" layoutX="424.0" layoutY="356.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="tile3" fill="DODGERBLUE" layoutX="618.0" layoutY="253.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="tile12" fill="DODGERBLUE" layoutX="292.0" layoutY="356.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="tile14" fill="DODGERBLUE" layoutX="553.0" layoutY="356.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="tile4" fill="DODGERBLUE" layoutX="685.0" layoutY="356.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="tile11" fill="DODGERBLUE" layoutX="228.0" layoutY="459.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="tile5" fill="DODGERBLUE" layoutX="749.0" layoutY="459.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="tile18" fill="DODGERBLUE" layoutX="358.0" layoutY="459.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="tile19" fill="DODGERBLUE" layoutX="488.0" layoutY="459.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="tile15" fill="DODGERBLUE" layoutX="618.0" layoutY="459.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="tile17" fill="DODGERBLUE" layoutX="424.0" layoutY="564.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="tile10" fill="DODGERBLUE" layoutX="292.0" layoutY="564.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="tile16" fill="DODGERBLUE" layoutX="553.0" layoutY="564.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="tile6" fill="DODGERBLUE" layoutX="685.0" layoutY="564.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="tile9" fill="DODGERBLUE" layoutX="358.0" layoutY="668.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="tile8" fill="DODGERBLUE" layoutX="488.0" layoutY="668.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="tile7" fill="DODGERBLUE" layoutX="618.0" layoutY="668.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="hexSea13" fill="DODGERBLUE" layoutX="228.0" layoutY="253.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="hexSea12" fill="DODGERBLUE" layoutX="164.0" layoutY="355.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="hexSea11" fill="DODGERBLUE" layoutX="100.0" layoutY="456.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="hexSea10" fill="DODGERBLUE" layoutX="164.0" layoutY="561.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="hexSea9" fill="DODGERBLUE" layoutX="228.0" layoutY="669.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="harbour5" fill="DODGERBLUE" layoutX="295.0" layoutY="770.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="harbour1" fill="DODGERBLUE" layoutX="293.0" layoutY="152.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="hexSea1" fill="DODGERBLUE" layoutX="423.0" layoutY="152.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="hexSea2" fill="DODGERBLUE" layoutX="553.0" layoutY="152.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="hexSea8" fill="DODGERBLUE" layoutX="423.0" layoutY="770.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="hexSea7" fill="DODGERBLUE" layoutX="554.0" layoutY="770.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="harbour4" fill="DODGERBLUE" layoutX="685.0" layoutY="770.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="hexSea6" fill="DODGERBLUE" layoutX="749.0" layoutY="669.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="hexSea5" fill="DODGERBLUE" layoutX="813.0" layoutY="563.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="harbour3" fill="DODGERBLUE" layoutX="878.0" layoutY="458.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="hexSea4" fill="DODGERBLUE" layoutX="814.0" layoutY="355.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="hexSea3" fill="DODGERBLUE" layoutX="749.0" layoutY="253.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-    <Polygon fx:id="harbour2" fill="DODGERBLUE" layoutX="685.0" layoutY="153.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+<AnchorPane prefHeight="755.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.catanfx.Controllers.GameBoardController">
+    <Polygon id="tile1" fx:id="tile1" fill="#30ff1f" layoutX="358.0" layoutY="253.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="tile2" fill="#30ff1f" layoutX="488.0" layoutY="253.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="tile13" fill="#30ff1f" layoutX="424.0" layoutY="356.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="tile3" fill="#30ff1f" layoutX="618.0" layoutY="253.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="tile12" fill="#30ff1f" layoutX="292.0" layoutY="356.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="tile14" fill="#30ff1f" layoutX="553.0" layoutY="356.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="tile4" fill="#30ff1f" layoutX="685.0" layoutY="356.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="tile11" fill="#30ff1f" layoutX="228.0" layoutY="459.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="tile5" fill="#30ff1f" layoutX="749.0" layoutY="459.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="tile18" fill="#30ff1f" layoutX="358.0" layoutY="459.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="tile19" fill="#30ff1f" layoutX="488.0" layoutY="459.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="tile15" fill="#30ff1f" layoutX="618.0" layoutY="459.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="tile17" fill="#30ff1f" layoutX="424.0" layoutY="564.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="tile10" fill="#30ff1f" layoutX="292.0" layoutY="564.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="tile16" fill="#30ff1f" layoutX="553.0" layoutY="564.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="tile6" fill="#30ff1f" layoutX="685.0" layoutY="564.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="tile9" fill="#30ff1f" layoutX="358.0" layoutY="668.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="tile8" fill="#30ff1f" layoutX="488.0" layoutY="668.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="tile7" fill="#30ff1f" layoutX="618.0" layoutY="668.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fill="DODGERBLUE" layoutX="228.0" layoutY="253.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="port9" fill="DODGERBLUE" layoutX="164.0" layoutY="355.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fill="DODGERBLUE" layoutX="100.0" layoutY="456.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="port8" fill="DODGERBLUE" layoutX="164.0" layoutY="561.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fill="DODGERBLUE" layoutX="228.0" layoutY="669.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="port7" fill="DODGERBLUE" layoutX="295.0" layoutY="770.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="port1" fill="DODGERBLUE" layoutX="293.0" layoutY="152.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fill="DODGERBLUE" layoutX="423.0" layoutY="152.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="port1" fill="DODGERBLUE" layoutX="553.0" layoutY="152.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fill="DODGERBLUE" layoutX="423.0" layoutY="770.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="port6" fill="DODGERBLUE" layoutX="554.0" layoutY="770.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fill="DODGERBLUE" layoutX="685.0" layoutY="770.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="port5" fill="DODGERBLUE" layoutX="749.0" layoutY="669.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fill="DODGERBLUE" layoutX="813.0" layoutY="563.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="port4" fill="DODGERBLUE" layoutX="878.0" layoutY="458.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fill="DODGERBLUE" layoutX="814.0" layoutY="355.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fx:id="port3" fill="DODGERBLUE" layoutX="749.0" layoutY="253.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Polygon fill="DODGERBLUE" layoutX="685.0" layoutY="153.0" points="-63.0, -38.0, -7.5, -10.0, 47.5, -38.0, 47.5, -98.0, -7.5, -126.0, -63.0, -98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
    <ImageView fx:id="road1" fitHeight="54.0" fitWidth="54.0" layoutX="258.0" layoutY="158.0" onMouseClicked="#buildRoad" onMouseEntered="#highlightRoad" onMouseExited="#stopHighlightRoad" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Empty.png" />
@@ -768,94 +768,49 @@
          <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="thief1" disable="true" fitHeight="30.0" fitWidth="77.0" layoutX="272.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true" visible="false">
+   <ImageView fitHeight="85.0" fitWidth="85.0" layoutX="242.0" layoutY="660.0" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Tokens/output-onlinejpgtools.png" />
+         <Image url="@../../../Assets/Port/brick.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="thief2" disable="true" fitHeight="30.0" fitWidth="77.0" layoutX="402.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true" visible="false">
+   <ImageView fitHeight="85.0" fitWidth="85.0" layoutX="242.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Tokens/output-onlinejpgtools.png" />
+         <Image url="@../../../Assets/Port/brick.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="thief11" disable="true" fitHeight="30.0" fitWidth="77.0" layoutX="600.0" layoutY="273.0" pickOnBounds="true" preserveRatio="true" visible="false">
+   <ImageView fitHeight="85.0" fitWidth="85.0" layoutX="699.0" layoutY="559.0" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Tokens/output-onlinejpgtools.png" />
+         <Image url="@../../../Assets/Port/brick.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="thief12" disable="true" fitHeight="30.0" fitWidth="77.0" layoutX="466.0" layoutY="273.0" pickOnBounds="true" preserveRatio="true" visible="false">
+   <ImageView fitHeight="85.0" fitWidth="85.0" layoutX="828.0" layoutY="348.0" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Tokens/output-onlinejpgtools.png" />
+         <Image url="@../../../Assets/Port/brick.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="thief13" disable="true" fitHeight="30.0" fitWidth="77.0" layoutX="142.0" layoutY="376.0" pickOnBounds="true" preserveRatio="true" visible="false">
+   <ImageView fx:id="harbour2" fitHeight="85.0" fitWidth="85.0" layoutX="503.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Tokens/output-onlinejpgtools.png" />
+         <Image url="@../../../Assets/Port/brick.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="thief14" disable="true" fitHeight="30.0" fitWidth="77.0" layoutX="338.0" layoutY="272.0" pickOnBounds="true" preserveRatio="true" visible="false">
+   <ImageView fitHeight="85.0" fitWidth="85.0" layoutX="114.0" layoutY="451.0" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Tokens/output-onlinejpgtools.png" />
+         <Image url="@../../../Assets/Port/brick.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="thief15" disable="true" fitHeight="30.0" fitWidth="77.0" layoutX="532.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true" visible="false">
+   <ImageView fx:id="harbour21" fitHeight="85.0" fitWidth="85.0" layoutX="699.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Tokens/output-onlinejpgtools.png" />
+         <Image url="@../../../Assets/Port/brick.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="thief16" disable="true" fitHeight="30.0" fitWidth="77.0" layoutX="338.0" layoutY="481.0" pickOnBounds="true" preserveRatio="true" visible="false">
+   <ImageView fitHeight="85.0" fitWidth="85.0" layoutX="504.0" layoutY="660.0" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Tokens/output-onlinejpgtools.png" />
+         <Image url="@../../../Assets/Port/brick.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="thief17" disable="true" fitHeight="30.0" fitWidth="77.0" layoutX="206.0" layoutY="481.0" pickOnBounds="true" preserveRatio="true" visible="false">
+   <ImageView fitHeight="85.0" fitWidth="85.0" layoutX="114.0" layoutY="245.0" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../Assets/Tokens/output-onlinejpgtools.png" />
-      </image>
-   </ImageView>
-   <ImageView fx:id="thief18" disable="true" fitHeight="30.0" fitWidth="77.0" layoutX="663.0" layoutY="376.0" pickOnBounds="true" preserveRatio="true" visible="false">
-      <image>
-         <Image url="@../../../Assets/Tokens/output-onlinejpgtools.png" />
-      </image>
-   </ImageView>
-   <ImageView fx:id="thief19" disable="true" fitHeight="30.0" fitWidth="77.0" layoutX="531.0" layoutY="376.0" pickOnBounds="true" preserveRatio="true" visible="false">
-      <image>
-         <Image url="@../../../Assets/Tokens/output-onlinejpgtools.png" />
-      </image>
-   </ImageView>
-   <ImageView fx:id="thief110" disable="true" fitHeight="30.0" fitWidth="77.0" layoutX="402.0" layoutY="376.0" pickOnBounds="true" preserveRatio="true" visible="false">
-      <image>
-         <Image url="@../../../Assets/Tokens/output-onlinejpgtools.png" />
-      </image>
-   </ImageView>
-   <ImageView fx:id="thief111" disable="true" fitHeight="30.0" fitWidth="77.0" layoutX="272.0" layoutY="376.0" pickOnBounds="true" preserveRatio="true" visible="false">
-      <image>
-         <Image url="@../../../Assets/Tokens/output-onlinejpgtools.png" />
-      </image>
-   </ImageView>
-   <ImageView fx:id="thief134" disable="true" fitHeight="30.0" fitWidth="77.0" layoutX="600.0" layoutY="481.0" pickOnBounds="true" preserveRatio="true" visible="false">
-      <image>
-         <Image url="@../../../Assets/Tokens/output-onlinejpgtools.png" />
-      </image>
-   </ImageView>
-   <ImageView fx:id="thief131" disable="true" fitHeight="30.0" fitWidth="77.0" layoutX="466.0" layoutY="481.0" pickOnBounds="true" preserveRatio="true" visible="false">
-      <image>
-         <Image url="@../../../Assets/Tokens/output-onlinejpgtools.png" />
-      </image>
-   </ImageView>
-   <ImageView fx:id="thief132" disable="true" fitHeight="30.0" fitWidth="77.0" layoutX="216.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true" visible="false">
-      <image>
-         <Image url="@../../../Assets/Tokens/output-onlinejpgtools.png" />
-      </image>
-   </ImageView>
-   <ImageView fx:id="thief133" disable="true" fitHeight="30.0" fitWidth="77.0" layoutX="216.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true" visible="false">
-      <image>
-         <Image url="@../../../Assets/Tokens/output-onlinejpgtools.png" />
-      </image>
-   </ImageView>
-   <ImageView fx:id="thief135" disable="true" fitHeight="30.0" fitWidth="77.0" layoutX="216.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true" visible="false">
-      <image>
-         <Image url="@../../../Assets/Tokens/output-onlinejpgtools.png" />
+         <Image url="@../../../Assets/Port/brick.png" />
       </image>
    </ImageView>
 </AnchorPane>
