@@ -140,13 +140,29 @@ public class GameState {
     }
 
     private static boolean canBuildRoad(){
+        if(players.get(turnNumber).getRoads().size() == 15){return false;}
         LinkedList<ResourceCard> rc = players.get(turnNumber).getRC();
         if(Collections.frequency(rc, new ResourceCard("brick")) < 1){return false;}
         if(Collections.frequency(rc, new ResourceCard("lumber")) < 1) {return  false;}
         return true;
     }
 
+    public static boolean canPlaceRoad(Road r){
+        for(Structure s: players.get(turnNumber).getSettlements()){
+            if(s.getImage().getBoundsInParent().intersects(r.getImage().getBoundsInParent())){
+                return true;
+            }
+        }
+        for(Structure s: players.get(turnNumber).getRoads()){
+            if(s.getImage().getBoundsInParent().intersects(r.getImage().getBoundsInParent())){
+                return true;
+            }
+        }
+        return false;
+    }
+
     private static boolean canBuildSettlement(){
+        if(players.get(turnNumber).getSettlements().size() == 5){return false;}
         LinkedList<ResourceCard> rc = players.get(turnNumber).getRC();
         if(Collections.frequency(rc, new ResourceCard("brick")) < 1){return false;}
         if(Collections.frequency(rc, new ResourceCard("lumber")) < 1) {return  false;}
@@ -156,6 +172,7 @@ public class GameState {
     }
 
     private static boolean canBuildCity(){
+        if(players.get(turnNumber).getCities().size() == 4){return false;}
         LinkedList<ResourceCard> rc = players.get(turnNumber).getRC();
         if(Collections.frequency(rc, new ResourceCard("grain")) < 2){return false;}
         if(Collections.frequency(rc, new ResourceCard("ore")) < 3) {return  false;}
@@ -312,13 +329,13 @@ public class GameState {
         for(Tile tt: tilesBook){
             if(tt.getVertices().contains(img)){
                 for(Structure s: tt.getEdges()){
-                    if(!s.getColor().equalsIgnoreCase(players.get(turnNumber).getColor()) && s.getImage().getBoundsInParent().intersects(img.getImage().getBoundsInParent())){
+                    if(s.getImage().getBoundsInParent().intersects(img.getImage().getBoundsInParent())){
                         if(roundZeroRoadIntersectSettlementLogic(s.getImage(), tt.getVertices())){
                             System.out.println("DOg");
                             return false;
                         }
                     }
-                    if(s.isVisible() && !s.getColor().equalsIgnoreCase(players.get(turnNumber).getColor()) && s.getImage().getBoundsInParent().intersects(img.getImage().getBoundsInParent()) ){
+                    if(s.isVisible() && s.getImage().getBoundsInParent().intersects(img.getImage().getBoundsInParent()) ){
                         System.out.println("CAT");
                         return false;
                     }
@@ -334,7 +351,7 @@ public class GameState {
 
     public static boolean roundZeroRoadIntersectSettlementLogic(ImageView img, ArrayList<Structure> verts){
         for(Structure s: verts){
-            if(s.isVisible() && !s.getColor().equalsIgnoreCase(players.get(turnNumber).getColor()) &&img.getBoundsInParent().intersects(s.getImage().getBoundsInParent())){
+            if(s.isVisible() && img.getBoundsInParent().intersects(s.getImage().getBoundsInParent())){
                 return true;
             }
         }
@@ -372,7 +389,6 @@ public class GameState {
         for(int i = 0; i < resourceTotal; i++){
             p.addRC(new ResourceCard(resource));
         }
-
     }
 
     public static void buyDC(Player p){
