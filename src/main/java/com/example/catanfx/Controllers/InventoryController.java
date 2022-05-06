@@ -91,6 +91,29 @@ public class InventoryController implements Initializable {
 
             alert.show();
         }
+        else if(Collections.frequency(p.getDC(), new DevelopmentCard("monopoly")) == 0){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText("You do not have enough!");
+
+            alert.show();
+        }
+        else {
+            stage = (Stage) pane.getScene().getWindow();
+            stage.close();
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/catanfx/monopoly.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root1));
+                stage.initModality(Modality.APPLICATION_MODAL);
+                stage.setResizable(false);
+                stage.showAndWait();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public void UseYoPDC(){
