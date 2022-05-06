@@ -79,18 +79,20 @@ public class generalInfoCompController {
 
     @FXML
     void rollDice(MouseEvent event) {
-        int[] arr = Dice.rollDice();
-        dice1.setImage(new Image(generalInfoCompController.class.getResource("/Assets/Dice/" + arr[0] + ".png").toExternalForm()));
-        dice2.setImage(new Image(generalInfoCompController.class.getResource("/Assets/Dice/" + arr[1] + ".png").toExternalForm()));
-        if(!GameState.roundZeroRollDice){
-            dice.setDisable(true);
-            tradeButton.setVisible(true);
-            tradeButton.setDisable(false);
-            nextButton.setDisable(false);
-            nextButton.setVisible(true);
-        }
+        if(GameState.roundZeroBuildRoad || GameState.roundZeroBuildSettlement){}
         else{
-            GameState.roundZeroRollDiceDice(Dice.getRolledNum());
+            int[] arr = Dice.rollDice();
+            dice1.setImage(new Image(generalInfoCompController.class.getResource("/Assets/Dice/" + arr[0] + ".png").toExternalForm()));
+            dice2.setImage(new Image(generalInfoCompController.class.getResource("/Assets/Dice/" + arr[1] + ".png").toExternalForm()));
+            if (!GameState.roundZeroRollDice) {
+                dice.setDisable(true);
+                tradeButton.setVisible(true);
+                tradeButton.setDisable(false);
+                nextButton.setDisable(false);
+                nextButton.setVisible(true);
+            } else {
+                GameState.roundZeroRollDiceDice(Dice.getRolledNum());
+            }
         }
     }
 
@@ -110,24 +112,62 @@ public class generalInfoCompController {
             if (GameState.canBuild((result.get().toLowerCase()))) {
                 GameBoardController.setCanBuildRoad();
             } else {
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Error");
-                alert.setHeaderText(null);
-                alert.setContentText("Not Enough Resources to Build " + result.get() + "!");
-                alert.showAndWait();
+                if(GameState.getAllPlayers().get(GameState.turnNumber).getRoads().size() ==15){
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Error");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Maximum Amount Of " + result.get() + "s Built!");
+                    alert.showAndWait();
+                }
+                else {
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Error");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Not Enough Resources to Build " + result.get() + "!");
+                    alert.showAndWait();
+                }
             }
         }
         if (result.get().equals("Settlement")) {
             if (GameState.canBuild((result.get().toLowerCase()))) {
                 GameBoardController.setCanBuildSettlement();
             } else {
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Error");
-                alert.setHeaderText(null);
-                alert.setContentText("Not Enough Resources to Build " + result.get() + "!");
-                alert.showAndWait();
+                if(GameState.getAllPlayers().get(GameState.turnNumber).getSettlements().size() ==5){
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Error");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Maximum Amount Of " + result.get() + "s Built!");
+                    alert.showAndWait();
+                }
+                else{
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Error");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Not Enough Resources to Build " + result.get() + "!");
+                    alert.showAndWait();
+                }
             }
         }
+//        if (result.get().equals("City")) {
+//            if (GameState.canBuild((result.get().toLowerCase()))) {
+//                GameBoardController.setCanBuildSettlement();
+//            } else {
+//                if(GameState.getAllPlayers().get(GameState.turnNumber).getSettlements().size() ==5){
+//                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+//                    alert.setTitle("Error");
+//                    alert.setHeaderText(null);
+//                    alert.setContentText("Maximum Amount Of " + result.get() + "s Built!");
+//                    alert.showAndWait();
+//                }
+//                else{
+//                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+//                    alert.setTitle("Error");
+//                    alert.setHeaderText(null);
+//                    alert.setContentText("Not Enough Resources to Build " + result.get() + "!");
+//                    alert.showAndWait();
+//                }
+//            }
+//        }
     }
 
     @FXML
