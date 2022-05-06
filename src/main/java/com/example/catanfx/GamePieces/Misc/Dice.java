@@ -21,7 +21,9 @@ public class Dice {
         num[1] = (int)(Math.random()*6)+1;
         number=num[0];
         number0=num[1];
-        GameState.rollDiceGetResources(number + number0);
+        if(!GameState.roundZeroRollDice && !GameState.roundZeroBuildSettlement && !GameState.roundZeroBuildRoad){
+            GameState.rollDiceGetResources(number + number0);
+        }
         return num;
     }
 }
