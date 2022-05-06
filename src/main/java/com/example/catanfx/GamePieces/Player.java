@@ -45,6 +45,8 @@ public class Player {
     public int getTurnNum(){return turnNum;}
     public LinkedList<DevelopmentCard> getDC(){return devCards;}
     public LinkedList<Structure> getSettlements(){return settlements;}
+    public LinkedList<Structure> getRoads(){return roads;}
+    public LinkedList<Structure> getCities(){return cities;}
 
     public void setRC(LinkedList<ResourceCard> rc){resourceCards = rc;}
     public void setDC(LinkedList<DevelopmentCard> d){devCards = d;}
