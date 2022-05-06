@@ -105,6 +105,14 @@ public class InventoryController implements Initializable {
 
             alert.show();
         }
+        else if(GameState.newCard(p, "monopoly")){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText("You just bought this card!");
+
+            alert.show();
+        }
         else {
             stage = (Stage) pane.getScene().getWindow();
             stage.close();
@@ -136,6 +144,14 @@ public class InventoryController implements Initializable {
             alert.setTitle("Error");
             alert.setHeaderText(null);
             alert.setContentText("You do not have enough!");
+
+            alert.show();
+        }
+        else if(GameState.newCard(p, "yearofplenty")){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText("You just bought this card!");
 
             alert.show();
         }

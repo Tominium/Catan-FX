@@ -10,6 +10,7 @@ public class DevelopmentCard {
     private ImageView dcFront;
     private ImageView dcBack;
     private int points;
+    private boolean justBought;
 
     public DevelopmentCard(String dcName){
         dc = dcName;
@@ -21,6 +22,7 @@ public class DevelopmentCard {
 //        }
         dcFront = new ImageView(DevelopmentCard.class.getResource("/Assets/DevCards/"+dc+".png").toExternalForm());
         dcBack = new ImageView(DevelopmentCard.class.getResource("/Assets/DevCards/back.png").toExternalForm());
+        justBought = true;
     }
     public DevelopmentCard(String dcName, int p){
         dc = dcName;
@@ -41,6 +43,8 @@ public class DevelopmentCard {
 
     public ImageView getFront(){ return dcFront; }
     public ImageView getBack(){ return dcBack; }
+    public boolean justBought(){ return justBought;}
+    public void oldCardNow(){ justBought = false; }
 
     @Override
     public boolean equals(Object o) {

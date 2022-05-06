@@ -212,6 +212,7 @@ public class generalInfoCompController {
         passDiceButton.setVisible(false);
         passDiceButton.setDisable(true);
         dice.setDisable(false);
+        GameState.oldCard(GameState.getAllPlayers().get(GameState.turnNumber));
         GameState.iterateTurn();
     }
 
