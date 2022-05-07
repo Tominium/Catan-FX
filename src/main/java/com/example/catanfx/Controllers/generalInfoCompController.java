@@ -75,6 +75,18 @@ public class generalInfoCompController {
             } catch (Exception e) {
                 e.printStackTrace();
             }
+        } else{
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/catanfx/4for1Trade.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root1));
+                stage.initModality(Modality.APPLICATION_MODAL);
+                stage.setResizable(false);
+                stage.showAndWait();
+            } catch (Exception e){
+                e.printStackTrace();
+            }
         }
     }
 

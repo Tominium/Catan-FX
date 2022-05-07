@@ -466,4 +466,19 @@ public class GameState {
             p.getDC().get(i).oldCardNow();
         }
     }
+
+    public static void BankTrade(Player p, String resourceOffered, String resourceRequested){
+        p.removeRCard(new ResourceCard(resourceOffered));
+        p.removeRCard(new ResourceCard(resourceOffered));
+        p.removeRCard(new ResourceCard(resourceOffered));
+        p.removeRCard(new ResourceCard(resourceOffered));
+        p.addRC(new ResourceCard(resourceRequested));
+    }
+
+    public static boolean checkBankTrade(Player p, String resourceOffered){
+        if(Collections.frequency(p.getRC(), new ResourceCard(resourceOffered)) >= 4){
+            return true;
+        }
+        return false;
+    }
 }
