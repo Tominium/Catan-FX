@@ -86,6 +86,27 @@ public class InventoryController implements Initializable {
 
             alert.show();
         }
+        else if(Collections.frequency(p.getDC(), new DevelopmentCard("knight")) == 0){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText("You do not have enough!");
+
+            alert.show();
+        }
+        else if(GameState.newCard(p, "knight")){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText("You just bought this card!");
+
+            alert.show();
+        }
+        else{
+            stage = (Stage) pane.getScene().getWindow();
+            stage.close();
+            GameState.Knight();
+        }
     }
 
     public void UseMonopolyDC(){
