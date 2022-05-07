@@ -43,22 +43,17 @@
             <Font size="28.0" />
          </font>
       </Text>
-      <RadioButton fx:id="port" layoutX="511.0" layoutY="58.0" mnemonicParsing="false" onAction="#choosePlayer" text="Port">
+      <RadioButton fx:id="port" layoutX="511.0" layoutY="58.0" mnemonicParsing="false" onAction="#choosePartner" text="Port">
          <font>
             <Font size="30.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="bank" layoutX="660.0" layoutY="58.0" mnemonicParsing="false" onAction="#choosePlayer" text="Bank">
+      <RadioButton fx:id="bank" layoutX="660.0" layoutY="58.0" mnemonicParsing="false" onAction="#choosePartner" text="Bank">
          <font>
             <Font size="30.0" />
          </font>
       </RadioButton>
       <Button fx:id="cont" layoutX="377.0" layoutY="478.0" mnemonicParsing="false" onAction="#next" text="Continue">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Button>
-      <Button fx:id="trade" disable="true" layoutX="393.0" layoutY="478.0" mnemonicParsing="false" onAction="#complete" text="Trade" visible="false">
          <font>
             <Font size="21.0" />
          </font>
@@ -69,7 +64,7 @@
             <Font size="28.0" />
          </font>
       </Text>
-      <Text layoutX="544.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Resource" wrappingWidth="200.46484375">
+      <Text layoutX="515.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Requested Resource" wrappingWidth="259.6649169921875">
          <font>
             <Font size="28.0" />
          </font>

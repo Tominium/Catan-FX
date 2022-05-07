@@ -1,8 +1,10 @@
 package com.example.catanfx.Controllers;
 
+import com.example.catanfx.GamePieces.GameState;
 import com.example.catanfx.GamePieces.Player;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.layout.AnchorPane;
@@ -119,11 +121,11 @@ public class FourforOneTradeController {
     void choosePartner(ActionEvent event){
         RadioButton temp = (RadioButton)event.getSource();
         deselectPartner(temp);
-        if(temp.equals(brick2)){
-            tradePartner = "brick";
+        if(temp.equals(bank)){
+            tradePartner = "bank";
         }
-        else if(temp.equals(grain2)){
-            tradePartner = "grain";
+        else if(temp.equals(port)){
+            tradePartner = "port";
         }
     }
 
@@ -133,6 +135,26 @@ public class FourforOneTradeController {
         }
         if (temp != bank) {
             bank.setSelected(false);
+        }
+    }
+
+    @FXML
+    void next(ActionEvent event){
+        p = GameState.getAllPlayers().get(GameState.turnNumber);
+        if(tradePartner.equals("bank")){
+            if(GameState.checkBankTrade(p, resourceOffered)){
+                GameState.BankTrade(p, resourceOffered, resourceRequested);
+                stage = (Stage)pane.getScene().getWindow();
+                stage.close();
+            }
+            else{
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Error");
+                alert.setHeaderText(null);
+                alert.setContentText("Not enough Resource Cards!");
+
+                alert.show();
+            }
         }
     }
 }
