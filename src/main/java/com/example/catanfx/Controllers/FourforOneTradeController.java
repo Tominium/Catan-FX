@@ -141,7 +141,31 @@ public class FourforOneTradeController {
     @FXML
     void next(ActionEvent event){
         p = GameState.getAllPlayers().get(GameState.turnNumber);
-        if(tradePartner.equals("bank")){
+        if(resourceRequested == null){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText("Please request a Resource Card!");
+
+            alert.show();
+        }
+        else if(resourceOffered == null){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText("Please select Resource Cards to offer!");
+
+            alert.show();
+        }
+        else if(tradePartner == null){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText("Please choose who you want to trade with!");
+
+            alert.show();
+        }
+        else if(tradePartner.equals("bank")){
             if(GameState.checkBankTrade(p, resourceOffered)){
                 GameState.BankTrade(p, resourceOffered, resourceRequested);
                 stage = (Stage)pane.getScene().getWindow();

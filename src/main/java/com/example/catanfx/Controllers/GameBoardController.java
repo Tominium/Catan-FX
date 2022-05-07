@@ -468,21 +468,21 @@ public class GameBoardController implements Initializable {
 
     @FXML
     void highlightThief(MouseEvent event) {
-        if(GameState.rollSeven){
+        if(GameState.rollSeven || GameState.usedKnight){
             ImageView img = (ImageView) event.getSource();
             Token.tokensMap.get(img).setThief(true);
         }
     }
 
     public void unHighlightThief(MouseEvent mouseEvent) {
-        if(GameState.rollSeven){
+        if(GameState.rollSeven || GameState.usedKnight){
             ImageView img = (ImageView) mouseEvent.getSource();
             Token.tokensMap.get(img).setThief(false);
         }
     }
 
     public void moveThief(MouseEvent mouseEvent) {
-        if(GameState.rollSeven){
+        if(GameState.rollSeven || GameState.usedKnight){
             for (Token t : Token.tokensMap.values()) {
                 if (t.isThief()) {
                     t.setThief(false);
@@ -491,9 +491,11 @@ public class GameBoardController implements Initializable {
             ImageView img = (ImageView) mouseEvent.getSource();
             Token.tokensMap.get(img).setThief(true);
             GameState.rollSeven = false;
+            GameState.usedKnight = false;
             GameState.rollSeven();
         }
     }
+
 
     public static void setCanBuildRoad(){
         canBuildRoad = true;

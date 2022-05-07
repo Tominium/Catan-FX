@@ -34,6 +34,7 @@ public class GameState {
     public static ArrayList<Tile> tilesBook;
     public static ArrayList<Structure> setts;
     public static boolean rollSeven;
+    public static boolean usedKnight;
 
     public GameState(int numOfPlayers){
         players = new ArrayList<Player>();
@@ -480,5 +481,14 @@ public class GameState {
             return true;
         }
         return false;
+    }
+
+    public static void Knight(){
+        usedKnight = true;
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Used Knight");
+        alert.setHeaderText(null);
+        alert.setContentText("Please move the Thief");
+        alert.showAndWait();
     }
 }
