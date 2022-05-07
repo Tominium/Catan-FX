@@ -111,6 +111,7 @@ public class GameState {
                         if (!t.getType().equals("desert") && t.getToken().getNumber() == a) {
                             if (!t.getType().equalsIgnoreCase("desert") && t.getVertices().contains(s)) {
                                 p.addRC(ResourceDeck.getCard(t.getType()));
+                                System.out.println(p.getColor()+": " + t.getType());
                             }
                         }
                     }
@@ -203,7 +204,7 @@ public class GameState {
         for(Tile ta: tilesBook){
             if(!ta.getType().equalsIgnoreCase("desert") && ta.getToken().isThief()){
                 for(Structure s: ta.getVertices()){
-                    if(!s.getColor().equalsIgnoreCase("white")){
+                    if(!s.getColor().equalsIgnoreCase("white") && !s.getColor().equalsIgnoreCase(players.get(turnNumber).getColor())){
                         colors.add(s.getColor());
                     }
                 }
@@ -222,11 +223,23 @@ public class GameState {
             Optional<String> result = dialog.showAndWait();
             for(Player p: players){
                 if(p.getColor().equalsIgnoreCase(result.get())){
-
+                    if(!p.getRC().isEmpty()){
+                        players.get(turnNumber).addRC(p.getRandomCard());
+                    }
+                    else{
+                        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                        alert.setTitle("Empty Deck");
+                        alert.setHeaderText(null);
+                        alert.setContentText("Trying To Steal From A Poor Player! L BOZO! Try Again");
+                        alert.showAndWait();
+                        if(colors.size()>1){
+                            rollSeven();
+                        }
+                    }
+                    return;
                 }
             }
         }
-
     }
 
     public static void giveLongestRoad(Player p) {
