@@ -5,6 +5,7 @@ import com.example.catanfx.GamePieces.Cards.DevelopmentDeck;
 import com.example.catanfx.GamePieces.Cards.ResourceCard;
 import com.example.catanfx.GamePieces.Cards.ResourceDeck;
 import com.example.catanfx.GamePieces.Misc.Dice;
+import com.example.catanfx.GamePieces.Structures.Port;
 import com.example.catanfx.GamePieces.Structures.Road;
 import com.example.catanfx.GamePieces.Structures.Settlement;
 import com.example.catanfx.GamePieces.Structures.Structure;
@@ -12,7 +13,6 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ChoiceDialog;
 import javafx.scene.image.ImageView;
 
-import javax.sound.sampled.Port;
 import java.awt.*;
 import java.util.*;
 import java.util.List;
@@ -33,6 +33,7 @@ public class GameState {
     public static HashMap<ImageView, Road> roadMap;
     public static ArrayList<Tile> tilesBook;
     public static ArrayList<Structure> setts;
+    public static HashMap<String, Port> portsMap;
     public static boolean rollSeven;
 
     public GameState(int numOfPlayers){

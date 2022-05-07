@@ -768,47 +768,47 @@
          <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fitHeight="85.0" fitWidth="85.0" layoutX="242.0" layoutY="660.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="portImg7" fitHeight="85.0" fitWidth="85.0" layoutX="242.0" layoutY="660.0" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Port/brick.png" />
       </image>
    </ImageView>
-   <ImageView fitHeight="85.0" fitWidth="85.0" layoutX="242.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="portImg1" fitHeight="85.0" fitWidth="85.0" layoutX="242.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Port/brick.png" />
       </image>
    </ImageView>
-   <ImageView fitHeight="85.0" fitWidth="85.0" layoutX="699.0" layoutY="559.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="portImg5" fitHeight="85.0" fitWidth="85.0" layoutX="699.0" layoutY="559.0" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Port/brick.png" />
       </image>
    </ImageView>
-   <ImageView fitHeight="85.0" fitWidth="85.0" layoutX="828.0" layoutY="348.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="portImg4" fitHeight="85.0" fitWidth="85.0" layoutX="828.0" layoutY="348.0" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Port/brick.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="harbour2" fitHeight="85.0" fitWidth="85.0" layoutX="503.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="portImg2" fitHeight="85.0" fitWidth="85.0" layoutX="503.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Port/brick.png" />
       </image>
    </ImageView>
-   <ImageView fitHeight="85.0" fitWidth="85.0" layoutX="114.0" layoutY="451.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="portImg8" fitHeight="85.0" fitWidth="85.0" layoutX="114.0" layoutY="451.0" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Port/brick.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="harbour21" fitHeight="85.0" fitWidth="85.0" layoutX="699.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="portImg3" fitHeight="85.0" fitWidth="85.0" layoutX="699.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Port/brick.png" />
       </image>
    </ImageView>
-   <ImageView fitHeight="85.0" fitWidth="85.0" layoutX="504.0" layoutY="660.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="portImg6" fitHeight="85.0" fitWidth="85.0" layoutX="504.0" layoutY="660.0" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Port/brick.png" />
       </image>
    </ImageView>
-   <ImageView fitHeight="85.0" fitWidth="85.0" layoutX="114.0" layoutY="245.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="portImg9" fitHeight="85.0" fitWidth="85.0" layoutX="114.0" layoutY="245.0" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Port/brick.png" />
       </image>
