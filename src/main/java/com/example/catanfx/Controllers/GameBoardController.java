@@ -399,6 +399,11 @@ public class GameBoardController implements Initializable {
             }
         }
         canBuildRoad = false; canBuildSettlement = false;
+        for(Tile t: tilesBook.values()){
+            if(t.getVertices().size()!=6){
+                System.out.println(t.getVertices().size());
+            }
+        }
     }
 
     @FXML
@@ -477,7 +482,9 @@ public class GameBoardController implements Initializable {
     public void unHighlightThief(MouseEvent mouseEvent) {
         if(GameState.rollSeven){
             ImageView img = (ImageView) mouseEvent.getSource();
-            Token.tokensMap.get(img).setThief(false);
+            if(Token.tokensMap.get(img).getNumber()!=-1){
+                Token.tokensMap.get(img).setThief(false);
+            }
         }
     }
 
@@ -489,9 +496,11 @@ public class GameBoardController implements Initializable {
                 }
             }
             ImageView img = (ImageView) mouseEvent.getSource();
-            Token.tokensMap.get(img).setThief(true);
-            GameState.rollSeven = false;
-            GameState.rollSeven();
+            if(Token.tokensMap.get(img).getNumber()!=-1){
+                Token.tokensMap.get(img).setThief(true);
+                GameState.rollSeven = false;
+                GameState.rollSeven();
+            }
         }
     }
 
