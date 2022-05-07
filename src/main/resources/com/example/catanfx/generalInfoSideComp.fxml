@@ -11,27 +11,27 @@
 
 <AnchorPane prefHeight="1021.0" prefWidth="367.0" scaleX="0.85" scaleY="0.85" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.catanfx.Controllers.generalInfoCompController">
    <children>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="brick" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Assets/Resource_Cards/brick.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="131.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="grain" fitHeight="150.0" fitWidth="200.0" layoutX="131.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Assets/Resource_Cards/grain.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="247.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="lumber" fitHeight="150.0" fitWidth="200.0" layoutX="247.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Assets/Resource_Cards/lumber.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="ore" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Assets/Resource_Cards/ore.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="131.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="wool" fitHeight="150.0" fitWidth="200.0" layoutX="131.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Assets/Resource_Cards/wool.png" />
          </image>

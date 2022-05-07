@@ -1,12 +1,14 @@
 package com.example.catanfx.Controllers;
 
 import com.example.catanfx.GamePieces.Cards.DevelopmentDeck;
+import com.example.catanfx.GamePieces.Cards.ResourceDeck;
 import com.example.catanfx.GamePieces.GameState;
 import com.example.catanfx.GamePieces.HelpMenu;
 import com.example.catanfx.GamePieces.Misc.Dice;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -19,38 +21,48 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+
+import java.net.URL;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.ResourceBundle;
 
-public class generalInfoCompController {
+public class generalInfoCompController implements Initializable {
 
     @FXML
     private Button buildButton;
-
     @FXML
     private Button buyButton;
-
     @FXML
     private Group dice;
-
     @FXML
     private ImageView dice1;
-
     @FXML
     private ImageView dice2;
-
     @FXML
     private ImageView help;
-
     @FXML
     private Button nextButton;
-
     @FXML
     private Button passDiceButton;
-
     @FXML
     private Button tradeButton;
+    @FXML
+    private ImageView brick;
+    @FXML
+    private ImageView grain;
+    @FXML
+    private ImageView lumber;
+    @FXML
+    private ImageView wool;
+    @FXML
+    private ImageView ore;
+
+
+
+
+
 
     @FXML
     void openTrade(ActionEvent event) {
@@ -77,7 +89,7 @@ public class generalInfoCompController {
             }
         } else{
             try {
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/catanfx/4for1Trade.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/catanfx/MaritimeTrade.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root1));
@@ -244,5 +256,24 @@ public class generalInfoCompController {
     @FXML
     void openHelp(MouseEvent event) {
         new HelpMenu();
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        if(ResourceDeck.isEmpty("brick")){
+            brick.setVisible(false);
+        }
+        if(ResourceDeck.isEmpty("grain")){
+            grain.setVisible(false);
+        }
+        if(ResourceDeck.isEmpty("wool")){
+            wool.setVisible(false);
+        }
+        if(ResourceDeck.isEmpty("ore")){
+            ore.setVisible(false);
+        }
+        if(ResourceDeck.isEmpty("lumber")){
+            lumber.setVisible(false);
+        }
     }
 }
