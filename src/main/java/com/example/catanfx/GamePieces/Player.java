@@ -72,6 +72,10 @@ public class Player {
         return cnt;
     }
 
+    public ResourceCard getRandomCard(){
+        return resourceCards.remove(0);
+    }
+
 
 
 
