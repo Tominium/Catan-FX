@@ -61,7 +61,7 @@ public class allPlayersSideComp implements Initializable {
                 Runnable updater = new Runnable() {
                     @Override
                     public void run() {updateAll();}};
-                while (true) {try {Thread.sleep(50);} catch (InterruptedException ex) {}
+                while (true) {try {Thread.sleep(16);} catch (InterruptedException ex) {}
                     Platform.runLater(updater);}}});
         // don't let thread prevent JVM shutdown
         thread.setDaemon(true);
@@ -85,6 +85,13 @@ public class allPlayersSideComp implements Initializable {
                 rect0.setFill(Color.rgb(225, 0, 0));
                 break;
         }
+        if(GameState.turnNumber==0){
+            rect0.setStroke(Color.rgb(233, 255, 0));
+            rect0.setStrokeWidth(8);
+        }
+        else{
+            rect0.setStroke(null);
+        }
         String text = "Resource Cards: " + p.getRC().size() + "\n" + "Development Cards: " + p.getDC().size() + "\n" + "Points: " + p.getPoints();
         textArea0.setText(text);
     }
@@ -104,6 +111,13 @@ public class allPlayersSideComp implements Initializable {
             case "red":
                 rect1.setFill(Color.rgb(225, 0, 0));
                 break;
+        }
+        if(GameState.turnNumber==1){
+            rect1.setStroke(Color.rgb(233, 255, 0));
+            rect1.setStrokeWidth(8);
+        }
+        else{
+            rect1.setStroke(null);
         }
         String text = "Resource Cards: " + p.getRC().size() + "\n" + "Development Cards: " + p.getDC().size() + "\n" + "Points: " + p.getPoints();
         textArea1.setText(text);
@@ -125,6 +139,13 @@ public class allPlayersSideComp implements Initializable {
                 rect2.setFill(Color.rgb(225, 0, 0));
                 break;
         }
+        if(GameState.turnNumber==2){
+            rect2.setStroke(Color.rgb(233, 255, 0));
+            rect2.setStrokeWidth(8);
+        }
+        else{
+            rect2.setStroke(null);
+        }
         String text = "Resource Cards: " + p.getRC().size() + "\n" + "Development Cards: " + p.getDC().size() + "\n" + "Points: " + p.getPoints();
         textArea2.setText(text);
     }
@@ -144,6 +165,13 @@ public class allPlayersSideComp implements Initializable {
             case "red":
                 rect3.setFill(Color.rgb(225, 0, 0));
                 break;
+        }
+        if(GameState.turnNumber==3){
+            rect3.setStroke(Color.rgb(233, 255, 0));
+            rect3.setStrokeWidth(8);
+        }
+        else{
+            rect3.setStroke(null);
         }
         String text = "Resource Cards: " + p.getRC().size() + "\n" + "Development Cards: " + p.getDC().size() + "\n" + "Points: " + p.getPoints();
         textArea3.setText(text);
