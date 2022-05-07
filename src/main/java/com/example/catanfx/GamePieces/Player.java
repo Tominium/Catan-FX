@@ -58,7 +58,7 @@ public class Player {
         for(int i=0; i<settlements.size(); i++){
             if(settlements.get(i).equals(s)){
                 settlements.set(i, new City("City", s.getColor(), s.getImage()));
-                cities.add(settlements.remove(i));
+                cities.add(settlements.get(i));
                 return;
             }
         }
