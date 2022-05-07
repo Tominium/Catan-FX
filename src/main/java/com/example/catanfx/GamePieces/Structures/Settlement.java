@@ -9,6 +9,6 @@ public class Settlement extends Structure {
         super(type, color, image);
     }
 
-    public void setColor(String c){color = c; image.setImage(new Image(GameBoardController.class.getResource("/Assets/Settlement/" + color + ".png").toExternalForm()));}
+    public void setColor(String c){color = c; image.setImage(new Image(Settlement.class.getResource("/Assets/Settlement/" + color + ".png").toExternalForm()));}
 
 }

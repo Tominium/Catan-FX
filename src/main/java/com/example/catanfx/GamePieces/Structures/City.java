@@ -10,6 +10,6 @@ public class City extends Structure {
         super(type, color, image);
     }
 
-    public void setColor(String c){color = c; image.setImage(new Image(GameBoardController.class.getResource("/Assets/City/" + color + ".png").toExternalForm()));}
+    public void setColor(String c){color = c; image.setImage(new Image(City.class.getResource("/Assets/City/" + color + ".png").toExternalForm()));}
 
 }

@@ -9,5 +9,5 @@ public class Road extends Structure {
         super(type, color, image);
     }
 
-    public void setColor(String c){color = c; image.setImage(new Image(GameBoardController.class.getResource("/Assets/Road/" + color + ".png").toExternalForm()));}
+    public void setColor(String c){color = c; image.setImage(new Image(Road.class.getResource("/Assets/Road/" + color + ".png").toExternalForm()));}
 }
