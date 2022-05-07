@@ -1,16 +1,26 @@
 package com.example.catanfx.Controllers;
 
+import com.example.catanfx.GamePieces.Cards.ResourceCard;
+import com.example.catanfx.GamePieces.Cards.ResourceDeck;
 import com.example.catanfx.GamePieces.GameState;
 import com.example.catanfx.GamePieces.Player;
+import com.example.catanfx.GamePieces.Structures.Port;
+import com.example.catanfx.GamePieces.Structures.Structure;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class FourforOneTradeController {
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.ResourceBundle;
+
+public class MaritimeTrade implements Initializable {
     String resourceOffered;
     String resourceRequested;
     String tradePartner;
@@ -57,7 +67,7 @@ public class FourforOneTradeController {
     @FXML
     private AnchorPane pane;
 
-    Stage stage;
+    private Stage stage;
 
     @FXML
     void chooseResource(ActionEvent event){
@@ -152,9 +162,66 @@ public class FourforOneTradeController {
                 alert.setTitle("Error");
                 alert.setHeaderText(null);
                 alert.setContentText("Not enough Resource Cards!");
-
                 alert.show();
             }
+        }
+        else if(tradePartner.equalsIgnoreCase("port")){
+            if(portIntersect(resourceOffered) && Collections.frequency(p.getRC(), new ResourceCard(resourceOffered)) >=2){
+                p.removeRCard(new ResourceCard(resourceOffered));
+                p.removeRCard(new ResourceCard(resourceOffered));
+                p.addRC(ResourceDeck.getCard(resourceRequested));
+                stage = (Stage)pane.getScene().getWindow();
+                stage.close();
+            }
+            else if(portIntersect("port") && Collections.frequency(p.getRC(), new ResourceCard(resourceOffered)) >=3){
+                p.removeRCard(new ResourceCard(resourceOffered));
+                p.removeRCard(new ResourceCard(resourceOffered));
+                p.removeRCard(new ResourceCard(resourceOffered));
+                p.addRC(ResourceDeck.getCard(resourceRequested));
+                stage = (Stage)pane.getScene().getWindow();
+                stage.close();
+            }
+            else{
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Error");
+                alert.setHeaderText(null);
+                alert.setContentText("Invalid Trade!");
+                alert.show();
+            }
+        }
+        else{
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText("Please Select Method of Trade");
+            alert.show();
+        }
+    }
+
+    private boolean portIntersect(String type){
+        Port port = GameState.portsMap.get(type);
+        for(Structure s: p.getSettlements()){
+            if(port.getPoly().getBoundsInParent().intersects(s.getImage().getBoundsInParent())){return true;}
+        }
+        return false;
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        if(ResourceDeck.isEmpty("brick")){
+            brick2.setDisable(true);
+        }
+        if(ResourceDeck.isEmpty("grain")){
+            grain2.setDisable(true);
+        }
+        if(ResourceDeck.isEmpty("wool")){
+            wool2.setDisable(true);
+        }
+        if(ResourceDeck.isEmpty("ore")){
+            ore2.setDisable(true);
+        }
+        if(ResourceDeck.isEmpty("lumber")){
+            lumber2.setDisable(true);
         }
     }
 }
