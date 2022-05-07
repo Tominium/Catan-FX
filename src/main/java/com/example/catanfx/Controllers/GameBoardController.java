@@ -522,7 +522,7 @@ public class GameBoardController implements Initializable {
             if(Token.tokensMap.get(img).getNumber()!=-1){
                 Token.tokensMap.get(img).setThief(true);
                 GameState.rollSeven = false;
-                GameState.usedKnight = false
+                GameState.usedKnight = false;
                 GameState.rollSeven();
             }
         }
