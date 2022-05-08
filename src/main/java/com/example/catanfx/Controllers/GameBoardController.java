@@ -432,7 +432,8 @@ public class GameBoardController implements Initializable {
     @FXML
     public void highlightRoad(MouseEvent mouseEvent) {
         ImageView img = (ImageView)mouseEvent.getSource();
-        if(!roadsMap.get(img).isVisible() && canBuildRoad && GameState.canPlaceRoad(roadsMap.get(img))){
+        if((!roadsMap.get(img).isVisible() && canBuildRoad && GameState.canPlaceRoad(roadsMap.get(img))) ||
+                (!roadsMap.get(img).isVisible() && (GameState.usedRB1  || GameState.usedRB2) && GameState.canPlaceRoad(roadsMap.get(img)))){
             img.setImage(new Image(GameBoardController.class.getResource("/Assets/Road/white.png").toExternalForm()));
         }
         else if(!roadsMap.get(img).isVisible() && GameState.roundZeroBuildRoad && GameState.roundZeroRoadLogic(img)){
@@ -451,12 +452,19 @@ public class GameBoardController implements Initializable {
     @FXML
     void buildRoad(MouseEvent event) {
         ImageView img = (ImageView)event.getSource();
-        if(!roadsMap.get(img).isVisible() && canBuildRoad && GameState.canPlaceRoad(roadsMap.get(img))){
+        if((!roadsMap.get(img).isVisible() && canBuildRoad && GameState.canPlaceRoad(roadsMap.get(img))) ||
+                (!roadsMap.get(img).isVisible() && (GameState.usedRB1 || GameState.usedRB2) && GameState.canPlaceRoad(roadsMap.get(img)))){
             GameState.buildRoad();
             roadsMap.get(img).setColor(GameState.getAllPlayers().get(GameState.turnNumber).getColor());
             roadsMap.get(img).setVisible(true);
             GameState.getAllPlayers().get(GameState.turnNumber).addRoad(roadsMap.get(img));
             canBuildRoad = false;
+            GameState.usedRB1 = false;
+            GameState.rbControl += 1;
+            if(GameState.rbControl == 2){
+                GameState.usedRB2 = false;
+                GameState.rbControl = 0;
+            }
         }
         if(!roadsMap.get(img).isVisible() && GameState.roundZeroBuildRoad && GameState.roundZeroRoadLogic(img)){
             roadsMap.get(img).setVisible(true);
@@ -524,6 +532,7 @@ public class GameBoardController implements Initializable {
                 GameState.rollSeven = false;
                 GameState.usedKnight = false;
                 GameState.rollSeven();
+                GameState.checkLargestArmy(GameState.getAllPlayers().get(GameState.turnNumber));
             }
         }
     }

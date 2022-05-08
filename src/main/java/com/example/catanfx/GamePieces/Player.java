@@ -15,6 +15,9 @@ public class Player {
     private LinkedList<Structure> roads;
     private LinkedList<Structure> cities;
     private int turnNum;
+    private int KnightsPlayed;
+    private int points;
+    private boolean largestArmy;
 
     public Player(String c, int turn){
         color = c;
@@ -24,7 +27,10 @@ public class Player {
         settlements = new LinkedList<>();
         roads = new LinkedList<>();
         cities = new LinkedList<>();
-        for(int i=0; i<(Math.random()*20)+1; i++){
+        KnightsPlayed = 0;
+        points = 0;
+        largestArmy = false;
+        for(int i=0; i<(Math.random()*40)+1; i++){
             resourceCards.add(new ResourceCard("brick"));
             resourceCards.add(new ResourceCard("lumber"));
             resourceCards.add(new ResourceCard("grain"));
@@ -47,7 +53,13 @@ public class Player {
     public LinkedList<Structure> getSettlements(){return settlements;}
     public LinkedList<Structure> getRoads(){return roads;}
     public LinkedList<Structure> getCities(){return cities;}
+    public int getKnightsPlayed(){return KnightsPlayed;}
+    public boolean hasLargestArmy(){return largestArmy;}
 
+    public void obtainedLargestArmy(){largestArmy = true;}
+    public void resetLargestArmy(){largestArmy = false; points = points - 2;}
+    public void setPoints(int i){points += i;}
+    public void playedKnight() {KnightsPlayed+=1;}
     public void setRC(LinkedList<ResourceCard> rc){resourceCards = rc;}
     public void setDC(LinkedList<DevelopmentCard> d){devCards = d;}
     public void addRC(ResourceCard c){resourceCards.add(c);}
@@ -69,7 +81,7 @@ public class Player {
         for(DevelopmentCard d: devCards){
             cnt+=d.getPoints();
         }
-        return cnt;
+        return cnt + points;
     }
 
     public ResourceCard getRandomCard(){

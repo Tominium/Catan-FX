@@ -36,6 +36,11 @@ public class GameState {
     public static HashMap<String, Port> portsMap;
     public static boolean rollSeven;
     public static boolean usedKnight;
+    public static boolean usedRB1;
+    public static boolean usedRB2;
+    public static int rbControl;
+    public static int maxKnights;
+    public static boolean firstLA;
 
     public GameState(int numOfPlayers){
         players = new ArrayList<Player>();
@@ -49,6 +54,9 @@ public class GameState {
         roundZeroRollDice = true;
         zeroMap = new TreeMap<>();
         turnDirc = false;
+        rbControl = 0;
+        maxKnights = 3;
+        firstLA = false;
     }
 
     private static void setColors(int num){
@@ -505,4 +513,55 @@ public class GameState {
         alert.setContentText("Please move the Thief");
         alert.showAndWait();
     }
+
+    public static void roadBuilding(){
+        usedRB1 = true;
+        usedRB2 = true;
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Used Road Building");
+        alert.setHeaderText(null);
+        alert.setContentText("Please place 2 roads");
+        alert.showAndWait();
+    }
+
+    public static void checkLargestArmy(Player p){
+        if(!firstLA) {
+            if (p.getKnightsPlayed() >= maxKnights) {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Obtained Largest Army");
+                alert.setHeaderText(null);
+                alert.setContentText("You have the Largest Army!");
+                alert.showAndWait();
+
+                maxKnights = p.getKnightsPlayed();
+                p.setPoints(2);
+                firstLA = true;
+                p.obtainedLargestArmy();
+            }
+        }
+        else{
+            if (p.getKnightsPlayed() > maxKnights) {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Obtained Largest Army");
+                alert.setHeaderText(null);
+                alert.setContentText("You have the Largest Army!");
+                alert.showAndWait();
+
+                maxKnights = p.getKnightsPlayed();
+                p.setPoints(2);
+                for(int i = 0; i < players.size(); i++){
+                    if(players.get(i).hasLargestArmy()){
+                        if(players.indexOf(p) == i){
+                            break;
+                        }
+                        else{
+                            players.get(i).resetLargestArmy();
+                        }
+                    }
+                }
+                p.obtainedLargestArmy();
+            }
+        }
+    }
+
 }

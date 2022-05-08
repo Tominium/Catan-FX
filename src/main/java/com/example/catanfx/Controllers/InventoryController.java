@@ -36,6 +36,9 @@ public class InventoryController implements Initializable {
     private Button useYoP;
 
     @FXML
+    private Button useRB;
+
+    @FXML
     private AnchorPane pane;
 
     @FXML
@@ -106,6 +109,8 @@ public class InventoryController implements Initializable {
             stage = (Stage) pane.getScene().getWindow();
             stage.close();
             GameState.Knight();
+            p.playedKnight();
+            p.removeDCard(new DevelopmentCard("knight"));
         }
     }
 
@@ -192,6 +197,40 @@ public class InventoryController implements Initializable {
             }
         }
     }
+
+    public void useRBDC(){
+        if(GameState.turnNumber != GameState.getAllPlayers().indexOf(p)){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText("Unable to use a Development Card during someone else's turn");
+
+            alert.show();
+        }
+        else if(Collections.frequency(p.getDC(), new DevelopmentCard("roadbuilding")) == 0){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText("You do not have enough!");
+
+            alert.show();
+        }
+        else if(GameState.newCard(p, "roadbuilding")){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText("You just bought this card!");
+
+            alert.show();
+        }
+        else{
+            stage = (Stage) pane.getScene().getWindow();
+            stage.close();
+            GameState.roadBuilding();
+            p.removeDCard(new DevelopmentCard("roadbuilding"));
+        }
+    }
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
