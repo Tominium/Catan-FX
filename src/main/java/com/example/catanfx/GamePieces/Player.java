@@ -87,7 +87,7 @@ public class Player {
                 cnt++;
             }
         }
-        return cnt + points;
+        return cnt + points + settlements.size() + (2*cities.size());
     }
 
     public ResourceCard getRandomCard(){

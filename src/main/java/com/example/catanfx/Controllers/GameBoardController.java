@@ -6,8 +6,10 @@ import com.example.catanfx.GamePieces.Structures.Road;
 import com.example.catanfx.GamePieces.Structures.Settlement;
 import com.example.catanfx.GamePieces.Structures.Structure;
 import com.example.catanfx.GamePieces.Tile;
+import com.example.catanfx.HelloApplication;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -518,6 +520,15 @@ public class GameBoardController implements Initializable {
             GameState.getAllPlayers().get(GameState.turnNumber).upgradeStruct(settMap.get(img));
             canBuildCity = false;
             GameState.buildCity();
+        }
+
+        if(GameState.checkWin()!=-1){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Game Over");
+            alert.setHeaderText(null);
+            alert.setContentText("Game Over! Player " + (GameState.checkWin()+1) + " won!");
+            alert.showAndWait();
+            HelloApplication.primaryStage.close();
         }
 
     }
