@@ -11,9 +11,10 @@ public class Player {
     private String color;
     private LinkedList<ResourceCard> resourceCards;
     private LinkedList<DevelopmentCard> devCards;
-    private LinkedList<Structure> settlements;
+    private LinkedList<Structure> structures;
     private LinkedList<Structure> roads;
     private LinkedList<Structure> cities;
+    private LinkedList<Structure> settlements;
     private int turnNum;
     private int KnightsPlayed;
     private int points;
@@ -24,9 +25,10 @@ public class Player {
         turnNum = turn;
         resourceCards = new LinkedList<>();
         devCards = new LinkedList<>();
-        settlements = new LinkedList<>();
+        structures = new LinkedList<>();
         roads = new LinkedList<>();
         cities = new LinkedList<>();
+        settlements = new LinkedList<>();
         KnightsPlayed = 0;
         points = 0;
         largestArmy = false;
@@ -50,9 +52,10 @@ public class Player {
     public LinkedList<ResourceCard> getRC(){return resourceCards;}
     public int getTurnNum(){return turnNum;}
     public LinkedList<DevelopmentCard> getDC(){return devCards;}
-    public LinkedList<Structure> getSettlements(){return settlements;}
+    public LinkedList<Structure> getStructures(){return structures;}
     public LinkedList<Structure> getRoads(){return roads;}
     public LinkedList<Structure> getCities(){return cities;}
+    public LinkedList<Structure> getSettlements(){return settlements;}
     public int getKnightsPlayed(){return KnightsPlayed;}
     public boolean hasLargestArmy(){return largestArmy;}
 
@@ -64,13 +67,14 @@ public class Player {
     public void setDC(LinkedList<DevelopmentCard> d){devCards = d;}
     public void addRC(ResourceCard c){resourceCards.add(c);}
     public void addDC(DevelopmentCard c){devCards.add(c);}
-    public void addSett(Structure s){settlements.add(s);}
+    public void addSett(Structure s){structures.add(s); settlements.add(s);}
     public void addRoad(Structure s){roads.add(s);}
     public void upgradeStruct(Structure s){
-        for(int i=0; i<settlements.size(); i++){
-            if(settlements.get(i).equals(s)){
-                settlements.set(i, new City("City", s.getColor(), s.getImage()));
-                cities.add(settlements.get(i));
+        for(int i=0; i<structures.size(); i++){
+            if(structures.get(i).equals(s)){
+                settlements.remove(settlements.indexOf(structures.get(i)));
+                structures.set(i, new City("City", s.getColor(), s.getImage()));
+                cities.add(structures.get(i));
                 return;
             }
         }

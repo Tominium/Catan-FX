@@ -224,7 +224,7 @@ public class MaritimeTrade implements Initializable {
 
     private boolean portIntersect(String type){
         Port port = GameState.portsMap.get(type);
-        for(Structure s: p.getSettlements()){
+        for(Structure s: p.getStructures()){
             if(port.getPoly().getBoundsInParent().intersects(s.getImage().getBoundsInParent())){return true;}
         }
         return false;

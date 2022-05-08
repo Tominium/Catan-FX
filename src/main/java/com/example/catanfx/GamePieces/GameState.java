@@ -116,7 +116,7 @@ public class GameState {
     public static void rollDiceGetResources(int a){
         if(a!=7){
             for (Player p : players) {
-                for (Structure s : p.getSettlements()) {
+                for (Structure s : p.getStructures()) {
                     for (Tile t : tilesBook) {
                         if (!t.getType().equals("desert") && t.getToken().getNumber() == a) {
                             if (!t.getType().equalsIgnoreCase("desert") && t.getVertices().contains(s)) {
@@ -167,7 +167,7 @@ public class GameState {
     }
 
     public static boolean canPlaceRoad(Road r){
-        for(Structure s: players.get(turnNumber).getSettlements()){
+        for(Structure s: players.get(turnNumber).getStructures()){
             if(s.getImage().getBoundsInParent().intersects(r.getImage().getBoundsInParent())){
                 return true;
             }
@@ -378,7 +378,7 @@ public class GameState {
         }
     }
     public static boolean roundZeroRoadLogic(ImageView img){
-        ImageView imgf = players.get(turnNumber).getSettlements().get(players.get(turnNumber).getSettlements().size()-1).getImage();
+        ImageView imgf = players.get(turnNumber).getStructures().get(players.get(turnNumber).getStructures().size()-1).getImage();
         return imgf.getBoundsInParent().intersects(img.getBoundsInParent());
     }
 
@@ -417,7 +417,7 @@ public class GameState {
 
     public static void roundZeroGiveResources(){
         for(Player p: players){
-            Structure s = p.getSettlements().get(1);
+            Structure s = p.getStructures().get(1);
             for(Tile t: tilesBook){
                 if(!t.getType().equalsIgnoreCase("desert") && t.getVertices().contains(s)){
                     p.addRC(ResourceDeck.getCard(t.getType()));

@@ -75,19 +75,21 @@ public class generalInfoCompController implements Initializable {
         dialog.setHeaderText("Select Trade Type");
 
         Optional<String> result = dialog.showAndWait();
-        if(result.get().equals("Domestic Trade")){
-            try {
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/catanfx/tradePanel.fxml"));
-                Parent root1 = (Parent) fxmlLoader.load();
-                Stage stage = new Stage();
-                stage.setScene(new Scene(root1));
-                stage.initModality(Modality.APPLICATION_MODAL);
-                stage.setResizable(false);
-                stage.showAndWait();
-            } catch (Exception e) {
-                e.printStackTrace();
+        if(!result.isEmpty()){
+            if (result.get().equals("Domestic Trade")) {
+                try {
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/catanfx/tradePanel.fxml"));
+                    Parent root1 = (Parent) fxmlLoader.load();
+                    Stage stage = new Stage();
+                    stage.setScene(new Scene(root1));
+                    stage.initModality(Modality.APPLICATION_MODAL);
+                    stage.setResizable(false);
+                    stage.showAndWait();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
-        } else{
+        } else if(result.get().equals("Maritime Trade")){
             try {
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/catanfx/MaritimeTrade.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();

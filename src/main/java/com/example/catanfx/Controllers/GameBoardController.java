@@ -482,7 +482,7 @@ public class GameBoardController implements Initializable {
         if(!settMap.get(img).isVisible()){
             img.setImage(new Image(GameBoardController.class.getResource("/Assets/Empty.png").toExternalForm()));
         }
-        else if(settMap.get(img).isVisible() && (canBuildCity) && GameState.getAllPlayers().get(GameState.turnNumber).getSettlements().contains(settMap.get(img)))
+        else if(settMap.get(img).isVisible() && (canBuildCity) && GameState.getAllPlayers().get(GameState.turnNumber).getStructures().contains(settMap.get(img)))
             img.setImage(new Image(GameBoardController.class.getResource("/Assets/Settlement/"+GameState.getAllPlayers().get(GameState.turnNumber).getColor().toLowerCase()+".png").toExternalForm()));
     }
 
@@ -492,7 +492,7 @@ public class GameBoardController implements Initializable {
         if(!settMap.get(img).isVisible() && ((canBuildSettlement && GameState.canBuildSettlementLocation(img))||(GameState.roundZeroBuildSettlement&&GameState.roundZeroSettlementLogic(settMap.get(img))))){
             img.setImage(new Image(GameBoardController.class.getResource("/Assets/Settlement/white.png").toExternalForm()));
         }
-        else if(settMap.get(img).isVisible() && (canBuildCity) && GameState.getAllPlayers().get(GameState.turnNumber).getSettlements().contains(settMap.get(img)))
+        else if(settMap.get(img).isVisible() && (canBuildCity) && GameState.getAllPlayers().get(GameState.turnNumber).getStructures().contains(settMap.get(img)))
             img.setImage(new Image(GameBoardController.class.getResource("/Assets/City/"+GameState.getAllPlayers().get(GameState.turnNumber).getColor().toLowerCase()+".png").toExternalForm()));
     }
 
@@ -507,7 +507,7 @@ public class GameBoardController implements Initializable {
             canBuildSettlement = false;
         }
 
-        else if(settMap.get(img).isVisible() && (canBuildCity) && GameState.getAllPlayers().get(GameState.turnNumber).getSettlements().contains(settMap.get(img))) {
+        else if(settMap.get(img).isVisible() && (canBuildCity) && GameState.getAllPlayers().get(GameState.turnNumber).getStructures().contains(settMap.get(img))) {
             GameState.getAllPlayers().get(GameState.turnNumber).upgradeStruct(settMap.get(img));
             canBuildCity = false;
             GameState.buildCity();
