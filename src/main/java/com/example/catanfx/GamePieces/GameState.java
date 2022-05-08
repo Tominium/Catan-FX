@@ -200,10 +200,6 @@ public class GameState {
         return true;
     }
 
-
-    public static boolean canPlace(Structure s, Point p) {
-        return true;
-    }
 //
 //    public static int getDiceRoll() {
 //        return dice.getRolledNum();
@@ -261,6 +257,7 @@ public class GameState {
     }
 
     public static Player longestRoad() {
+
         return players.get(0);
     }
 

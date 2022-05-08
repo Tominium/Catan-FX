@@ -173,26 +173,26 @@ public class generalInfoCompController implements Initializable {
                 }
             }
         }
-//        if (result.get().equals("City")) {
-//            if (GameState.canBuild((result.get().toLowerCase()))) {
-//                GameBoardController.setCanBuildSettlement();
-//            } else {
-//                if(GameState.getAllPlayers().get(GameState.turnNumber).getSettlements().size() ==5){
-//                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
-//                    alert.setTitle("Error");
-//                    alert.setHeaderText(null);
-//                    alert.setContentText("Maximum Amount Of " + result.get() + "s Built!");
-//                    alert.showAndWait();
-//                }
-//                else{
-//                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
-//                    alert.setTitle("Error");
-//                    alert.setHeaderText(null);
-//                    alert.setContentText("Not Enough Resources to Build " + result.get() + "!");
-//                    alert.showAndWait();
-//                }
-//            }
-//        }
+        if (result.get().equals("City")) {
+            if (GameState.canBuild((result.get().toLowerCase()))) {
+                GameBoardController.setCanBuildCity();
+            } else {
+                if(GameState.getAllPlayers().get(GameState.turnNumber).getCities().size() ==4){
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Error");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Maximum Amount Of " + result.get() + "s Built!");
+                    alert.showAndWait();
+                }
+                else{
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Error");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Not Enough Resources to Build " + result.get() + "!");
+                    alert.showAndWait();
+                }
+            }
+        }
     }
 
     @FXML
