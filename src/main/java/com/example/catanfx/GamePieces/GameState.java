@@ -93,13 +93,14 @@ public class GameState {
 //        for(Player p: )
 //    }
 
-    public static boolean checkWin() {
-        for(int i = 0; i < players.size(); i++) {
-            if (players.get(i).getPoints() >= 10) {
-                return true;
-            }
+    public static void checkWin() {
+        if(players.get(turnNumber).getPoints() >= 10) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Game Over");
+            alert.setHeaderText(null);
+            alert.setContentText("Game Over! Player " + (turnNumber + 1) + " won!");
+            alert.showAndWait();
         }
-        return false;
     }
 
     public static LinkedList<ResourceCard> getResourceInventory() {
@@ -347,6 +348,7 @@ public class GameState {
             getAllPlayers().get(turnNumber).removeRCard(new ResourceCard("grain"));
             getAllPlayers().get(turnNumber).removeRCard(new ResourceCard("wool"));
         }
+        checkWin();
     }
 
     public static void buildCity(){
@@ -355,6 +357,8 @@ public class GameState {
         getAllPlayers().get(turnNumber).removeRCard(new ResourceCard("ore"));
         getAllPlayers().get(turnNumber).removeRCard(new ResourceCard("ore"));
         getAllPlayers().get(turnNumber).removeRCard(new ResourceCard("ore"));
+        getAllPlayers().get(turnNumber).setPoints(1);
+        checkWin();
     }
 
     public static void useDevCard(DevelopmentCard dc) {
@@ -589,6 +593,7 @@ public class GameState {
                 p.obtainedLargestArmy();
             }
         }
+        checkWin();
     }
 
 }
