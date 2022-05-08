@@ -548,10 +548,6 @@ public class GameState {
     public static void roadBuilding(){
         usedRB1 = true;
         usedRB2 = true;
-        players.get(turnNumber).addRC(new ResourceCard("lumber"));
-        players.get(turnNumber).addRC(new ResourceCard("lumber"));
-        players.get(turnNumber).addRC(new ResourceCard("brick"));
-        players.get(turnNumber).addRC(new ResourceCard("brick"));
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Used Road Building");
         alert.setHeaderText(null);

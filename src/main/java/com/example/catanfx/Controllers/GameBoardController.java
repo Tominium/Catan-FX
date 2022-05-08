@@ -457,7 +457,9 @@ public class GameBoardController implements Initializable {
         ImageView img = (ImageView)event.getSource();
         if((!roadsMap.get(img).isVisible() && canBuildRoad && GameState.canPlaceRoad(roadsMap.get(img))) ||
                 (!roadsMap.get(img).isVisible() && (GameState.usedRB1 || GameState.usedRB2) && GameState.canPlaceRoad(roadsMap.get(img)))){
-            GameState.buildRoad();
+            if(!(GameState.usedRB1 || GameState.usedRB2)) {
+                GameState.buildRoad();
+            }
             roadsMap.get(img).setColor(GameState.getAllPlayers().get(GameState.turnNumber).getColor());
             roadsMap.get(img).setVisible(true);
             GameState.getAllPlayers().get(GameState.turnNumber).addRoad(roadsMap.get(img));
