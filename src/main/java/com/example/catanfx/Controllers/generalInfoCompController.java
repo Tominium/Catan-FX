@@ -5,6 +5,7 @@ import com.example.catanfx.GamePieces.Cards.ResourceDeck;
 import com.example.catanfx.GamePieces.GameState;
 import com.example.catanfx.GamePieces.HelpMenu;
 import com.example.catanfx.GamePieces.Misc.Dice;
+import com.example.catanfx.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -211,6 +212,14 @@ public class generalInfoCompController implements Initializable {
             if(GameState.check(GameState.getAllPlayers().get(GameState.turnNumber))) {
                 if(DevelopmentDeck.deck.size() != 0) {
                     GameState.buyDC(GameState.getAllPlayers().get(GameState.turnNumber));
+                    if(GameState.checkWin()!=-1){
+                        Alert alert4 = new Alert(Alert.AlertType.INFORMATION);
+                        alert4.setTitle("Game Over");
+                        alert4.setHeaderText(null);
+                        alert4.setContentText("Game Over! Player " + (GameState.checkWin()+1) + " won!");
+                        alert4.showAndWait();
+                        HelloApplication.primaryStage.close();
+                    }
                 }
                 else{
                     Alert alert3 = new Alert(Alert.AlertType.INFORMATION);
@@ -243,12 +252,13 @@ public class generalInfoCompController implements Initializable {
         dice.setDisable(false);
         GameState.oldCard(GameState.getAllPlayers().get(GameState.turnNumber));
         GameState.iterateTurn();
-        if(GameState.checkWin()){
+        if(GameState.checkWin()!=-1){
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Game Over");
             alert.setHeaderText(null);
-            alert.setContentText("Game Over! Player " + (GameState.turnNumber + 1) + " won!");
+            alert.setContentText("Game Over! Player " + (GameState.checkWin()+1) + " won!");
             alert.showAndWait();
+            HelloApplication.primaryStage.close();
         }
     }
 

@@ -93,13 +93,23 @@ public class GameState {
 //        for(Player p: )
 //    }
 
-    public static boolean checkWin() {
+    public static int checkWin() {
+        TreeMap<Integer, Player> pp = new TreeMap<>();
         for(int i = 0; i < players.size(); i++) {
             if (players.get(i).getPoints() >= 10) {
-                return true;
+                pp.put(i, players.get(i));
             }
         }
-        return false;
+        int max = Integer.MIN_VALUE;
+        if(!pp.isEmpty()){
+            for(int a: pp.keySet()){
+                if(a>max){
+                    max = a;
+                }
+            }
+            return pp.get(max).getTurnNum();
+        }
+        return -1;
     }
 
     public static LinkedList<ResourceCard> getResourceInventory() {
