@@ -78,8 +78,10 @@ public class Player {
 
     public int getPoints(){
         int cnt = 0;
-        for(DevelopmentCard d: devCards){
-            cnt+=d.getPoints();
+        for(int i = 0; i < devCards.size(); i++){
+            if(devCards.get(i).equals(new DevelopmentCard("victorypoint"))){
+                cnt++;
+            }
         }
         return cnt + points;
     }
