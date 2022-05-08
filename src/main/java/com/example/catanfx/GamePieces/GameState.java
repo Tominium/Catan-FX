@@ -126,6 +126,9 @@ public class GameState {
                         if (!t.getType().equals("desert") && t.getToken().getNumber() == a) {
                             if (!t.getType().equalsIgnoreCase("desert") && t.getVertices().contains(s)) {
                                 p.addRC(ResourceDeck.getCard(t.getType()));
+                                if(s.getType().equalsIgnoreCase("City")){
+                                    p.addRC(ResourceDeck.getCard(t.getType()));
+                                }
                                 System.out.println(p.getColor()+": " + t.getType());
                             }
                         }
