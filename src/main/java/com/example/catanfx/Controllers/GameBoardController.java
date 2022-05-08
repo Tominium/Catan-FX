@@ -391,6 +391,8 @@ public class GameBoardController implements Initializable {
 
     private static boolean canBuildRoad;
     private static boolean canBuildSettlement;
+
+    private static boolean canBuildCity;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         tilesBook = new HashMap<>();
@@ -421,7 +423,7 @@ public class GameBoardController implements Initializable {
                 }
             }
         }
-        canBuildRoad = false; canBuildSettlement = false;
+        canBuildRoad = false; canBuildSettlement = false; canBuildCity = false;
         for(Tile t: tilesBook.values()){
             if(t.getVertices().size()!=6){
                 System.out.println(t.getVertices().size());
@@ -472,6 +474,8 @@ public class GameBoardController implements Initializable {
         if(!settMap.get(img).isVisible()){
             img.setImage(new Image(GameBoardController.class.getResource("/Assets/Empty.png").toExternalForm()));
         }
+        else if(settMap.get(img).isVisible() && (canBuildCity) && GameState.getAllPlayers().get(GameState.turnNumber).getSettlements().contains(settMap.get(img)))
+            img.setImage(new Image(GameBoardController.class.getResource("/Assets/Settlement/"+GameState.getAllPlayers().get(GameState.turnNumber).getColor().toLowerCase()+".png").toExternalForm()));
     }
 
     @FXML
@@ -480,6 +484,8 @@ public class GameBoardController implements Initializable {
         if(!settMap.get(img).isVisible() && (canBuildSettlement||(GameState.roundZeroBuildSettlement&&GameState.roundZeroSettlementLogic(settMap.get(img))))){
             img.setImage(new Image(GameBoardController.class.getResource("/Assets/Settlement/white.png").toExternalForm()));
         }
+        else if(settMap.get(img).isVisible() && (canBuildCity) && GameState.getAllPlayers().get(GameState.turnNumber).getSettlements().contains(settMap.get(img)))
+            img.setImage(new Image(GameBoardController.class.getResource("/Assets/City/"+GameState.getAllPlayers().get(GameState.turnNumber).getColor().toLowerCase()+".png").toExternalForm()));
     }
 
     @FXML
@@ -490,8 +496,15 @@ public class GameBoardController implements Initializable {
             settMap.get(img).setColor(GameState.getAllPlayers().get(GameState.turnNumber).getColor());
             GameState.getAllPlayers().get(GameState.turnNumber).addSett(settMap.get(img));
             GameState.buildSettlement();
+            canBuildSettlement = false;
         }
-        canBuildSettlement = false;
+
+        else if(settMap.get(img).isVisible() && (canBuildCity) && GameState.getAllPlayers().get(GameState.turnNumber).getSettlements().contains(settMap.get(img))) {
+            GameState.getAllPlayers().get(GameState.turnNumber).upgradeStruct(settMap.get(img));
+            canBuildCity = false;
+            GameState.buildCity();
+        }
+
     }
 
     @FXML
@@ -534,6 +547,10 @@ public class GameBoardController implements Initializable {
     }
     public static void setCanBuildSettlement(){
         canBuildSettlement = true;
+    }
+
+    public static void setCanBuildCity() {
+        canBuildCity = true;
     }
 
 }
