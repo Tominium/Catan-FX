@@ -5,6 +5,7 @@ import com.example.catanfx.GamePieces.Cards.ResourceDeck;
 import com.example.catanfx.GamePieces.GameState;
 import com.example.catanfx.GamePieces.HelpMenu;
 import com.example.catanfx.GamePieces.Misc.Dice;
+import com.example.catanfx.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -249,6 +250,7 @@ public class generalInfoCompController implements Initializable {
             alert.setHeaderText(null);
             alert.setContentText("Game Over! Player " + (GameState.turnNumber + 1) + " won!");
             alert.showAndWait();
+            HelloApplication.primaryStage.close();
         }
     }
 
