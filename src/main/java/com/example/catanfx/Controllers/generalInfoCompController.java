@@ -230,6 +230,7 @@ public class generalInfoCompController implements Initializable {
         } else {
             // ... user chose CANCEL or closed the dialog
         }
+        GameState.checkWin();
     }
 
     @FXML
@@ -243,13 +244,7 @@ public class generalInfoCompController implements Initializable {
         dice.setDisable(false);
         GameState.oldCard(GameState.getAllPlayers().get(GameState.turnNumber));
         GameState.iterateTurn();
-        if(GameState.checkWin()){
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Game Over");
-            alert.setHeaderText(null);
-            alert.setContentText("Game Over! Player " + (GameState.turnNumber + 1) + " won!");
-            alert.showAndWait();
-        }
+        GameState.checkWin();
     }
 
     @FXML
