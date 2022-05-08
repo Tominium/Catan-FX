@@ -433,7 +433,7 @@
          <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett2" fitHeight="54.0" fitWidth="46.0" layoutX="326.0" layoutY="95.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" onMousePressed="#buildSettlement" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett2" fitHeight="31.0" fitWidth="29.0" layoutX="326.0" layoutY="103.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" onMousePressed="#buildSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Empty.png" />
       </image>
@@ -811,6 +811,96 @@
    <ImageView fx:id="portImg9" fitHeight="85.0" fitWidth="85.0" layoutX="114.0" layoutY="245.0" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Port/brick.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="pier1" fitHeight="35.0" fitWidth="12.0" layoutX="334.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true" rotate="147.5">
+      <image>
+         <Image url="@../../../Assets/Port/pier.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="pier2" fitHeight="35.0" fitWidth="12.0" layoutX="284.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true" rotate="147.5">
+      <image>
+         <Image url="@../../../Assets/Port/pier.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="pier3" fitHeight="35.0" fitWidth="12.0" layoutX="485.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true" rotate="212.5">
+      <image>
+         <Image url="@../../../Assets/Port/pier.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="pier4" fitHeight="35.0" fitWidth="12.0" layoutX="530.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true" rotate="212.5">
+      <image>
+         <Image url="@../../../Assets/Port/pier.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="pier5" fitHeight="35.0" fitWidth="12.0" layoutX="680.0" layoutY="206.0" pickOnBounds="true" preserveRatio="true" rotate="212.5">
+      <image>
+         <Image url="@../../../Assets/Port/pier.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="pier6" fitHeight="35.0" fitWidth="12.0" layoutX="727.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true" rotate="212.5">
+      <image>
+         <Image url="@../../../Assets/Port/pier.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="pier7" fitHeight="35.0" fitWidth="12.0" layoutX="803.0" layoutY="348.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+      <image>
+         <Image url="@../../../Assets/Port/pier.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="pier8" fitHeight="35.0" fitWidth="12.0" layoutX="804.0" layoutY="402.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+      <image>
+         <Image url="@../../../Assets/Port/pier.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="pier9" fitHeight="35.0" fitWidth="12.0" layoutX="680.0" layoutY="542.0" pickOnBounds="true" preserveRatio="true" rotate="147.5">
+      <image>
+         <Image url="@../../../Assets/Port/pier.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="pier10" fitHeight="35.0" fitWidth="12.0" layoutX="727.0" layoutY="519.0" pickOnBounds="true" preserveRatio="true" rotate="147.5">
+      <image>
+         <Image url="@../../../Assets/Port/pier.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="pier11" fitHeight="35.0" fitWidth="12.0" layoutX="484.0" layoutY="644.0" pickOnBounds="true" preserveRatio="true" rotate="147.5">
+      <image>
+         <Image url="@../../../Assets/Port/pier.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="pier12" fitHeight="35.0" fitWidth="12.0" layoutX="530.0" layoutY="620.0" pickOnBounds="true" preserveRatio="true" rotate="147.5">
+      <image>
+         <Image url="@../../../Assets/Port/pier.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="pier13" fitHeight="35.0" fitWidth="12.0" layoutX="289.0" layoutY="620.0" pickOnBounds="true" preserveRatio="true" rotate="212.5">
+      <image>
+         <Image url="@../../../Assets/Port/pier.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="pier14" fitHeight="35.0" fitWidth="12.0" layoutX="338.0" layoutY="644.0" pickOnBounds="true" preserveRatio="true" rotate="212.5">
+      <image>
+         <Image url="@../../../Assets/Port/pier.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="pier15" fitHeight="35.0" fitWidth="12.0" layoutX="214.0" layoutY="453.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+      <image>
+         <Image url="@../../../Assets/Port/pier.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="pier16" fitHeight="35.0" fitWidth="12.0" layoutX="214.0" layoutY="503.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+      <image>
+         <Image url="@../../../Assets/Port/pier.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="pier17" fitHeight="35.0" fitWidth="12.0" layoutX="214.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+      <image>
+         <Image url="@../../../Assets/Port/pier.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="pier18" fitHeight="35.0" fitWidth="12.0" layoutX="214.0" layoutY="243.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+      <image>
+         <Image url="@../../../Assets/Port/pier.png" />
       </image>
    </ImageView>
 </AnchorPane>

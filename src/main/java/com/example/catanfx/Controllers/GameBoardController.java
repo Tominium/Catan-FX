@@ -21,6 +21,43 @@ import java.util.*;
 public class GameBoardController implements Initializable {
 
     @FXML
+    private ImageView pier1;
+    @FXML
+    private ImageView pier10;
+    @FXML
+    private ImageView pier11;
+    @FXML
+    private ImageView pier12;
+    @FXML
+    private ImageView pier13;
+    @FXML
+    private ImageView pier14;
+    @FXML
+    private ImageView pier15;
+    @FXML
+    private ImageView pier16;
+    @FXML
+    private ImageView pier17;
+    @FXML
+    private ImageView pier18;
+    @FXML
+    private ImageView pier2;
+    @FXML
+    private ImageView pier3;
+    @FXML
+    private ImageView pier4;
+    @FXML
+    private ImageView pier5;
+    @FXML
+    private ImageView pier6;
+    @FXML
+    private ImageView pier7;
+    @FXML
+    private ImageView pier8;
+    @FXML
+    private ImageView pier9;
+
+    @FXML
     private Polygon port1;
     @FXML
     private Polygon port2;
@@ -407,7 +444,7 @@ public class GameBoardController implements Initializable {
         portMap = new HashMap<>();
         portTypes.addAll(List.of(new String[]{"brick", "ore", "grain", "lumber", "wool", "port", "port", "port", "port"}));
         Collections.shuffle(portTypes);
-        portMap.put(portTypes.get(0), new Port(portTypes.get(0), port1, portImg1));portMap.put(portTypes.get(1), new Port(portTypes.get(1), port2, portImg2));portMap.put(portTypes.get(2), new Port(portTypes.get(2), port3, portImg3));portMap.put(portTypes.get(3), new Port(portTypes.get(3), port4, portImg4));portMap.put(portTypes.get(4), new Port(portTypes.get(4), port5, portImg5));portMap.put(portTypes.get(5), new Port(portTypes.get(5), port6, portImg6));portMap.put(portTypes.get(6), new Port(portTypes.get(6), port7, portImg7));portMap.put(portTypes.get(7), new Port(portTypes.get(7), port8, portImg8));portMap.put(portTypes.get(8), new Port(portTypes.get(8), port9, portImg9));
+        portMap.put(portTypes.get(0), new Port(portTypes.get(0), port1, portImg1, pier1, pier2));portMap.put(portTypes.get(1), new Port(portTypes.get(1), port2, portImg2, pier3, pier4));portMap.put(portTypes.get(2), new Port(portTypes.get(2), port3, portImg3, pier5, pier6));portMap.put(portTypes.get(3), new Port(portTypes.get(3), port4, portImg4, pier7, pier8));portMap.put(portTypes.get(4), new Port(portTypes.get(4), port5, portImg5, pier9, pier10));portMap.put(portTypes.get(5), new Port(portTypes.get(5), port6, portImg6, pier11, pier12));portMap.put(portTypes.get(6), new Port(portTypes.get(6), port7, portImg7, pier13, pier14));portMap.put(portTypes.get(7), new Port(portTypes.get(7), port8, portImg8, pier15, pier16));portMap.put(portTypes.get(8), new Port(portTypes.get(8), port9, portImg9, pier17, pier18));
         GameState.portsMap = portMap;
         GameState.setRoadMap(roadsMap);
         GameState.tilesBook = new ArrayList<>(tilesBook.values());
@@ -511,9 +548,6 @@ public class GameBoardController implements Initializable {
             GameState.getAllPlayers().get(GameState.turnNumber).addSett(settMap.get(img));
             GameState.buildSettlement();
             canBuildSettlement = false;
-            if(!GameState.roundZero){
-                GameState.getAllPlayers().get(GameState.turnNumber).setPoints(1);
-            }
         }
 
         else if(settMap.get(img).isVisible() && (canBuildCity) && GameState.getAllPlayers().get(GameState.turnNumber).getStructures().contains(settMap.get(img))) {
