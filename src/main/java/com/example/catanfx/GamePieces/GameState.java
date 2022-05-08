@@ -12,6 +12,7 @@ import com.example.catanfx.GamePieces.Structures.Structure;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ChoiceDialog;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 
 import java.awt.*;
 import java.util.*;
@@ -25,6 +26,7 @@ public class GameState {
     //private GameBoardGraphic fullGameBoard;
 //    private static Dice dice;
 //    private static Thief thief;
+    public static boolean roundZero;
     public static boolean roundZeroRollDice;
     public static boolean roundZeroBuildSettlement;
     public static boolean roundZeroBuildRoad;
@@ -43,6 +45,7 @@ public class GameState {
     public static boolean firstLA;
 
     public GameState(int numOfPlayers){
+        roundZero = true;
         players = new ArrayList<Player>();
         new ResourceDeck();
         new DevelopmentDeck();
@@ -90,11 +93,13 @@ public class GameState {
 //        for(Player p: )
 //    }
 
-    public static Player checkWin() {
-        for(int i = 0; i < players.size(); i++)
-            if(players.get(i).getPoints()>=10)
-                return players.get(i);
-        return null;
+    public static boolean checkWin() {
+        for(int i = 0; i < players.size(); i++) {
+            if (players.get(i).getPoints() >= 10) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public static LinkedList<ResourceCard> getResourceInventory() {
@@ -424,6 +429,8 @@ public class GameState {
                 }
             }
         }
+        roundZero = false;
+
     }
 
     public static void yearOfPlenty(Player p, String resource){

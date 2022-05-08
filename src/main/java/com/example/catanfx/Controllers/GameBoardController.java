@@ -505,6 +505,9 @@ public class GameBoardController implements Initializable {
             GameState.getAllPlayers().get(GameState.turnNumber).addSett(settMap.get(img));
             GameState.buildSettlement();
             canBuildSettlement = false;
+            if(!GameState.roundZero){
+                GameState.getAllPlayers().get(GameState.turnNumber).setPoints(1);
+            }
         }
 
         else if(settMap.get(img).isVisible() && (canBuildCity) && GameState.getAllPlayers().get(GameState.turnNumber).getStructures().contains(settMap.get(img))) {

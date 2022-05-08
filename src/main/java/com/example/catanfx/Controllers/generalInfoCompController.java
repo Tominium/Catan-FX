@@ -19,6 +19,7 @@ import javafx.scene.control.ChoiceDialog;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -58,6 +59,8 @@ public class generalInfoCompController implements Initializable {
     private ImageView wool;
     @FXML
     private ImageView ore;
+    @FXML
+    private AnchorPane pane;
 
 
 
@@ -240,6 +243,13 @@ public class generalInfoCompController implements Initializable {
         dice.setDisable(false);
         GameState.oldCard(GameState.getAllPlayers().get(GameState.turnNumber));
         GameState.iterateTurn();
+        if(GameState.checkWin()){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Game Over");
+            alert.setHeaderText(null);
+            alert.setContentText("Game Over! Player " + (GameState.turnNumber + 1) + " won!");
+            alert.showAndWait();
+        }
     }
 
     @FXML
