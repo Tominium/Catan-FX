@@ -568,4 +568,10 @@ public class GameState {
         }
     }
 
+    public static boolean canBuildSettlementLocation(ImageView img){
+        for(Structure s: players.get(turnNumber).getRoads()){
+            if(s.getImage().getBoundsInParent().intersects(img.getBoundsInParent())){return true;}
+        }
+        return false;
+    }
 }

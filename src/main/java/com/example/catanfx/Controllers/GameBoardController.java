@@ -489,7 +489,7 @@ public class GameBoardController implements Initializable {
     @FXML
     void showSettlement(MouseEvent event) {
         ImageView img = (ImageView)event.getSource();
-        if(!settMap.get(img).isVisible() && (canBuildSettlement||(GameState.roundZeroBuildSettlement&&GameState.roundZeroSettlementLogic(settMap.get(img))))){
+        if(!settMap.get(img).isVisible() && ((canBuildSettlement && GameState.canBuildSettlementLocation(img))||(GameState.roundZeroBuildSettlement&&GameState.roundZeroSettlementLogic(settMap.get(img))))){
             img.setImage(new Image(GameBoardController.class.getResource("/Assets/Settlement/white.png").toExternalForm()));
         }
         else if(settMap.get(img).isVisible() && (canBuildCity) && GameState.getAllPlayers().get(GameState.turnNumber).getSettlements().contains(settMap.get(img)))
@@ -499,7 +499,7 @@ public class GameBoardController implements Initializable {
     @FXML
     void buildSettlement(MouseEvent event) {
         ImageView img = (ImageView)event.getSource();
-        if((canBuildSettlement || (GameState.roundZeroBuildSettlement&&GameState.roundZeroSettlementLogic(settMap.get(img)))) && !settMap.get(img).isVisible()){
+        if(((canBuildSettlement&&GameState.canBuildSettlementLocation(img)) || (GameState.roundZeroBuildSettlement&&GameState.roundZeroSettlementLogic(settMap.get(img)))) && !settMap.get(img).isVisible()){
             settMap.get(img).setVisible(true);
             settMap.get(img).setColor(GameState.getAllPlayers().get(GameState.turnNumber).getColor());
             GameState.getAllPlayers().get(GameState.turnNumber).addSett(settMap.get(img));
