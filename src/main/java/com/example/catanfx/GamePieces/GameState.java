@@ -94,20 +94,10 @@ public class GameState {
 //    }
 
     public static int checkWin() {
-        TreeMap<Integer, Player> pp = new TreeMap<>();
         for(int i = 0; i < players.size(); i++) {
             if (players.get(i).getPoints() >= 10) {
-                pp.put(i, players.get(i));
+                return i;
             }
-        }
-        int max = Integer.MIN_VALUE;
-        if(!pp.isEmpty()){
-            for(int a: pp.keySet()){
-                if(a>max){
-                    max = a;
-                }
-            }
-            return pp.get(max).getTurnNum();
         }
         return -1;
     }
