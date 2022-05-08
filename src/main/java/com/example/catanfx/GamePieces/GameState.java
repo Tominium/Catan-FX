@@ -197,6 +197,29 @@ public class GameState {
         return true;
     }
 
+    public static boolean canBuildSettlementLocation(ImageView img){
+        for(Structure s: players.get(turnNumber).getRoads()){
+            if(s.getImage().getBoundsInParent().intersects(img.getBoundsInParent())){return true;}
+        }
+        return false;
+    }
+
+    public static boolean normalRoundSettlementLogic(Settlement img){
+        for(Tile tt: tilesBook){
+            if(tt.getVertices().contains(img)){
+                for(Structure s: tt.getEdges()){
+                    if(s.isVisible() && players.get(turnNumber).getRoads().contains(s)&&s.getImage().getBoundsInParent().intersects(img.getImage().getBoundsInParent())){
+                        if(roundZeroRoadIntersectSettlementLogic(s.getImage(), tt.getVertices())){
+                            System.out.println("DOg");
+                            return false;
+                        }
+                    }
+                }
+            }
+        }
+        return true;
+    }
+
     private static boolean canBuildCity(){
         if(players.get(turnNumber).getCities().size() == 4){return false;}
         LinkedList<ResourceCard> rc = players.get(turnNumber).getRC();
@@ -568,10 +591,4 @@ public class GameState {
         }
     }
 
-    public static boolean canBuildSettlementLocation(ImageView img){
-        for(Structure s: players.get(turnNumber).getRoads()){
-            if(s.getImage().getBoundsInParent().intersects(img.getBoundsInParent())){return true;}
-        }
-        return false;
-    }
 }
