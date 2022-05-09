@@ -528,6 +528,7 @@ public class GameState {
         ResourceDeck.addCard(resourceOffered);
         ResourceDeck.addCard(resourceOffered);
         ResourceDeck.addCard(resourceOffered);
+        ResourceDeck.addCard(resourceOffered);
         p.addRC(ResourceDeck.getCard(resourceRequested));
     }
 

@@ -32,13 +32,6 @@ public class Player {
         KnightsPlayed = 0;
         points = 0;
         largestArmy = false;
-        for(int i=0; i<(Math.random()*40)+1; i++){
-            resourceCards.add(new ResourceCard("brick"));
-            resourceCards.add(new ResourceCard("lumber"));
-            resourceCards.add(new ResourceCard("grain"));
-            resourceCards.add(new ResourceCard("wool"));
-            resourceCards.add(new ResourceCard("ore"));
-        }
     }
 
     public void removeRCard(ResourceCard c){
