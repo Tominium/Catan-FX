@@ -1,7 +1,9 @@
 package com.example.catanfx.GamePieces.Structures;
-import com.example.catanfx.Controllers.GameBoardController;
+
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+
+import java.util.Locale;
 
 
 public class Settlement extends Structure {
@@ -9,6 +11,9 @@ public class Settlement extends Structure {
         super(type, color, image);
     }
 
-    public void setColor(String c){color = c; image.setImage(new Image(Settlement.class.getResource("/Assets/Settlement/" + color + ".png").toExternalForm()));}
-
+    public void setColor(String c) {
+        color = c.toLowerCase();
+        System.out.println(color);
+        image.setImage(new Image(Settlement.class.getClassLoader().getResource("Assets/Settlement/" + color + ".png").toExternalForm()));
+    }
 }

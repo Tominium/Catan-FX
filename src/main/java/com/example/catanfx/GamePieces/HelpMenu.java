@@ -18,23 +18,23 @@ public class HelpMenu extends JFrame {
 
     {
         try {
-            page0 = ImageIO.read(new File("src/main/resources/Assets/Images/instructions.jpg"));
-            page1 = ImageIO.read(new File("src/main/resources/Assets/Images/0001.jpg"));
-            page2 = ImageIO.read(new File("src/main/resources/Assets/Images/0002.jpg"));
-            page3 = ImageIO.read(new File("src/main/resources/Assets/Images/0003.jpg"));
-            page4 = ImageIO.read(new File("src/main/resources/Assets/Images/0004.jpg"));
-            page5 = ImageIO.read(new File("src/main/resources/Assets/Images/0005.jpg"));
-            page6 = ImageIO.read(new File("src/main/resources/Assets/Images/0006.jpg"));
-            page7 = ImageIO.read(new File("src/main/resources/Assets/Images/0007.jpg"));
-            page8 = ImageIO.read(new File("src/main/resources/Assets/Images/0008.jpg"));
-            page9 = ImageIO.read(new File("src/main/resources/Assets/Images/0009.jpg"));
-            page10 = ImageIO.read(new File("src/main/resources/Assets/Images/0010.jpg"));
-            page11 = ImageIO.read(new File("src/main/resources/Assets/Images/0011.jpg"));
-            page12 = ImageIO.read(new File("src/main/resources/Assets/Images/0012.jpg"));
-            page13 = ImageIO.read(new File("src/main/resources/Assets/Images/0013.jpg"));
-            page14 = ImageIO.read(new File("src/main/resources/Assets/Images/0014.jpg"));
-            page15 = ImageIO.read(new File("src/main/resources/Assets/Images/0015.jpg"));
-            page16 = ImageIO.read(new File("src/main/resources/Assets/Images/0016.jpg"));
+            page0 = ImageIO.read(new File("src/main/resourcesAssets/Images/instructions.jpg"));
+            page1 = ImageIO.read(new File("src/main/resourcesAssets/Images/0001.jpg"));
+            page2 = ImageIO.read(new File("src/main/resourcesAssets/Images/0002.jpg"));
+            page3 = ImageIO.read(new File("src/main/resourcesAssets/Images/0003.jpg"));
+            page4 = ImageIO.read(new File("src/main/resourcesAssets/Images/0004.jpg"));
+            page5 = ImageIO.read(new File("src/main/resourcesAssets/Images/0005.jpg"));
+            page6 = ImageIO.read(new File("src/main/resourcesAssets/Images/0006.jpg"));
+            page7 = ImageIO.read(new File("src/main/resourcesAssets/Images/0007.jpg"));
+            page8 = ImageIO.read(new File("src/main/resourcesAssets/Images/0008.jpg"));
+            page9 = ImageIO.read(new File("src/main/resourcesAssets/Images/0009.jpg"));
+            page10 = ImageIO.read(new File("src/main/resourcesAssets/Images/0010.jpg"));
+            page11 = ImageIO.read(new File("src/main/resourcesAssets/Images/0011.jpg"));
+            page12 = ImageIO.read(new File("src/main/resourcesAssets/Images/0012.jpg"));
+            page13 = ImageIO.read(new File("src/main/resourcesAssets/Images/0013.jpg"));
+            page14 = ImageIO.read(new File("src/main/resourcesAssets/Images/0014.jpg"));
+            page15 = ImageIO.read(new File("src/main/resourcesAssets/Images/0015.jpg"));
+            page16 = ImageIO.read(new File("src/main/resourcesAssets/Images/0016.jpg"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -50,7 +50,7 @@ public class HelpMenu extends JFrame {
         setResizable(false);
         setLayout(null);
         //set a background image
-        setContentPane(new JLabel(new ImageIcon("src/main/resources/Assets/Images/CoolPic.jpg")));
+        setContentPane(new JLabel(new ImageIcon("src/main/resourcesAssets/Images/CoolPic.jpg")));
         setVisible(true);
         getContentPane().setBackground(new Color(245, 245, 220));
         JLabel page = new JLabel(new ImageIcon(page0));

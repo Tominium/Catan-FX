@@ -476,10 +476,10 @@ public class GameBoardController implements Initializable {
         ImageView img = (ImageView)mouseEvent.getSource();
         if((!roadsMap.get(img).isVisible() && canBuildRoad && GameState.canPlaceRoad(roadsMap.get(img))) ||
                 (!roadsMap.get(img).isVisible() && (GameState.usedRB1  || GameState.usedRB2) && GameState.canPlaceRoad(roadsMap.get(img)))){
-            img.setImage(new Image(GameBoardController.class.getResource("/Assets/Road/white.png").toExternalForm()));
+            img.setImage(new Image(GameBoardController.class.getClassLoader().getResource("Assets/Road/white.png").toExternalForm()));
         }
         else if(!roadsMap.get(img).isVisible() && GameState.roundZeroBuildRoad && GameState.roundZeroRoadLogic(img)){
-            img.setImage(new Image(GameBoardController.class.getResource("/Assets/Road/white.png").toExternalForm()));
+            img.setImage(new Image(GameBoardController.class.getClassLoader().getResource("Assets/Road/white.png").toExternalForm()));
         }
     }
 
@@ -487,7 +487,7 @@ public class GameBoardController implements Initializable {
     public void stopHighlightRoad(MouseEvent mouseEvent) {
         ImageView img = (ImageView)mouseEvent.getSource();
         if(!roadsMap.get(img).isVisible()){
-            img.setImage(new Image(GameBoardController.class.getResource("/Assets/Empty.png").toExternalForm()));
+            img.setImage(new Image(GameBoardController.class.getClassLoader().getResource("Assets/Empty.png").toExternalForm()));
         }
     }
 
@@ -522,20 +522,20 @@ public class GameBoardController implements Initializable {
     void noShowSettlement(MouseEvent event) {
         ImageView img = (ImageView)event.getSource();
         if(!settMap.get(img).isVisible()){
-            img.setImage(new Image(GameBoardController.class.getResource("/Assets/Empty.png").toExternalForm()));
+            img.setImage(new Image(GameBoardController.class.getClassLoader().getResource("Assets/Empty.png").toExternalForm()));
         }
         else if(settMap.get(img).isVisible() && (canBuildCity) && GameState.getAllPlayers().get(GameState.turnNumber).getStructures().contains(settMap.get(img)))
-            img.setImage(new Image(GameBoardController.class.getResource("/Assets/Settlement/"+GameState.getAllPlayers().get(GameState.turnNumber).getColor().toLowerCase()+".png").toExternalForm()));
+            img.setImage(new Image(GameBoardController.class.getClassLoader().getResource("Assets/Settlement/"+GameState.getAllPlayers().get(GameState.turnNumber).getColor().toLowerCase()+".png").toExternalForm()));
     }
 
     @FXML
     void showSettlement(MouseEvent event) {
         ImageView img = (ImageView)event.getSource();
         if(!settMap.get(img).isVisible() && ((canBuildSettlement && GameState.canBuildSettlementLocation(img)&&GameState.normalRoundSettlementLogic(settMap.get(img)))||(GameState.roundZeroBuildSettlement&&GameState.roundZeroSettlementLogic(settMap.get(img))))){
-            img.setImage(new Image(GameBoardController.class.getResource("/Assets/Settlement/white.png").toExternalForm()));
+            img.setImage(new Image(GameBoardController.class.getClassLoader().getResource("Assets/Settlement/white.png").toExternalForm()));
         }
         else if(settMap.get(img).isVisible() && (canBuildCity) && GameState.getAllPlayers().get(GameState.turnNumber).getStructures().contains(settMap.get(img))) {
-            img.setImage(new Image(GameBoardController.class.getResource("/Assets/City/" + GameState.getAllPlayers().get(GameState.turnNumber).getColor().toLowerCase() + ".png").toExternalForm()));
+            img.setImage(new Image(GameBoardController.class.getClassLoader().getResource("Assets/City/" + GameState.getAllPlayers().get(GameState.turnNumber).getColor().toLowerCase() + ".png").toExternalForm()));
         }
     }
 

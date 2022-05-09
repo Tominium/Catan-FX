@@ -15,9 +15,9 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         primaryStage = stage;
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("mainMenu.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getClassLoader().getResource("com/example/catanfx/mainMenu.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        scene.getStylesheets().add(HelloApplication.class.getResource("/CSS/bootstrap2" + ".css").toExternalForm());
+        scene.getStylesheets().add(HelloApplication.class.getClassLoader().getResource("CSS/bootstrap2.css").toExternalForm());
         primaryStage.setTitle("Settlers Of Catan");
         primaryStage.setScene(scene);
         primaryStage.show();
@@ -27,7 +27,7 @@ public class HelloApplication extends Application {
         Parent pane = null;
         try {
             pane = FXMLLoader.load(
-                    HelloApplication.class.getResource(fxml));
+                    HelloApplication.class.getClassLoader().getResource(fxml));
         } catch (IOException e) {
             e.printStackTrace();
         }

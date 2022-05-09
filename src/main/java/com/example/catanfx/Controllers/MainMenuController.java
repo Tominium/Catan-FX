@@ -38,7 +38,7 @@ MainMenuController implements Initializable {
         }
         else{
             new GameState(choice.getValue());
-            HelloApplication.changeScene("test.fxml");
+            HelloApplication.changeScene("com/example/catanfx/test.fxml");
         }
     }
     @FXML

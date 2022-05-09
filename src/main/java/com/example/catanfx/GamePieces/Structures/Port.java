@@ -4,6 +4,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.shape.Polygon;
 
+import java.util.Locale;
+
 public class Port {
     private Polygon poly;
     private ImageView portImg;
@@ -12,10 +14,10 @@ public class Port {
     private ImageView pier2;
 
     public Port(String t, Polygon pol, ImageView img, ImageView img1, ImageView img2){
-        type = t;
+        type = t.toLowerCase();
         poly = pol;
         portImg = img;
-        portImg.setImage(new Image(Port.class.getResource("/Assets/Port/"+type+".png").toExternalForm()));
+        portImg.setImage(new Image(Port.class.getClassLoader().getResource("Assets/Port/"+type+".png").toExternalForm()));
         pier1 = img1;
         pier2 = img2;
     }

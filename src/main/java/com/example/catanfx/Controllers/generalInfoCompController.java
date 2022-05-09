@@ -114,8 +114,8 @@ public class generalInfoCompController implements Initializable {
         if(GameState.roundZeroBuildRoad || GameState.roundZeroBuildSettlement){}
         else{
             int[] arr = Dice.rollDice();
-            dice1.setImage(new Image(generalInfoCompController.class.getResource("/Assets/Dice/" + arr[0] + ".png").toExternalForm()));
-            dice2.setImage(new Image(generalInfoCompController.class.getResource("/Assets/Dice/" + arr[1] + ".png").toExternalForm()));
+            dice1.setImage(new Image(generalInfoCompController.class.getClassLoader().getResource("Assets/Dice/" + arr[0] + ".png").toExternalForm()));
+            dice2.setImage(new Image(generalInfoCompController.class.getClassLoader().getResource("Assets/Dice/" + arr[1] + ".png").toExternalForm()));
             if (!GameState.roundZeroRollDice) {
                 dice.setDisable(true);
                 tradeButton.setVisible(true);

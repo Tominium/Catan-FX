@@ -2,6 +2,7 @@ package com.example.catanfx.GamePieces.Cards;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
+import java.util.Locale;
 
 public class ResourceDeck {
     // instance variables
@@ -75,6 +76,21 @@ public class ResourceDeck {
             return oreDeck.isEmpty();
         }
         return true;
+    }
+
+    public static void addCard(String card){
+        card = card.toLowerCase();
+        if (card.equals("lumber")) {
+            lumberDeck.add(new ResourceCard(card));
+        } else if (card.equals("brick")) {
+            brickDeck.add(new ResourceCard(card));
+        } else if (card.equals("wool")) {
+            woolDeck.add(new ResourceCard(card));
+        } else if (card.equals("grain")) {
+            grainDeck.add(new ResourceCard(card));
+        } else if (card.equals("ore")) {
+            oreDeck.add(new ResourceCard(card));
+        }
     }
  }
 

@@ -193,6 +193,8 @@ public class MaritimeTrade implements Initializable {
             if(portIntersect(resourceOffered) && Collections.frequency(p.getRC(), new ResourceCard(resourceOffered)) >=2){
                 p.removeRCard(new ResourceCard(resourceOffered));
                 p.removeRCard(new ResourceCard(resourceOffered));
+                ResourceDeck.addCard(resourceOffered);
+                ResourceDeck.addCard(resourceOffered);
                 p.addRC(ResourceDeck.getCard(resourceRequested));
                 stage = (Stage)pane.getScene().getWindow();
                 stage.close();
@@ -201,6 +203,10 @@ public class MaritimeTrade implements Initializable {
                 p.removeRCard(new ResourceCard(resourceOffered));
                 p.removeRCard(new ResourceCard(resourceOffered));
                 p.removeRCard(new ResourceCard(resourceOffered));
+                ResourceDeck.addCard(resourceOffered);
+                ResourceDeck.addCard(resourceOffered);
+                ResourceDeck.addCard(resourceOffered);
+
                 p.addRC(ResourceDeck.getCard(resourceRequested));
                 stage = (Stage)pane.getScene().getWindow();
                 stage.close();

@@ -51,7 +51,7 @@ public class Tile{
     public Token getToken(){return tok;}
 
     public Image getImage(){
-        return new Image(Tile.class.getResource("/Assets/Hexagons/" + type + ".png").toExternalForm());
+        return new Image(Tile.class.getClassLoader().getResource("Assets/Hexagons/" + type + ".png").toExternalForm());
     }
 
     public String getType(){

@@ -20,12 +20,12 @@ public class Token {
         isThief = false;
         if(num!=-1){
             image = img;
-            image.setImage(new Image(Token.class.getResource("/Assets/Tokens/prob_" + number + ".png").toExternalForm()));
+            image.setImage(new Image(Token.class.getClassLoader().getResource("Assets/Tokens/prob_" + number + ".png").toExternalForm()));
             tokensMap.put(image, this);
         }
         else{
             image = img;
-            image.setImage(new Image(Token.class.getResource("/Assets/robber.png").toExternalForm()));
+            image.setImage(new Image(Token.class.getClassLoader().getResource("Assets/robber.png").toExternalForm()));
             isThief = true;
             tokensMap.put(image, this);
         }
@@ -38,13 +38,13 @@ public class Token {
     public void setThief(Boolean b){
         isThief = b;
         if(isThief){
-            image.setImage(new Image(Token.class.getResource("/Assets/robber.png").toExternalForm()));
+            image.setImage(new Image(Token.class.getClassLoader().getResource("Assets/robber.png").toExternalForm()));
         }
         else if(number != -1){
-            image.setImage(new Image(Token.class.getResource("/Assets/Tokens/prob_" + number + ".png").toExternalForm()));
+            image.setImage(new Image(Token.class.getClassLoader().getResource("Assets/Tokens/prob_" + number + ".png").toExternalForm()));
         }
         else{
-            image.setImage(new Image(Token.class.getResource("/Assets/Empty.png").toExternalForm()));
+            image.setImage(new Image(Token.class.getClassLoader().getResource("Assets/Empty.png").toExternalForm()));
         }
     }
 

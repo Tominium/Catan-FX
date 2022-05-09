@@ -525,7 +525,10 @@ public class GameState {
         p.removeRCard(new ResourceCard(resourceOffered));
         p.removeRCard(new ResourceCard(resourceOffered));
         p.removeRCard(new ResourceCard(resourceOffered));
-        p.addRC(new ResourceCard(resourceRequested));
+        ResourceDeck.addCard(resourceOffered);
+        ResourceDeck.addCard(resourceOffered);
+        ResourceDeck.addCard(resourceOffered);
+        p.addRC(ResourceDeck.getCard(resourceRequested));
     }
 
     public static boolean checkBankTrade(Player p, String resourceOffered){

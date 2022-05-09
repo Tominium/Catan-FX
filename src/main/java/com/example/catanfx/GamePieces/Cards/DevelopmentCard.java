@@ -15,20 +15,20 @@ public class DevelopmentCard {
     public DevelopmentCard(String dcName){
         dc = dcName;
 //        try {
-//            dcFront = ImageIO.read(DevelopmentCard.class.getResource("Assets/DevCards/"+dc+".png"));
-//            dcBack = ImageIO.read(DevelopmentCard.class.getResource("Assets/DevCards/back.png"));
+//            dcFront = ImageIO.read(DevelopmentCard.class.getClassLoader().getResource("Assets/DevCards/"+dc+".png"));
+//            dcBack = ImageIO.read(DevelopmentCard.class.getClassLoader().getResource("Assets/DevCards/back.png"));
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
-        dcFront = new ImageView(DevelopmentCard.class.getResource("/Assets/DevCards/"+dc+".png").toExternalForm());
-        dcBack = new ImageView(DevelopmentCard.class.getResource("/Assets/DevCards/back.png").toExternalForm());
+        dcFront = new ImageView(DevelopmentCard.class.getClassLoader().getResource("Assets/DevCards/"+dc+".png").toExternalForm());
+        dcBack = new ImageView(DevelopmentCard.class.getClassLoader().getResource("Assets/DevCards/back.png").toExternalForm());
         justBought = true;
     }
     public DevelopmentCard(String dcName, int p){
         dc = dcName;
         points = p;
-        dcFront = new ImageView(DevelopmentCard.class.getResource("/Assets/DevCards/"+dc+".png").toExternalForm());
-        dcBack = new ImageView(DevelopmentCard.class.getResource("/Assets/DevCards/back.png").toExternalForm());
+        dcFront = new ImageView(DevelopmentCard.class.getClassLoader().getResource("Assets/DevCards/"+dc+".png").toExternalForm());
+        dcBack = new ImageView(DevelopmentCard.class.getClassLoader().getResource("Assets/DevCards/back.png").toExternalForm());
     }
 
     public DevelopmentCard() {

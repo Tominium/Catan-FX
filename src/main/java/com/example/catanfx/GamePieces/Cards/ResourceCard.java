@@ -10,8 +10,8 @@ public class ResourceCard {
 
     public ResourceCard(String rcName) {
         rc = rcName;
-        rcFront = new ImageView(ResourceCard.class.getResource("/Assets/Resource_Cards/"+rc+".png").toExternalForm());
-        rcBack = new ImageView(ResourceCard.class.getResource("/Assets/Resource_Cards/back.png").toExternalForm());
+        rcFront = new ImageView(ResourceCard.class.getClassLoader().getResource("Assets/Resource_Cards/"+rc+".png").toExternalForm());
+        rcBack = new ImageView(ResourceCard.class.getClassLoader().getResource("Assets/Resource_Cards/back.png").toExternalForm());
     }
 
     public ImageView getFront(){
