@@ -70,40 +70,50 @@ public class generalInfoCompController implements Initializable {
 
     @FXML
     void openTrade(ActionEvent event) {
-        String[] arrayData = {"Domestic Trade", "Maritime Trade"};
-        List<String> dialogData = Arrays.asList(arrayData);
 
-        ChoiceDialog dialog = new ChoiceDialog(dialogData.get(0), dialogData);
-        dialog.setGraphic(null);
-        dialog.setTitle("Trading");
-        dialog.setHeaderText("Select Trade Type");
+        if(GameState.rollSeven){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText("Move The Thief First!");
+            alert.showAndWait();
+        }
 
-        Optional<String> result = dialog.showAndWait();
-        if(!result.isEmpty()){
-            if (result.get().equals("Domestic Trade")) {
-                try {
-                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/catanfx/tradePanel.fxml"));
-                    Parent root1 = (Parent) fxmlLoader.load();
-                    Stage stage = new Stage();
-                    stage.setScene(new Scene(root1));
-                    stage.initModality(Modality.APPLICATION_MODAL);
-                    stage.setResizable(false);
-                    stage.showAndWait();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-            else if(result.get().equals("Maritime Trade")){
-                try {
-                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/catanfx/MaritimeTrade.fxml"));
-                    Parent root1 = (Parent) fxmlLoader.load();
-                    Stage stage = new Stage();
-                    stage.setScene(new Scene(root1));
-                    stage.initModality(Modality.APPLICATION_MODAL);
-                    stage.setResizable(false);
-                    stage.showAndWait();
-                } catch (Exception e){
-                    e.printStackTrace();
+        else{
+            String[] arrayData = {"Domestic Trade", "Maritime Trade"};
+            List<String> dialogData = Arrays.asList(arrayData);
+
+            ChoiceDialog dialog = new ChoiceDialog(dialogData.get(0), dialogData);
+            dialog.setGraphic(null);
+            dialog.setTitle("Trading");
+            dialog.setHeaderText("Select Trade Type");
+
+            Optional<String> result = dialog.showAndWait();
+            if (!result.isEmpty()) {
+                if (result.get().equals("Domestic Trade")) {
+                    try {
+                        FXMLLoader fxmlLoader = new FXMLLoader(generalInfoCompController.class.getClassLoader().getResource("com/example/catanfx/tradePanel.fxml"));
+                        Parent root1 = (Parent) fxmlLoader.load();
+                        Stage stage = new Stage();
+                        stage.setScene(new Scene(root1));
+                        stage.initModality(Modality.APPLICATION_MODAL);
+                        stage.setResizable(false);
+                        stage.showAndWait();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                } else if (result.get().equals("Maritime Trade")) {
+                    try {
+                        FXMLLoader fxmlLoader = new FXMLLoader(generalInfoCompController.class.getClassLoader().getResource("com/example/catanfx/MaritimeTrade.fxml"));
+                        Parent root1 = (Parent) fxmlLoader.load();
+                        Stage stage = new Stage();
+                        stage.setScene(new Scene(root1));
+                        stage.initModality(Modality.APPLICATION_MODAL);
+                        stage.setResizable(false);
+                        stage.showAndWait();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         }
@@ -125,6 +135,21 @@ public class generalInfoCompController implements Initializable {
             } else {
                 GameState.roundZeroRollDiceDice(Dice.getRolledNum());
             }
+        }
+        if(ResourceDeck.isEmpty("brick")){
+            brick.setVisible(false);
+        }
+        if(ResourceDeck.isEmpty("grain")){
+            grain.setVisible(false);
+        }
+        if(ResourceDeck.isEmpty("wool")){
+            wool.setVisible(false);
+        }
+        if(ResourceDeck.isEmpty("ore")){
+            ore.setVisible(false);
+        }
+        if(ResourceDeck.isEmpty("lumber")){
+            lumber.setVisible(false);
         }
     }
 
@@ -265,16 +290,27 @@ public class generalInfoCompController implements Initializable {
 
     @FXML
     void next(ActionEvent event) {
-        tradeButton.setVisible(false);
-        tradeButton.setDisable(true);
-        nextButton.setVisible(false);
-        nextButton.setDisable(true);
-        buildButton.setVisible(true);
-        buildButton.setDisable(false);
-        buyButton.setVisible(true);
-        buyButton.setDisable(false);
-        passDiceButton.setVisible(true);
-        passDiceButton.setDisable(false);
+
+        if(GameState.rollSeven){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText("Move The Thief First!");
+            alert.showAndWait();
+        }
+
+        else{
+            tradeButton.setVisible(false);
+            tradeButton.setDisable(true);
+            nextButton.setVisible(false);
+            nextButton.setDisable(true);
+            buildButton.setVisible(true);
+            buildButton.setDisable(false);
+            buyButton.setVisible(true);
+            buyButton.setDisable(false);
+            passDiceButton.setVisible(true);
+            passDiceButton.setDisable(false);
+        }
     }
     @FXML
     void openHelp(MouseEvent event) {

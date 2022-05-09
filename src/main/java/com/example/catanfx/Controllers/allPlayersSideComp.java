@@ -61,7 +61,7 @@ public class allPlayersSideComp implements Initializable {
                 Runnable updater = new Runnable() {
                     @Override
                     public void run() {updateAll();}};
-                while (true) {try {Thread.sleep(16);} catch (InterruptedException ex) {}
+                while (true) {try {Thread.sleep(2500);} catch (InterruptedException ex) {}
                     Platform.runLater(updater);}}});
         // don't let thread prevent JVM shutdown
         thread.setDaemon(true);
@@ -92,7 +92,8 @@ public class allPlayersSideComp implements Initializable {
         else{
             rect0.setStroke(null);
         }
-        String text = "Resource Cards: " + p.getRC().size() + "\n" + "Development Cards: " + p.getDC().size() + "\n" + "Points: " + p.getPoints();
+        String text = "Resource Cards: " + p.getRC().size() + "\n" + "Development Cards: " + p.getDC().size() + "\n" + "Points: " + p.getPoints() + "\n" + "Roads: " + p.getRoads().size() + "/15";
+        text += "\n" + "Settlements: " + p.getSettlements().size() + "/5" + "\n" + "Cities: " + p.getCities().size() + "/4";
         textArea0.setText(text);
     }
 
@@ -119,7 +120,8 @@ public class allPlayersSideComp implements Initializable {
         else{
             rect1.setStroke(null);
         }
-        String text = "Resource Cards: " + p.getRC().size() + "\n" + "Development Cards: " + p.getDC().size() + "\n" + "Points: " + p.getPoints();
+        String text = "Resource Cards: " + p.getRC().size() + "\n" + "Development Cards: " + p.getDC().size() + "\n" + "Points: " + p.getPoints() + "\n" + "Roads: " + p.getRoads().size() + "/15";
+        text += "\n" + "Settlements: " + p.getSettlements().size() + "/5" + "\n" + "Cities: " + p.getCities().size() + "/4";
         textArea1.setText(text);
     }
 
@@ -146,7 +148,8 @@ public class allPlayersSideComp implements Initializable {
         else{
             rect2.setStroke(null);
         }
-        String text = "Resource Cards: " + p.getRC().size() + "\n" + "Development Cards: " + p.getDC().size() + "\n" + "Points: " + p.getPoints();
+        String text = "Resource Cards: " + p.getRC().size() + "\n" + "Development Cards: " + p.getDC().size() + "\n" + "Points: " + p.getPoints() + "\n" + "Roads: " + p.getRoads().size() + "/15";
+        text += "\n" + "Settlements: " + p.getSettlements().size() + "/5" + "\n" + "Cities: " + p.getCities().size() + "/4";
         textArea2.setText(text);
     }
 
@@ -173,7 +176,8 @@ public class allPlayersSideComp implements Initializable {
         else{
             rect3.setStroke(null);
         }
-        String text = "Resource Cards: " + p.getRC().size() + "\n" + "Development Cards: " + p.getDC().size() + "\n" + "Points: " + p.getPoints();
+        String text = "Resource Cards: " + p.getRC().size() + "\n" + "Development Cards: " + p.getDC().size() + "\n" + "Points: " + p.getPoints() + "\n" + "Roads: " + p.getRoads().size() + "/15";
+        text += "\n" + "Settlements: " + p.getSettlements().size() + "/5" + "\n" + "Cities: " + p.getCities().size() + "/4";
         textArea3.setText(text);
     }
 
@@ -185,7 +189,7 @@ public class allPlayersSideComp implements Initializable {
         if(b.equals(inventory0)){
             try {
                 InventoryController.selectPlayer(GameState.getAllPlayers().get(0));
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/catanfx/playerInventory.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("com/example/catanfx/playerInventory.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root1));
@@ -201,7 +205,7 @@ public class allPlayersSideComp implements Initializable {
         else if(b.equals(inventory1)){
             try {
                 InventoryController.selectPlayer(GameState.getAllPlayers().get(1));
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/catanfx/playerInventory.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("com/example/catanfx/playerInventory.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root1));
@@ -215,7 +219,7 @@ public class allPlayersSideComp implements Initializable {
         else if(b.equals(inventory2)){
             try {
                 InventoryController.selectPlayer(GameState.getAllPlayers().get(2));
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/catanfx/playerInventory.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("com/example/catanfx/playerInventory.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root1));
@@ -229,7 +233,7 @@ public class allPlayersSideComp implements Initializable {
         else if(b.equals(inventory3)){
             try {
                 InventoryController.selectPlayer(GameState.getAllPlayers().get(3));
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/catanfx/playerInventory.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("com/example/catanfx/playerInventory.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root1));

@@ -1,5 +1,6 @@
 package com.example.catanfx.GamePieces;
 
+import com.example.catanfx.Controllers.generalInfoCompController;
 import com.example.catanfx.GamePieces.Cards.DevelopmentCard;
 import com.example.catanfx.GamePieces.Cards.DevelopmentDeck;
 import com.example.catanfx.GamePieces.Cards.ResourceCard;
@@ -9,12 +10,17 @@ import com.example.catanfx.GamePieces.Structures.Port;
 import com.example.catanfx.GamePieces.Structures.Road;
 import com.example.catanfx.GamePieces.Structures.Settlement;
 import com.example.catanfx.GamePieces.Structures.Structure;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ChoiceDialog;
 import javafx.scene.image.ImageView;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.awt.*;
+import java.io.IOException;
 import java.util.*;
 import java.util.List;
 
@@ -273,9 +279,19 @@ public class GameState {
                             rollSeven();
                         }
                     }
-                    return;
                 }
             }
+        }
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(generalInfoCompController.class.getClassLoader().getResource("com/example/catanfx/discardPanel.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root1));
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setResizable(false);
+            stage.showAndWait();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
@@ -336,6 +352,8 @@ public class GameState {
         else{
             getAllPlayers().get(turnNumber).removeRCard(new ResourceCard("brick"));
             getAllPlayers().get(turnNumber).removeRCard(new ResourceCard("lumber"));
+            ResourceDeck.addCard("brick");
+            ResourceDeck.addCard("lumber");
         }
     }
 
@@ -349,6 +367,10 @@ public class GameState {
             getAllPlayers().get(turnNumber).removeRCard(new ResourceCard("lumber"));
             getAllPlayers().get(turnNumber).removeRCard(new ResourceCard("grain"));
             getAllPlayers().get(turnNumber).removeRCard(new ResourceCard("wool"));
+            ResourceDeck.addCard("brick");
+            ResourceDeck.addCard("lumber");
+            ResourceDeck.addCard("grain");
+            ResourceDeck.addCard("wool");
         }
     }
 
@@ -358,6 +380,11 @@ public class GameState {
         getAllPlayers().get(turnNumber).removeRCard(new ResourceCard("ore"));
         getAllPlayers().get(turnNumber).removeRCard(new ResourceCard("ore"));
         getAllPlayers().get(turnNumber).removeRCard(new ResourceCard("ore"));
+        ResourceDeck.addCard("grain");
+        ResourceDeck.addCard("grain");
+        ResourceDeck.addCard("ore");
+        ResourceDeck.addCard("ore");
+        ResourceDeck.addCard("ore");
     }
 
     public static void useDevCard(DevelopmentCard dc) {

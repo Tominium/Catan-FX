@@ -143,7 +143,7 @@ public class InventoryController implements Initializable {
             stage = (Stage) pane.getScene().getWindow();
             stage.close();
             try {
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/catanfx/monopoly.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("com/example/catanfx/monopoly.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root1));
@@ -185,7 +185,7 @@ public class InventoryController implements Initializable {
             stage = (Stage) pane.getScene().getWindow();
             stage.close();
             try {
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/catanfx/YearOfPlenty.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("com/example/catanfx/YearOfPlenty.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root1));

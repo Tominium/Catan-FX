@@ -571,7 +571,7 @@ public class GameBoardController implements Initializable {
     void highlightThief(MouseEvent event) {
         if(GameState.rollSeven || GameState.usedKnight){
             ImageView img = (ImageView) event.getSource();
-            Token.tokensMap.get(img).setThief(true);
+            img.setImage(new Image(GameBoardController.class.getClassLoader().getResource("Assets/robber.png").toExternalForm()));
         }
     }
 
@@ -579,20 +579,20 @@ public class GameBoardController implements Initializable {
         if(GameState.rollSeven || GameState.usedKnight){
             ImageView img = (ImageView) mouseEvent.getSource();
             if(Token.tokensMap.get(img).getNumber()!=-1){
-                Token.tokensMap.get(img).setThief(false);
+                img.setImage(new Image(GameBoardController.class.getClassLoader().getResource("Assets/Tokens/prob_" +Token.tokensMap.get(img).getNumber() +".png").toExternalForm()));
             }
         }
     }
 
     public void moveThief(MouseEvent mouseEvent) {
-        if(GameState.rollSeven || GameState.usedKnight){
-            for (Token t : Token.tokensMap.values()) {
-                if (t.isThief()) {
-                    t.setThief(false);
+        ImageView img = (ImageView) mouseEvent.getSource();
+        if(!Token.tokensMap.get(img).isThief() && Token.tokensMap.get(img).getNumber()!=-1){
+            if (GameState.rollSeven || GameState.usedKnight) {
+                for (Token t : Token.tokensMap.values()) {
+                    if (t.isThief()) {
+                        t.setThief(false);
+                    }
                 }
-            }
-            ImageView img = (ImageView) mouseEvent.getSource();
-            if(Token.tokensMap.get(img).getNumber()!=-1){
                 Token.tokensMap.get(img).setThief(true);
                 GameState.rollSeven = false;
                 GameState.usedKnight = false;

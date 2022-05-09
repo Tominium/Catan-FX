@@ -34,9 +34,9 @@
                         <Font size="49.0" />
                      </font>
                   </Text>
-                  <TextArea fx:id="textArea0" editable="false" layoutX="28.0" layoutY="108.0" prefHeight="154.0" prefWidth="373.0" text="Resource Cards: 1&#10;Development Cards: 1 &#10;Victory Points: 1">
+                  <TextArea fx:id="textArea0" editable="false" layoutX="28.0" layoutY="108.0" prefHeight="154.0" prefWidth="373.0" text="Resource Cards: 1&#10;Development Cards: 1 &#10;Victory Points: 1&#10;Roads: 0/15&#10;Settlements: 0/5&#10;Cities: 0/4">
                      <font>
-                        <Font size="24.0" />
+                        <Font size="15.0" />
                      </font>
                   </TextArea>
                   <Button fx:id="inventory0" layoutX="142.0" layoutY="223.0" mnemonicParsing="false" onAction="#openInventory" prefHeight="37.0" prefWidth="121.0" text="Inventory" />
@@ -51,9 +51,9 @@
                         <Font size="49.0" />
                      </font>
                   </Text>
-                  <TextArea fx:id="textArea1" editable="false" layoutX="29.0" layoutY="108.0" prefHeight="154.0" prefWidth="373.0" text="Resource Cards: 1&#10;Development Cards: 1 &#10;Victory Points: 1">
+                  <TextArea fx:id="textArea1" editable="false" layoutX="29.0" layoutY="108.0" prefHeight="154.0" prefWidth="373.0" text="Resource Cards: 1&#10;Development Cards: 1 &#10;Victory Points: 1&#10;Roads: 0/15&#10;Settlements: 0/5&#10;Cities: 0/4">
                      <font>
-                        <Font size="24.0" />
+                        <Font size="15.0" />
                      </font>
                   </TextArea>
                   <Button fx:id="inventory1" layoutX="142.0" layoutY="223.0" mnemonicParsing="false" onAction="#openInventory" prefHeight="37.0" prefWidth="121.0" text="Inventory" />
@@ -68,9 +68,9 @@
                         <Font size="49.0" />
                      </font>
                   </Text>
-                  <TextArea fx:id="textArea2" editable="false" layoutX="29.0" layoutY="107.0" prefHeight="154.0" prefWidth="373.0" text="Resource Cards: 1&#10;Development Cards: 1 &#10;Victory Points: 1">
+                  <TextArea fx:id="textArea2" editable="false" layoutX="29.0" layoutY="107.0" prefHeight="154.0" prefWidth="373.0" text="Resource Cards: 1&#10;Development Cards: 1 &#10;Victory Points: 1&#10;Roads: 0/15&#10;Settlements: 0/5&#10;Cities: 0/4">
                      <font>
-                        <Font size="24.0" />
+                        <Font size="15.0" />
                      </font>
                   </TextArea>
                   <Button fx:id="inventory2" layoutX="143.0" layoutY="222.0" mnemonicParsing="false" onAction="#openInventory" prefHeight="37.0" prefWidth="121.0" text="Inventory" />
@@ -85,9 +85,9 @@
                         <Font size="49.0" />
                      </font>
                   </Text>
-                  <TextArea fx:id="textArea3" editable="false" layoutX="29.0" layoutY="110.0" prefHeight="154.0" prefWidth="373.0" text="Resource Cards: 1&#10;Development Cards: 1 &#10;Victory Points: 1">
+                  <TextArea fx:id="textArea3" editable="false" layoutX="29.0" layoutY="110.0" prefHeight="154.0" prefWidth="373.0" text="Resource Cards: 1&#10;Development Cards: 1 &#10;Victory Points: 1&#10;Roads: 0/15&#10;Settlements: 0/5&#10;Cities: 0/4">
                      <font>
-                        <Font size="24.0" />
+                        <Font size="15.0" />
                      </font>
                   </TextArea>
                   <Button fx:id="inventory3" layoutX="144.0" layoutY="226.0" mnemonicParsing="false" onAction="#openInventory" prefHeight="37.0" prefWidth="121.0" text="Inventory" />
