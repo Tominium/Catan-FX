@@ -433,7 +433,7 @@
          <Image url="@../../../Assets/Empty.png" />
       </image>
    </ImageView>
-   <ImageView fx:id="sett2" fitHeight="31.0" fitWidth="29.0" layoutX="326.0" layoutY="103.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" onMousePressed="#buildSettlement" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="sett2" fitHeight="54.0" fitWidth="46.0" layoutX="327.0" layoutY="95.0" onMouseEntered="#showSettlement" onMouseExited="#noShowSettlement" onMousePressed="#buildSettlement" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Assets/Empty.png" />
       </image>

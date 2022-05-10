@@ -292,20 +292,22 @@ public class GameState {
                 }
             }
         }
-        for(Player p: players){
-            if(p.getRC().size()>7){
-                try {
-                    FXMLLoader fxmlLoader = new FXMLLoader(generalInfoCompController.class.getClassLoader().getResource("com/example/catanfx/discardPanel.fxml"));
-                    Parent root1 = (Parent) fxmlLoader.load();
-                    Stage stage = new Stage();
-                    stage.setScene(new Scene(root1));
-                    stage.initModality(Modality.APPLICATION_MODAL);
-                    stage.setResizable(false);
-                    stage.showAndWait();
-                } catch (Exception e) {
-                    e.printStackTrace();
+        if(rollSeven) {
+            for (Player p : players) {
+                if (p.getRC().size() > 7) {
+                    try {
+                        FXMLLoader fxmlLoader = new FXMLLoader(generalInfoCompController.class.getClassLoader().getResource("com/example/catanfx/discardPanel.fxml"));
+                        Parent root1 = (Parent) fxmlLoader.load();
+                        Stage stage = new Stage();
+                        stage.setScene(new Scene(root1));
+                        stage.initModality(Modality.APPLICATION_MODAL);
+                        stage.setResizable(false);
+                        stage.showAndWait();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                    return;
                 }
-                return;
             }
         }
     }

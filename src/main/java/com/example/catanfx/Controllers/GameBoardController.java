@@ -594,9 +594,9 @@ public class GameBoardController implements Initializable {
                     }
                 }
                 Token.tokensMap.get(img).setThief(true);
-                GameState.rollSeven = false;
                 GameState.usedKnight = false;
                 GameState.rollSeven();
+                GameState.rollSeven = false;
                 GameState.checkLargestArmy(GameState.getAllPlayers().get(GameState.turnNumber));
             }
         }
