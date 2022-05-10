@@ -64,4 +64,12 @@ public class DevelopmentDeck {
     public static DevelopmentCard getCard() {
         return deck.pop();
     }
+
+    public static int getSize() {
+        return deck.size();
+    }
+
+    public static boolean isEmpty() {
+        return deck.isEmpty();
+    }
 }

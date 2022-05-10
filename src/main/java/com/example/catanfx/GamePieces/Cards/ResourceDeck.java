@@ -92,6 +92,21 @@ public class ResourceDeck {
             oreDeck.add(new ResourceCard(card));
         }
     }
+
+    public static int getSize(String resource) {
+        if (resource.equals("lumber")) {
+            return lumberDeck.size();
+        } else if (resource.equals("brick")) {
+            return brickDeck.size();
+        } else if (resource.equals("wool")) {
+            return woolDeck.size();
+        } else if (resource.equals("grain")) {
+            return grainDeck.size();
+        } else if (resource.equals("ore")) {
+            return oreDeck.size();
+        }
+        return -1;
+    }
  }
 
 

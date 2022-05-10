@@ -183,11 +183,21 @@ public class GameState {
     public static boolean canPlaceRoad(Road r){
         for(Structure s: players.get(turnNumber).getStructures()){
             if(s.getImage().getBoundsInParent().intersects(r.getImage().getBoundsInParent())){
+                System.out.println("diding");
                 return true;
             }
         }
         for(Structure s: players.get(turnNumber).getRoads()){
             if(s.getImage().getBoundsInParent().intersects(r.getImage().getBoundsInParent())){
+                for(Tile t: tilesBook){
+                    for(Structure ss: t.getVertices()){
+                    if(ss.isVisible() && !ss.getColor().equalsIgnoreCase(players.get(turnNumber).getColor())){
+                        if(ss.getImage().getBoundsInParent().intersects(s.getImage().getBoundsInParent()) && ss.getImage().getBoundsInParent().intersects(r.getImage().getBoundsInParent())){
+                            return false;
+                        }
+                    }
+                    }
+                }
                 return true;
             }
         }
@@ -282,16 +292,21 @@ public class GameState {
                 }
             }
         }
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(generalInfoCompController.class.getClassLoader().getResource("com/example/catanfx/discardPanel.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root1));
-            stage.initModality(Modality.APPLICATION_MODAL);
-            stage.setResizable(false);
-            stage.showAndWait();
-        } catch (Exception e) {
-            e.printStackTrace();
+        for(Player p: players){
+            if(p.getRC().size()>7){
+                try {
+                    FXMLLoader fxmlLoader = new FXMLLoader(generalInfoCompController.class.getClassLoader().getResource("com/example/catanfx/discardPanel.fxml"));
+                    Parent root1 = (Parent) fxmlLoader.load();
+                    Stage stage = new Stage();
+                    stage.setScene(new Scene(root1));
+                    stage.initModality(Modality.APPLICATION_MODAL);
+                    stage.setResizable(false);
+                    stage.showAndWait();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                return;
+            }
         }
     }
 

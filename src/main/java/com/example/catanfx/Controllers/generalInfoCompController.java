@@ -21,6 +21,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -61,7 +62,20 @@ public class generalInfoCompController implements Initializable {
     @FXML
     private ImageView ore;
     @FXML
+    private ImageView devCard;
+    @FXML
     private AnchorPane pane;
+
+    @FXML
+    private Text text1;
+    @FXML
+    private Text text2;
+    @FXML
+    private Text text3;
+    @FXML
+    private Text text4;
+    @FXML
+    private Text text5;
 
 
 
@@ -136,21 +150,7 @@ public class generalInfoCompController implements Initializable {
                 GameState.roundZeroRollDiceDice(Dice.getRolledNum());
             }
         }
-        if(ResourceDeck.isEmpty("brick")){
-            brick.setVisible(false);
-        }
-        if(ResourceDeck.isEmpty("grain")){
-            grain.setVisible(false);
-        }
-        if(ResourceDeck.isEmpty("wool")){
-            wool.setVisible(false);
-        }
-        if(ResourceDeck.isEmpty("ore")){
-            ore.setVisible(false);
-        }
-        if(ResourceDeck.isEmpty("lumber")){
-            lumber.setVisible(false);
-        }
+        check();
     }
 
     @FXML
@@ -319,20 +319,46 @@ public class generalInfoCompController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        text1.setText(ResourceDeck.getSize("brick") + "/19");
+        text2.setText(ResourceDeck.getSize("grain") + "/19");
+        text3.setText(ResourceDeck.getSize("lumber") + "/19");
+        text4.setText(ResourceDeck.getSize("ore") + "/19");
+        text5.setText(ResourceDeck.getSize("wool") + "/19");
+    }
+
+    public void check(){
         if(ResourceDeck.isEmpty("brick")){
             brick.setVisible(false);
+        }
+        else{
+            text1.setText(ResourceDeck.getSize("brick") + "/19");
         }
         if(ResourceDeck.isEmpty("grain")){
             grain.setVisible(false);
         }
+        else{
+            text2.setText(ResourceDeck.getSize("grain") + "/19");
+        }
         if(ResourceDeck.isEmpty("wool")){
             wool.setVisible(false);
+        }
+        else{
+            text5.setText(ResourceDeck.getSize("wool") + "/19");
         }
         if(ResourceDeck.isEmpty("ore")){
             ore.setVisible(false);
         }
+        else{
+            text4.setText(ResourceDeck.getSize("ore") + "/19");
+        }
         if(ResourceDeck.isEmpty("lumber")){
             lumber.setVisible(false);
+        }
+        else{
+            text3.setText(ResourceDeck.getSize("lumber") + "/19");
+        }
+        if(DevelopmentDeck.isEmpty()){
+            devCard.setVisible(false);
         }
     }
 }
