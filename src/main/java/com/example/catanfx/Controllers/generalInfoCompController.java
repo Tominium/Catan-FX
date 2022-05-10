@@ -329,32 +329,42 @@ public class generalInfoCompController implements Initializable {
     public void check(){
         if(ResourceDeck.isEmpty("brick")){
             brick.setVisible(false);
+            text1.setVisible(false);
         }
         else{
+            brick.setVisible(true);
             text1.setText(ResourceDeck.getSize("brick") + "/19");
         }
         if(ResourceDeck.isEmpty("grain")){
             grain.setVisible(false);
+            text2.setVisible(false);
         }
         else{
+            grain.setVisible(true);
             text2.setText(ResourceDeck.getSize("grain") + "/19");
         }
         if(ResourceDeck.isEmpty("wool")){
             wool.setVisible(false);
+            text5.setVisible(false);
         }
         else{
+            wool.setVisible(true);
             text5.setText(ResourceDeck.getSize("wool") + "/19");
         }
         if(ResourceDeck.isEmpty("ore")){
             ore.setVisible(false);
+            text4.setVisible(false);
         }
         else{
+            ore.setVisible(true);
             text4.setText(ResourceDeck.getSize("ore") + "/19");
         }
         if(ResourceDeck.isEmpty("lumber")){
             lumber.setVisible(false);
+            text3.setVisible(false);
         }
         else{
+            lumber.setVisible(true);
             text3.setText(ResourceDeck.getSize("lumber") + "/19");
         }
         if(DevelopmentDeck.isEmpty()){
