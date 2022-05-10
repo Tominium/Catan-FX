@@ -111,11 +111,13 @@ public class discardController implements Initializable {
                     if(GameState.getAllPlayers().get(index).getRC().size()>7){
                         textHead.setText("Player " +(index+1)+": Please Select " + GameState.getAllPlayers().get(index).getRC().size()/2 + " Cards To Discard" );
                         showCards(GameState.getAllPlayers().get(index).getRC());
-                        index = index;
                         System.out.println(index);
                         return;
                     }
                 }
+                Stage stage = (Stage) cb1.getScene().getWindow();
+                // do what you have to do
+                stage.close();
             }
         }
     }
