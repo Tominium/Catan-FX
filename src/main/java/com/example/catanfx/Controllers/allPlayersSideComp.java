@@ -61,7 +61,7 @@ public class allPlayersSideComp implements Initializable {
                 Runnable updater = new Runnable() {
                     @Override
                     public void run() {updateAll();}};
-                while (true) {try {Thread.sleep(2000);} catch (InterruptedException ex) {}
+                while (true) {try {Thread.sleep(2500);} catch (InterruptedException ex) {}
                     Platform.runLater(updater);}}});
         // don't let thread prevent JVM shutdown
         thread.setDaemon(true);
